@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.bapsyt"
+    name="BAPS "
+    version="1.1.0"
+    provider-name="JP">
+  <requires>
+    <!-- <import addon="xbmc.python" version="2.14.0"/> -->
+    <!-- <import addon="script.module.addon.common" version="2.0.0"/> -->
+    <import addon="plugin.video.youtube"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">BAPS youtube Channel and videos.</summary>
+    <description lang="en">Add on that uses youtube to display BAPS Channel videos.</description>
+    <platform>all</platform>
+    <source>https://github.com/dvatterott/Kodi_addons/</source>
+    <website>http://www.BAPS.org/</website>
+    <email>jp@gmail.com</email>
+    <license>GPL v2.0</license>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+    </assets>
+    <news>New channel added sub and ibn7</news>
+        <platform>all</platform>
+  </extension>
+</addon>

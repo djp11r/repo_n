@@ -1,0 +1,28 @@
+{
+	"builds": [
+		{
+			"name": "Slam 19 Lite",
+			"version": "1.4",
+			"url": "http://slamiousbuilds.com/blds2/slamlite19.zip",
+			"icon": "http://slamiousbuilds.com/blds2/slam19lite.jpg",
+			"fanart": "http://slamiousbuilds.com/blds2/slam19lite.jpg",
+			"description": "Slam19 Test Build"
+		},
+		{
+			"name": "Slam X",
+			"version": "1.4",
+			"url": "http://slamiousbuilds.com/blds2/slamx19.zip",
+			"icon": "http://slamiousbuilds.com/blds2/slamx.jpg",
+			"fanart": "http://slamiousbuilds.com/blds2/slamx.jpg",
+			"description": "Extuary Skin"
+		},
+		{
+			"name": "Test - No Build",
+			"version": "1.5",
+			"url": "http://slamiousbuilds.com/blds2/testbuild.zip",
+			"icon": "http://slamiousbuilds.com/blds2/slamx.jpg",
+			"fanart": "http://slamiousbuilds.com/blds2/slamx.jpg",
+			"description": "Dummy Build for testing purposes."
+		}
+	]
+}

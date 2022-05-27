@@ -152,20 +152,6 @@ Launched in January 2013, it enables users to discover 20 years of rich content 
 	</extension>
 </addon>
 
-<addon id="script.tikiart" name="Tiki Art Module" provider-name="Tiki" version="1.1.58">
-    <extension point="xbmc.python.module"/>
-    <extension point="xbmc.addon.metadata">
-        <summary>Themes for Addons</summary>
-        <description>Themes for Addons</description>
-        <platform>all</platform>
-        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-        <assets>
-            <icon>icon.png</icon>
-            <fanart>fanart.png</fanart>
-        </assets>
-    </extension>
-</addon>
-
 <addon id="plugin.googledrive" name="Google Drive" version="1.4.11" provider-name="Carlos Guzman (cguZZman)">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
@@ -1485,7 +1471,7 @@ v1.0.25 (marcelveldt)
   </extension>
 </addon>
 
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.680" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.681" provider-name="gujal">
     <requires>
         <!-- <import addon="xbmc.python" version="3.0.0" /> -->
         <import addon="script.module.six"/>
@@ -2881,17 +2867,17 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
   </extension>
 </addon>
 
-<addon id="repository.JPB" name="[COLOR lime][B]J[/B][/COLOR]PB Repo" version="1.14" provider-name="JPB">
+<addon id="repository.JPB" name="[COLOR lime][B]J[/B][/COLOR]PB Repo" version="1.15" provider-name="JPB">
 	<extension point="xbmc.addon.repository" name="[COLOR lime][B]J[/B]PB Repo">
 		<dir>
-			<info compressed="false">https://raw.githubusercontent.com/djp11r/repojp/master/addons.xml</info>
-			<checksum>https://raw.githubusercontent.com/djp11r/repojp/master/addons.xml.md5</checksum>
-			<datadir zip="true">https://raw.githubusercontent.com/djp11r/repojp/master/</datadir>
+			<info compressed="false">https://raw.githubusercontent.com/djp11r/repo_n/mayb/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/djp11r/repo_n/mayb/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/djp11r/repo_n/mayb/</datadir>
 		</dir>
 		<dir>
-			<info compressed="false">https://raw.githubusercontent.com/djp11r/additinal_addons_zips/master/addons.xml</info>
-			<checksum>https://raw.githubusercontent.com/djp11r/additinal_addons_zips/master/addons.xml.md5</checksum>
-			<datadir zip="true">https://raw.githubusercontent.com/djp11r/additinal_addons_zips/master/</datadir>
+			<info compressed="false">https://raw.githubusercontent.com/djp11r/additinal_repo_n/mayb/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/djp11r/additinal_repo_n/mayb/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/djp11r/additinal_repo_n/mayb/</datadir>
 		</dir>
         <dir>
             <info compressed="false">https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml</info>
