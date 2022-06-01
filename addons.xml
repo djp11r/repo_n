@@ -31,7 +31,7 @@ Launched in January 2013, it enables users to discover 20 years of rich content 
 </extension>
 </addon>
 
-<addon id="plugin.video.ezra" name="Ezra" provider-name="Ezra Hubbard" version="0.1.1">
+<addon id="plugin.video.ezra" name="Ezra" provider-name="Ezra Hubbard" version="0.1.3">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests" version="2.19.1"/>
@@ -663,70 +663,86 @@ v1.1.0 (2020-01-17)
     <news>
 [fix] Fix to_str |contrib: RNavega|
 [fix] Fix playback buffering |contrib: RNavega|
+[fix] Subtitle language names
 [lang] translation updates from Weblate
         </news>
-    <assets>
-      <icon>icon.png</icon>
-      <fanart>fanart.jpg</fanart>
-    </assets>
-    <platform>all</platform>
-    <license>GPL-2.0-only</license>
-    <forum>https://ytaddon.panicked.xyz/forum</forum>
-    <website>https://www.youtube.com</website>
-    <source>https://github.com/anxdpanic/plugin.video.youtube</source>
-    <reuselanguageinvoker>true</reuselanguageinvoker>
-    <summary lang="bg_BG">  YouTube</summary>
-    <summary lang="cs_CZ">Plugin pro YouTube</summary>
-    <summary lang="de_DE">Plugin fur YouTube</summary>
-    <summary lang="el_GR"> YouTube</summary>
-    <summary lang="en_GB">Plugin for YouTube</summary>
-    <summary lang="es_ES">Plugin para YouTube</summary>
-    <summary lang="es_MX">Plugin para YouTube</summary>
-    <summary lang="fr_FR">Plugin pour YouTube</summary>
-    <summary lang="he_IL">  YouTube</summary>
-    <summary lang="hu_HU">YouTube kiegeszito</summary>
-    <summary lang="it_IT">Plugin per YouTube</summary>
-    <summary lang="ko_KR"> </summary>
-    <summary lang="nb_NO">Tillegg for YouTube</summary>
-    <summary lang="pl_PL">Wtyczka YouTube</summary>
-    <summary lang="ru_RU"> YouTube</summary>
-    <summary lang="tr_TR">YouTube icin eklenti</summary>
-    <summary lang="vi_VN">Plugin danh cho YouTube</summary>
-    <summary lang="zh_CN">YouTube</summary>
-    <summary lang="zh_TW">YouTube</summary>
-    <description lang="bg_BG">YouTube    -         .</description>
-    <description lang="cs_CZ">YouTube je jedna z nejvetsich webovych stranek sveta sdilejici video.</description>
-    <description lang="de_DE">YouTube ist eines der groten Video-Sharing-Websites der Welt.</description>
-    <description lang="el_GR"> YouTube          .</description>
-    <description lang="en_GB">YouTube is one of the biggest video-sharing websites of the world.</description>
-    <description lang="es_ES">YouTube es uno de los sitios web mas grande del mundo para compartir videos.</description>
-    <description lang="es_MX">YouTube es uno de los mas grandes sitios web de intercambio de videos del mundo.</description>
-    <description lang="fr_FR">YouTube est l'un des plus grands sites de partage videos du monde.</description>
-    <description lang="he_IL">YouTube       .</description>
-    <description lang="hu_HU">A YouTube vilag egyik legnagyobb videomegoszto weboldala.</description>
-    <description lang="it_IT">YouTube e uno dei piu grandi siti web di condivisione video del mondo.</description>
-    <description lang="ko_KR">        .</description>
-    <description lang="nb_NO">YouTube er en av verdens strste nettsider for videodeling.</description>
-    <description lang="pl_PL">YouTube jest jednym z najwiekszych na swiecie serwisow udostepniania wideo.</description>
-    <description lang="ru_RU">YouTube -   ,    ,    .</description>
-    <description lang="tr_TR">YouTube, dunya uzerindeki en buyuk video paylasma platformlarndan birisidir.</description>
-    <description lang="vi_VN">YouTube la mot trong nhung trang web chia se video lon nhat tren the gioi.</description>
-    <description lang="zh_CN">Youtube</description>
-    <description lang="zh_TW">Youtube</description>
-    <disclaimer lang="cs_CZ">Tento plugin neni schvalen spolecnosti Google</disclaimer>
-    <disclaimer lang="de_DE">Dieses Plugin ist nicht von Google befurwortet</disclaimer>
-    <disclaimer lang="el_GR">        Google</disclaimer>
-    <disclaimer lang="en_GB">This plugin is not endorsed by Google</disclaimer>
-    <disclaimer lang="es_ES">Este add-on no esta respaldado por Google</disclaimer>
-    <disclaimer lang="es_MX">Este add-on no esta respaldado por Google</disclaimer>
-    <disclaimer lang="it_IT">Questo plugin non e promosso da Google</disclaimer>
-    <disclaimer lang="ko_KR">  Google   </disclaimer>
-    <disclaimer lang="pl_PL">Ta wtyczka nie jest zatwierdzona przez Google</disclaimer>
-    <disclaimer lang="ru_RU">   Google</disclaimer>
-    <disclaimer lang="tr_TR">Bu eklenti Google tarafndan uretilmemistir</disclaimer>
-    <disclaimer lang="vi_VN">Plugin nay khong uoc xac nhan boi Google</disclaimer>
-    <disclaimer lang="zh_TW">Google</disclaimer>
-  </extension>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+        <platform>all</platform>
+        <license>GPL-2.0-only</license>
+        <forum>https://ytaddon.panicked.xyz/forum</forum>
+        <website>https://www.youtube.com</website>
+        <source>https://github.com/anxdpanic/plugin.video.youtube</source>
+        <reuselanguageinvoker>true</reuselanguageinvoker>
+        <summary lang="bg_BG">  YouTube</summary>
+        <summary lang="cs_CZ">Plugin pro YouTube</summary>
+        <summary lang="da_DK">Plugin til YouTube</summary>
+        <summary lang="de_DE">Plugin fur YouTube</summary>
+        <summary lang="el_GR"> YouTube</summary>
+        <summary lang="en_GB">Plugin for YouTube</summary>
+        <summary lang="es_ES">Plugin para YouTube</summary>
+        <summary lang="es_MX">Complemento para YouTube</summary>
+        <summary lang="fi_FI">YouTube lisaosa</summary>
+        <summary lang="fr_FR">Plugin pour YouTube</summary>
+        <summary lang="he_IL">  YouTube</summary>
+        <summary lang="hr_HR">Dodatak za YouTube</summary>
+        <summary lang="hu_HU">YouTube kiegeszito</summary>
+        <summary lang="it_IT">Plugin per YouTube</summary>
+        <summary lang="ko_KR"> </summary>
+        <summary lang="nb_NO">Tillegg for YouTube</summary>
+        <summary lang="nl_NL">Plugin voor YouTube</summary>
+        <summary lang="pl_PL">Wtyczka YouTube</summary>
+        <summary lang="ru_RU"> YouTube</summary>
+        <summary lang="sk_SK">Doplnok pre YouTube</summary>
+        <summary lang="tr_TR">YouTube icin eklenti</summary>
+        <summary lang="vi_VN">Plugin danh cho YouTube</summary>
+        <summary lang="zh_CN"/>
+        <summary lang="zh_TW">YouTube</summary>
+        <description lang="bg_BG">YouTube    -         .</description>
+        <description lang="cs_CZ">YouTube je jedna z nejvetsich webovych stranek sveta sdilejici video.</description>
+        <description lang="da_DK">YouTube er et af verdens strste videodelingswebsteder.</description>
+        <description lang="de_DE">YouTube ist eines der groten Video-Sharing-Websites der Welt.</description>
+        <description lang="el_GR"> YouTube          .</description>
+        <description lang="en_GB">YouTube is one of the biggest video-sharing websites of the world.</description>
+        <description lang="es_ES">YouTube es uno de los sitios web mas grande del mundo para compartir videos.</description>
+        <description lang="es_MX">YouTube es uno de los mas grandes sitios web de intercambio de videos del mundo.</description>
+        <description lang="fi_FI">YouTube on yksi maailman suurimmista videonjakosivustoista.</description>
+        <description lang="fr_FR">YouTube est l'un des plus grands sites de partage videos du monde.</description>
+        <description lang="he_IL">YouTube       .</description>
+        <description lang="hr_HR">YouTube je jedna od najvecih stranica za dijeljenje video sadrzaja na svijetu.</description>
+        <description lang="hu_HU">A YouTube vilag egyik legnagyobb videomegoszto weboldala.</description>
+        <description lang="it_IT">YouTube e uno dei piu grandi siti web di condivisione video del mondo.</description>
+        <description lang="ko_KR">        .</description>
+        <description lang="nb_NO">YouTube er en av verdens strste nettsider for videodeling.</description>
+        <description lang="pl_PL">YouTube jest jednym z najwiekszych na swiecie serwisow udostepniania wideo.</description>
+        <description lang="ru_RU">YouTube -   ,    ,    .</description>
+        <description lang="sk_SK">YouTube je jednou z najvacsich stranok na zdielanie videa na svete.</description>
+        <description lang="tr_TR">YouTube, dunya uzerindeki en buyuk video paylasma platformlarndan birisidir.</description>
+        <description lang="vi_VN">YouTube la mot trong nhung trang web chia se video lon nhat tren the gioi.</description>
+        <description lang="zh_CN"/>
+        <description lang="zh_TW">Youtube </description>
+        <disclaimer lang="cs_CZ">Tento plugin neni schvalen spolecnosti Google</disclaimer>
+        <disclaimer lang="da_DK">Dette plugin er ikke godkendt af Google</disclaimer>
+        <disclaimer lang="de_DE">Dieses Plugin ist nicht von Google befurwortet</disclaimer>
+        <disclaimer lang="el_GR">        Google</disclaimer>
+        <disclaimer lang="en_GB">This plugin is not endorsed by Google</disclaimer>
+        <disclaimer lang="es_ES">Este add-on no esta respaldado por Google</disclaimer>
+        <disclaimer lang="es_MX">Este complemento no esta respaldado por Google</disclaimer>
+        <disclaimer lang="fi_FI">Google ei tue tata lisaosaa</disclaimer>
+        <disclaimer lang="fr_FR">Ce module n'est pas valide par Google</disclaimer>
+        <disclaimer lang="hr_HR">Ovaj dodatak nije podrzan od strane Googlea</disclaimer>
+        <disclaimer lang="it_IT">Questo plugin non e promosso da Google</disclaimer>
+        <disclaimer lang="ko_KR">  Google   </disclaimer>
+        <disclaimer lang="pl_PL">Ta wtyczka nie jest zatwierdzona przez Google</disclaimer>
+        <disclaimer lang="ru_RU">   Google</disclaimer>
+        <disclaimer lang="sk_SK">Tento doplnok nie je schvaleny spolocnostou Google</disclaimer>
+        <disclaimer lang="tr_TR">Bu eklenti Google tarafndan uretilmemistir</disclaimer>
+        <disclaimer lang="vi_VN">Plugin nay khong uoc xac nhan boi Google</disclaimer>
+        <disclaimer lang="zh_CN"/>
+        <disclaimer lang="zh_TW">Google</disclaimer>
+    </extension>
 </addon>
 
 <addon id="plugin.video.f4mTester" version="3.0.0" name="F4mTester" provider-name="Shani">
@@ -1471,7 +1487,7 @@ v1.0.25 (marcelveldt)
   </extension>
 </addon>
 
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.681" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.690" provider-name="gujal">
     <requires>
         <!-- <import addon="xbmc.python" version="3.0.0" /> -->
         <import addon="script.module.six"/>
@@ -2582,7 +2598,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 </extension>
 </addon>
 
-<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.26">
+<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.27">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests"/>
@@ -2800,7 +2816,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 	</extension>
 </addon>
 
-<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.5.8">
+<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.5.9">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="context.infinity"/>
