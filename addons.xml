@@ -2605,6 +2605,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
         <import addon="script.module.myaccounts"/>
         <import addon="script.module.openscrapers"/>
         <import addon="script.module.resolveurl"/>
+        <import addon="script.module.inputstreamhelper"/>
     </requires>
     <extension library="resources/lib/fen.py" point="xbmc.python.pluginsource">
         <provides>video</provides>
