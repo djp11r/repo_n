@@ -31,7 +31,7 @@ Launched in January 2013, it enables users to discover 20 years of rich content 
 </extension>
 </addon>
 
-<addon id="plugin.video.ezra" name="Ezra" provider-name="Ezra Hubbard" version="0.1.3">
+<addon id="plugin.video.ezra" name="Ezra" provider-name="Ezra Hubbard" version="0.1.5b">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests" version="2.19.1"/>
@@ -2598,7 +2598,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 </extension>
 </addon>
 
-<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.29">
+<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.30">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests"/>
