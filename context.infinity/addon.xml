@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="context.infinity" name="Infinity - Global Context Menu Items" provider-name="Infinity" version="1.2.1">
+<addon id="context.infinity" name="Infinity - Global Context Menu Items" provider-name="Infinity" version="1.2.2">
 	<requires>
 		<import addon="script.module.requests" version="2.19.1" />
 	</requires>
@@ -11,6 +11,15 @@
 					!String.IsEmpty(Window(home).Property(context.infinity.settings)) +
 					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
 					String.IsEqual(ListItem.Property(isInfinity_widget),true)
+				</visible>
+			</item>
+			<item library="addtoLibrary.py">
+				<label>[B][COLOR yellowgreen]Infinity[/COLOR][/B] - Add to Library</label>
+				<visible>
+					!String.IsEmpty(Window(home).Property(context.infinity.settings)) +
+					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
+					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
+					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,movie)]
 				</visible>
 			</item>
 			<item library="traktManager.py">

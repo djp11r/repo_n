@@ -132,7 +132,7 @@ You can clone the project and host it in your own server.
 	</extension>
 </addon>
 
-<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.19" provider-name="open">
+<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.20" provider-name="open">
 	<requires>
 		<import addon="script.module.beautifulsoup4"/>
 		<import addon="script.module.requests"/>
@@ -1622,7 +1622,7 @@ v1.0.25 (marcelveldt)
   </extension>
 </addon>
 
-<addon id="script.module.tulip" name="Tulip Library" version="3.0.0" provider-name="Twilight0">
+<addon id="script.module.tulip" name="Tulip Library" version="3.0.1" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
         <import addon="script.module.kodi-six" version="0.0.2"/>
@@ -2462,7 +2462,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 </extension>
 </addon>
 
-<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.34">
+<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.35">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests"/>
@@ -2525,21 +2525,21 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
         </menu>
     </extension>
     <extension point="xbmc.addon.metadata">
-        <reuselanguageinvoker>true</reuselanguageinvoker>
-        <summary lang="en_GB">Mainly used for English and Hindi content.</summary>
-        <description lang="en_GB">This add-on is intended for advanced Kodi users only. Mainly used for Openscrapers account access. Also utilizes Openscrapers for those without a Furk or Easynews(web) account. You must have a debrid service to use this add-on without Furk/Easynews.[CR][CR][B]Please Note: This add-on is NOT an Exodus fork, and as such will behave differently to an Exodus fork.[/B]</description>
-        <platform>all</platform>
-        <disclaimer lang="en_GB">The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
         <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+        <platform>all</platform>
+        <reuselanguageinvoker>true</reuselanguageinvoker>
+        <description lang="en_GB">This add-on is intended for advanced Kodi users only. Mainly used for Openscrapers account access. Also utilizes Openscrapers for those without a Furk or Easynews(web) account. You must have a debrid service to use this add-on without Furk/Easynews.[CR][CR][B]Please Note: This add-on is NOT an Exodus fork, and as such will behave differently to an Exodus fork.[/B]</description>
+        <disclaimer lang="en_GB">The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
+        <summary lang="en_GB">Mainly used for English and Hindi content.</summary>
+        <news>INFO: For latest changes see Changelog within Tools of add-on.</news>
         <assets>
             <icon>icon.png</icon>
             <fanart>fanart.png</fanart>
         </assets>
-        <news>INFO: For latest changes see Changelog within Tools of add-on.</news>
     </extension>
 </addon>
 
-<addon id="context.infinity" name="Infinity - Global Context Menu Items" provider-name="Infinity" version="1.2.1">
+<addon id="context.infinity" name="Infinity - Global Context Menu Items" provider-name="Infinity" version="1.2.2">
 	<requires>
 		<import addon="script.module.requests" version="2.19.1"/>
 	</requires>
@@ -2551,6 +2551,15 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 					!String.IsEmpty(Window(home).Property(context.infinity.settings)) +
 					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
 					String.IsEqual(ListItem.Property(isInfinity_widget),true)
+				</visible>
+			</item>
+			<item library="addtoLibrary.py">
+				<label>[B][COLOR yellowgreen]Infinity[/COLOR][/B] - Add to Library</label>
+				<visible>
+					!String.IsEmpty(Window(home).Property(context.infinity.settings)) +
+					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
+					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
+					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,movie)]
 				</visible>
 			</item>
 			<item library="traktManager.py">
@@ -2681,7 +2690,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 	</extension>
 </addon>
 
-<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.1">
+<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.2">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="context.infinity"/>
