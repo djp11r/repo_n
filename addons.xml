@@ -1369,7 +1369,7 @@ v1.0.25 (marcelveldt)
   </extension>
 </addon>
 
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.720" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.730" provider-name="gujal">
     <requires>
         <!-- <import addon="xbmc.python" version="3.0.0" /> -->
         <import addon="script.module.six"/>
@@ -2464,7 +2464,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 </extension>
 </addon>
 
-<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.38">
+<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.39">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests"/>
@@ -2473,11 +2473,11 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
         <import addon="script.module.resolveurl"/>
         <import addon="script.module.inputstreamhelper"/>
     </requires>
-    <extension point="xbmc.python.pluginsource" library="resources/lib/fen.py">
+    <extension library="resources/lib/fen.py" point="xbmc.python.pluginsource">
         <provides>video</provides>
     </extension>
-    <extension point="xbmc.service" library="resources/lib/service.py"/>
-    <extension point="xbmc.python.module" library="resources/lib/"/>
+    <extension library="resources/lib/service.py" point="xbmc.service"/>
+    <extension library="resources/lib/" point="xbmc.python.module"/>
     <extension point="kodi.context.item">
         <menu id="kodi.core.main">
             <item library="resources/contextmenu/refresh_widgets.py">
@@ -2512,10 +2512,6 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
                 <label>40008</label>
                 <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,tvshow)] + String.IsEqual(ListItem.Property(infinite_widget),true)</visible>
             </item>
-            <item library="resources/contextmenu/play_random.py">
-                <label>40010</label>
-                <visible>[String.IsEqual(ListItem.dbtype,tvshow)] + String.IsEqual(ListItem.Property(infinite_widget),true)</visible>
-            </item>
             <item library="resources/contextmenu/options.py">
                 <label>40007</label>
                 <visible>String.IsEqual(ListItem.Property(infinite_widget),true)</visible>
@@ -2527,12 +2523,12 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
         </menu>
     </extension>
     <extension point="xbmc.addon.metadata">
-        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-        <platform>all</platform>
         <reuselanguageinvoker>true</reuselanguageinvoker>
-        <description lang="en_GB">This add-on is intended for advanced Kodi users only. Mainly used for Openscrapers account access. Also utilizes Openscrapers for those without a Furk or Easynews(web) account. You must have a debrid service to use this add-on without Furk/Easynews.[CR][CR][B]Please Note: This add-on is NOT an Exodus fork, and as such will behave differently to an Exodus fork.[/B]</description>
-        <disclaimer lang="en_GB">The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
         <summary lang="en_GB">Mainly used for English and Hindi content.</summary>
+        <description lang="en_GB">This add-on is intended for advanced Kodi users only. Mainly used for Furk and Easynews(web) account access. An External Scraper package may be used. You must own the content of any media you play through this addon.</description>
+        <platform>all</platform>
+        <disclaimer lang="en_GB">The author of this addon does not host any of the content which is found and has no affiliation with any of the content providers. This addon simply searches websites for content.</disclaimer>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
         <news>INFO: For latest changes see Changelog within Tools of add-on.</news>
         <assets>
             <icon>icon.png</icon>
@@ -2692,7 +2688,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 	</extension>
 </addon>
 
-<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.4">
+<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.5">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="context.infinity"/>
