@@ -132,7 +132,7 @@ You can clone the project and host it in your own server.
 	</extension>
 </addon>
 
-<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.21" provider-name="open">
+<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.22" provider-name="open">
 	<requires>
 		<import addon="script.module.beautifulsoup4"/>
 		<import addon="script.module.requests"/>
@@ -1232,7 +1232,7 @@ v1.0.25 (marcelveldt)
 	</extension>
 </addon>
 
-<addon id="script.module.myaccounts" version="2.0.9" name="My Accounts" provider-name="">
+<addon id="script.module.myaccounts" version="2.1.0" name="My Accounts" provider-name="">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="script.module.requests" version="2.19.1"/>
@@ -1369,7 +1369,7 @@ v1.0.25 (marcelveldt)
   </extension>
 </addon>
 
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.730" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.731" provider-name="gujal">
     <requires>
         <!-- <import addon="xbmc.python" version="3.0.0" /> -->
         <import addon="script.module.six"/>
@@ -2464,7 +2464,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 </extension>
 </addon>
 
-<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.39">
+<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.40">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests"/>
