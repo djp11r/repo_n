@@ -2464,7 +2464,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 </extension>
 </addon>
 
-<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.40">
+<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.41">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests"/>
@@ -2688,7 +2688,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 	</extension>
 </addon>
 
-<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.5">
+<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.51">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="context.infinity"/>
