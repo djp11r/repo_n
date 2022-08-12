@@ -1,4 +1,4 @@
-<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.51">
+<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.5.65">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0" />
 		<import addon="context.infinity" />
@@ -30,12 +30,9 @@
 			<fanart>fanart.png</fanart>
 		</assets>
 		<news>
-[B][COLOR black]Update - v6.5.54 - July 22, 2022[/COLOR][/B]
---[I] Fix for PlayNext with TMDBHelper.[I]
---[I] Split Pre-Emp Settings into TV/Movie[I]
---[I] Adjustments for incorrect values added to cloudflare.[I]
---[I] Added color setting for PlayNext and Still Watching background.[I]
---[I] Adjustments for All-Debrid and Premiumize file type exclusions.[I]
+[B][COLOR black]Update - v6.5.65 - August 12, 2022[/COLOR][/B]
+--[I] Added PlexShare Compatibility.[I]
+--[I] Small bump in version to trigger update with scrapers.[I]
 		</news>
 	</extension>
 </addon>
