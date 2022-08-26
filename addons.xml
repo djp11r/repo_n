@@ -132,7 +132,7 @@ You can clone the project and host it in your own server.
 	</extension>
 </addon>
 
-<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.24" provider-name="open">
+<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.25" provider-name="open">
 	<requires>
 		<import addon="script.module.beautifulsoup4"/>
 		<import addon="script.module.requests"/>
@@ -2464,7 +2464,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 </extension>
 </addon>
 
-<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.44">
+<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.45">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests"/>
@@ -2688,7 +2688,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 	</extension>
 </addon>
 
-<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.5.66">
+<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.5.68">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="context.infinity"/>
@@ -2700,7 +2700,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 		<import addon="plugin.video.youtube" optional="true"/>
 		<import addon="script.module.resolveurl"/>
 	</requires>
-	<extension point="xbmc.python.pluginsource" library="venom.py">
+	<extension point="xbmc.python.pluginsource" library="umbrella.py">
 		<provides>video</provides>
 	</extension>
 	<extension point="xbmc.service" library="service.py" start="startup"/>
@@ -2720,9 +2720,11 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 			<fanart>fanart.png</fanart>
 		</assets>
 		<news>
-[B][COLOR black]Update - v6.5.65 - August 12, 2022[/COLOR][/B]
---[I] Added PlexShare Compatibility.[I]
---[I] Small bump in version to trigger update with scrapers.[I]
+[B][COLOR black]Update - v6.5.68 - August 24, 2022[/COLOR][/B]
+--[I] Video Filters Added.[I]
+--[I] Audio Filters Added.[I]
+--[I] Sorting and Filtering Sources now in a new category in settings.[I]
+--[I] Create Strm Context Menu Option Added.[I]
 		</news>
 	</extension>
 </addon>
