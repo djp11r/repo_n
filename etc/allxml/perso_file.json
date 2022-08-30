@@ -1,7 +1,7 @@
 [{
 "name": "infinite_udata",
 "section": "custom",
-"url": "https://raw.githubusercontent.com/djp11r/repojp/mayb/etc/infinite_udata.zip",
+"url": "https://raw.githubusercontent.com/djp11r/repo_n/mayb/etc/infinite_udata.zip",
 "icon": "http://i.imgur.com/qwcRj6e.png",
 "fanart": "http://i.imgur.com/rd7dgNv.jpg",
 "adult": "no",
@@ -9,7 +9,7 @@
 }, {
 "name": "Custom source xmlfile",
 "section": "custom",
-"url": "https://raw.githubusercontent.com/djp11r/repojp/mayb/etc/sourcexml_custom.zip",
+"url": "https://raw.githubusercontent.com/djp11r/repo_n/mayb/etc/sourcexml_custom.zip",
 "icon": "http://i.imgur.com/qwcRj6e.png",
 "fanart": "http://i.imgur.com/rd7dgNv.jpg",
 "adult": "no",
@@ -17,7 +17,7 @@
 }, {
 "name": "live tv fix for infinite",
 "section": "custom",
-"url": "https://raw.githubusercontent.com/djp11r/repojp/mayb/etc/mod_addons.zip",
+"url": "https://raw.githubusercontent.com/djp11r/repo_n/mayb/etc/mod_addons.zip",
 "icon": "http://i.imgur.com/qwcRj6e.png",
 "fanart": "http://i.imgur.com/rd7dgNv.jpg",
 "adult": "no",
@@ -25,7 +25,7 @@
 }, {
 "name": "Hindi Meta db file",
 "section": "custom",
-"url": "https://raw.githubusercontent.com/djp11r/repojp/mayb/etc/allxml/hindi_metacache.db",
+"url": "https://raw.githubusercontent.com/djp11r/repo_n/mayb/etc/allxml/hindi_metacache.db",
 "icon": "http://i.imgur.com/qwcRj6e.png",
 "fanart": "http://i.imgur.com/rd7dgNv.jpg",
 "adult": "no",
@@ -33,7 +33,7 @@
 }, {
 "name": "user setting for fen",
 "section": "custom",
-"url": "https://raw.githubusercontent.com/djp11r/repojp/mayb/etc/fen_ud.zip",
+"url": "https://raw.githubusercontent.com/djp11r/repo_n/mayb/etc/fen_ud.zip",
 "icon": "http://i.imgur.com/qwcRj6e.png",
 "fanart": "http://i.imgur.com/rd7dgNv.jpg",
 "adult": "no",
@@ -41,7 +41,7 @@
 }, {
 "name": "Custom user setting file",
 "section": "custom",
-"url": "https://raw.githubusercontent.com/djp11r/repojp/mayb/etc/custom_userdata.zip",
+"url": "https://raw.githubusercontent.com/djp11r/repo_n/mayb/etc/custom_userdata.zip",
 "icon": "http://i.imgur.com/qwcRj6e.png",
 "fanart": "http://i.imgur.com/rd7dgNv.jpg",
 "adult": "no",
@@ -49,7 +49,7 @@
 }, {
 "name": "All repo files",
 "section": "custom",
-"url": "https://raw.githubusercontent.com/djp11r/repojp/mayb/etc/all_repo.zip",
+"url": "https://raw.githubusercontent.com/djp11r/repo_n/mayb/etc/all_repo.zip",
 "icon": "http://i.imgur.com/qwcRj6e.png",
 "fanart": "http://i.imgur.com/rd7dgNv.jpg",
 "adult": "no",
