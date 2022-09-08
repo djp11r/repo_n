@@ -1,4 +1,4 @@
-<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.45">
+<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.46">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
         <import addon="script.module.requests" />
@@ -67,6 +67,7 @@
         <assets>
             <icon>icon.png</icon>
             <fanart>fanart.png</fanart>
+            <clearlogo>resources/media/clearlogo.png</clearlogo>
         </assets>
     </extension>
 </addon>

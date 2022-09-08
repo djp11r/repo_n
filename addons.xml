@@ -132,7 +132,7 @@ You can clone the project and host it in your own server.
 	</extension>
 </addon>
 
-<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.26" provider-name="open">
+<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.27" provider-name="open">
 	<requires>
 		<import addon="script.module.beautifulsoup4"/>
 		<import addon="script.module.requests"/>
@@ -1369,7 +1369,7 @@ v1.0.25 (marcelveldt)
   </extension>
 </addon>
 
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.750" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.751" provider-name="gujal">
     <requires>
         <!-- <import addon="xbmc.python" version="3.0.0" /> -->
         <import addon="script.module.six"/>
@@ -2464,7 +2464,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 </extension>
 </addon>
 
-<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.45">
+<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.46">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests"/>
@@ -2533,6 +2533,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
         <assets>
             <icon>icon.png</icon>
             <fanart>fanart.png</fanart>
+            <clearlogo>resources/media/clearlogo.png</clearlogo>
         </assets>
     </extension>
 </addon>
@@ -2682,8 +2683,8 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 			<screenshot/>
 		</assets>
 		<news>
-[B][COLOR red]Update - v1.2.1 - Nov. 04, 2021[/COLOR][/B]
-[COLOR yellow]--[/COLOR][I] The "Rescrape Item" context menu now has a pop-up select method of 4 possible choices to rescrape.  You can set a preferred default action in the settings to bypass the select dialog pop up.[/I]
+[B][COLOR red]Update - v1.2.7 - Sept 1st, 2022[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Changed to new settings format.[/I]
 		</news>
 	</extension>
 </addon>
@@ -2720,11 +2721,9 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 			<fanart>fanart.png</fanart>
 		</assets>
 		<news>
-[B][COLOR black]Update - v6.5.68 - August 24, 2022[/COLOR][/B]
---[I] Video Filters Added.[I]
---[I] Audio Filters Added.[I]
---[I] Sorting and Filtering Sources now in a new category in settings.[I]
---[I] Create Strm Context Menu Option Added.[I]
+[B][COLOR black]Update - v6.5.69 - August 26, 2022[/COLOR][/B]
+--[I] Nice[I]
+--[I] Settings format adjusted for latest kodi requirements.[I]
 		</news>
 	</extension>
 </addon>
