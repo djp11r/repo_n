@@ -290,6 +290,11 @@
         "name": "Dharmendra (524)",
         "mode": "vod_tv_geetm"
     }, {
+        "url": "https://www.hindigeetmala.net/actor/manoj_kumar.php",
+        "image": "https://www.hindigeetmala.net/images/actor_160x120/manoj_kumar.jpg",
+        "name": "Manoj Kumar (138)",
+        "mode": "vod_tv_geetm"
+    }, {
         "url": "https://www.hindigeetmala.net/actor/shahrukh_khan.php",
         "image": "https://www.hindigeetmala.net/images/actor_160x120/shahrukh_khan.jpg",
         "name": "Shahrukh Khan (385)",
@@ -781,22 +786,22 @@
         "mode": "vod_tv_geetm"
     }, {
         "url": "https://www.hindigeetmala.net/search.php?type=1&value=",
-        "image": "special://home/addons/plugin.video.infinite/resources/lib/indexers/hindi/h_icon/search-icon.png",
+        "image": "https://i.imgur.com/6C6mowF.png",
         "name": "Search by Singer",
         "mode": "vod_tv_geetm"
     }, {
         "url": "https://www.hindigeetmala.net/search.php?type=2&value=",
-        "image": "special://home/addons/plugin.video.infinite/resources/lib/indexers/hindi/h_icon/search-icon.png",
+        "image": "https://i.imgur.com/6C6mowF.png",
         "name": "Search by Composer",
         "mode": "vod_tv_geetm"
     }, {
         "url": "https://www.hindigeetmala.net/search.php?type=3&value=",
-        "image": "special://home/addons/plugin.video.infinite/resources/lib/indexers/hindi/h_icon/search-icon.png",
+        "image": "https://i.imgur.com/xHd1orL.png",
         "name": "Search by Movie",
         "mode": "vod_tv_geetm"
     }, {
         "url": "https://www.hindigeetmala.net/search.php?type=8&value=",
-        "image": "special://home/addons/plugin.video.infinite/resources/lib/indexers/hindi/h_icon/search-icon.png",
+        "image": "https://i.imgur.com/BW3UonZ.png",
         "name": "Search by Song",
         "mode": "vod_tv_geetm"
     }
