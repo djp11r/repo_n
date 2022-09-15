@@ -132,7 +132,7 @@ You can clone the project and host it in your own server.
 	</extension>
 </addon>
 
-<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.27" provider-name="open">
+<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.28" provider-name="open">
 	<requires>
 		<import addon="script.module.beautifulsoup4"/>
 		<import addon="script.module.requests"/>
@@ -882,20 +882,20 @@ v1.1.0 (2020-01-17)
     </extension>
 </addon>
 
-<addon id="script.module.autocompletion" name="AutoCompletion library" version="2.0.3" provider-name="Philipp Temminghoff (phil65),sualfred">
+<addon id="script.module.autocompletion" name="AutoCompletion library" version="2.0.5" provider-name="Philipp Temminghoff (phil65), sualfred, bbaronSVK, finkleandeinhorn">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests" version="2.9.1"/>
     </requires>
     <extension point="xbmc.python.module" library="lib"/>
     <extension point="xbmc.addon.metadata">
-        <summary lang="en_GB">Module providing some AutoCompletion functions</summary>
-        <description lang="en_GB">Module providing some AutoCompletion functions</description>
+        <summary lang="en">Module providing some AutoCompletion functions</summary>
+        <description lang="en">Module providing some AutoCompletion functions</description>
         <platform>all</platform>
         <license>GPL-2.0-or-later</license>
-        <source>https://github.com/sualfred/script.module.autocompletion</source>
+        <source>https://github.com/finkleandeinhorn/script.module.autocompletion</source>
         <assets>
-            <icon>resources/icon.png</icon>
+            <icon>icon.png</icon>
         </assets>
     </extension>
 </addon>
@@ -1369,7 +1369,7 @@ v1.0.25 (marcelveldt)
   </extension>
 </addon>
 
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.760" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.761" provider-name="gujal">
     <requires>
         <!-- <import addon="xbmc.python" version="3.0.0" /> -->
         <import addon="script.module.six"/>
@@ -2433,7 +2433,7 @@ Other languages with a great number of subtitles are: Danish, French, Swedish, D
     </extension>
 </addon>
 
-<addon id="plugin.video.deccandelight" version="2.0.25" name="Deccan Delight" provider-name="gujal">
+<addon id="plugin.video.deccandelight" version="2.0.26" name="Deccan Delight" provider-name="gujal">
 <requires>
 	<import addon="script.module.six"/>
 	<import addon="script.module.kodi-six"/>
@@ -2464,7 +2464,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 </extension>
 </addon>
 
-<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.47">
+<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.48">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests"/>
