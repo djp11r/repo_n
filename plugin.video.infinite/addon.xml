@@ -1,4 +1,4 @@
-<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.48">
+<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.49">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
         <import addon="script.module.requests" />
@@ -30,22 +30,6 @@
                 <label>40009</label>
                 <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,episode)] + String.IsEqual(ListItem.Property(infinite_widget),true) + String.IsEqual(ListItem.Property(infinite_in_progress),true)</visible>
             </item>
-            <item library="resources/contextmenu/browse.py">
-                <label>40002</label>
-                <visible>String.IsEqual(ListItem.dbtype,episode) + String.IsEqual(ListItem.Property(infinite_widget),true)</visible>
-            </item>
-            <item library="resources/contextmenu/browse_season.py">
-                <label>40011</label>
-                <visible>String.IsEqual(ListItem.dbtype,episode) + String.IsEqual(ListItem.Property(infinite_widget),true)</visible>
-            </item>
-            <item library="resources/contextmenu/trakt_manager.py">
-                <label>40005</label>
-                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,tvshow)] + String.IsEqual(ListItem.Property(infinite_widget),true)</visible>
-            </item>
-            <item library="resources/contextmenu/favorites_manager.py">
-                <label>40008</label>
-                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,tvshow)] + String.IsEqual(ListItem.Property(infinite_widget),true)</visible>
-            </item>
             <item library="resources/contextmenu/options.py">
                 <label>40007</label>
                 <visible>String.IsEqual(ListItem.Property(infinite_widget),true)</visible>
@@ -65,8 +49,8 @@
         <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
         <news>INFO: For latest changes see Changelog within Tools of add-on.</news>
         <assets>
-            <icon>icon.png</icon>
-            <fanart>fanart.png</fanart>
+            <icon>resources/media/icon.png</icon>
+            <fanart>resources/media/fanart.png</fanart>
             <clearlogo>resources/media/clearlogo.png</clearlogo>
         </assets>
     </extension>
