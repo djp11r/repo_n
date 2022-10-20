@@ -134,18 +134,18 @@
 		<description lang="en_GB">Adds Global Contextual Menu Items for Infinity menu items throughout Kodi</description>
 		<platform>all</platform>
 		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-		<forum />
+		<forum></forum>
 		<website />
 		<source />
-		<disclaimer lang="en_GB" />
+		<disclaimer lang="en_GB"></disclaimer>
 		<assets>
 			<icon>icon.png</icon>
 			<fanart>fanart.png</fanart>
-			<screenshot />
+			<screenshot></screenshot>
 		</assets>
 		<news>
-[B][COLOR red]Update - v1.2.1 - Nov. 04, 2021[/COLOR][/B]
-[COLOR yellow]--[/COLOR][I] The "Rescrape Item" context menu now has a pop-up select method of 4 possible choices to rescrape.  You can set a preferred default action in the settings to bypass the select dialog pop up.[/I]
+[B][COLOR red]Update - v1.2.7 - Sept 1st, 2022[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Changed to new settings format.[/I]
 		</news>
 	</extension>
 </addon>

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.jptools" name="JP Tools" provider-name="People" version="1.50">
+<addon id="script.jptools" name="JP Tools" provider-name="People" version="1.51">
     <requires>
         <import addon="script.module.requests" />
         <import addon="script.module.beautifulsoup4" />
+        <import addon="script.module.youtube.dl" />
     </requires>
     <extension library="resources/lib/script_entry.py" point="xbmc.python.pluginsource">
         <provides>executable</provides>
