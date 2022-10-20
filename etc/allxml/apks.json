@@ -1,44 +1,44 @@
 [{
-        "name": "DNS66 Ad blocker",
-        "version": "26",
-        "url": "https://raw.githubusercontent.com/djp11r/repojp/mayb/etc/apps/org.jak_linux.dns66_26.apk",
-        "icon": "https://i.imgur.com/UK1OH3m.jpg",
-        "fanart": "",
-        "description": "DNS66 Ad blocker"
-    }, {
-        "name": "LiveNetTV",
-        "version": "1.1",
-        "url": "https://raw.githubusercontent.com/djp11r/repojp/mayb/etc/apps/LiveNetTV_Amazon_1.1_Update.apk",
-        "icon": "https://i.imgur.com/reNaF1P.png",
-        "fanart": "",
-        "description": "Hindi Live Net TV apk"
-    }, {
-        "name": "MX Player Pro",
-        "version": "1.36.11",
-        "url": "https://raw.githubusercontent.com/djp11r/repojp/mayb/etc/apps/MX-Player-Pro-1_36_11-Apkmos_com_280821154438.apk",
-        "icon": "https://i.imgur.com/aDWmiRh.png",
-        "fanart": "",
-        "description": "MX Player Pro"
-    }, {
-        "name": "MX Player",
-        "version": "1.8.10",
-        "url": "https://raw.githubusercontent.com/djp11r/repojp/mayb/etc/apps/MX%20PLAYER%20TV%20V1.8.10G%20%5BFIRESTICK%20%26%20ANDROID%20TV%5D%20%5BAD-FREE%5D_210821022506.apk",
-        "icon": "https://i.imgur.com/236FHbg.png",
-        "fanart": "",
-        "description": "MX Player"
-    }, {
-        "name": "ES Pro",
-        "version": "1.1.4.1",
-        "url": "https://raw.githubusercontent.com/djp11r/repojp/mayb/etc/apps/ES%20Pro%20RB-Pro%201.1.4.1.apk",
-        "icon": "https://i.imgur.com/EbdIgrG.png",
-        "fanart": "",
-        "description": "ES Pro"
-    }, {
-        "name": "Apps2Fire",
-        "version": "3.3.5",
-        "url": "https://raw.githubusercontent.com/djp11r/repojp/mayb/etc/apps/Apps2Fire_v3.3.5_-_Mod_%5BSap%5D_020320220411.apk",
-        "icon": "https://i.imgur.com/AkFsqqn.png",
-        "fanart": "",
-        "description": "Apps2Fire"
-    }
+"name": "DNS66 Ad blocker",
+"version": "26",
+"url": "https://raw.githubusercontent.com/djp11r/repojp/mayb/etc/apps/org.jak_linux.dns66_26.apk",
+"icon": "https://i.imgur.com/UK1OH3m.jpg",
+"fanart": "",
+"description": "DNS66 Ad blocker"
+}, {
+"name": "LiveNetTV",
+"version": "1.1",
+"url": "https://raw.githubusercontent.com/djp11r/repojp/mayb/etc/apps/LiveNetTV_Amazon_1.1_Update.apk",
+"icon": "https://i.imgur.com/reNaF1P.png",
+"fanart": "",
+"description": "Hindi Live Net TV apk"
+}, {
+"name": "MX Player Pro",
+"version": "1.36.11",
+"url": "https://raw.githubusercontent.com/djp11r/repojp/mayb/etc/apps/MX-Player-Pro-1_36_11-Apkmos_com_280821154438.apk",
+"icon": "https://i.imgur.com/aDWmiRh.png",
+"fanart": "",
+"description": "MX Player Pro"
+}, {
+"name": "MX Player",
+"version": "1.8.10",
+"url": "https://raw.githubusercontent.com/djp11r/repojp/mayb/etc/apps/MX%20PLAYER%20TV%20V1.8.10G%20%5BFIRESTICK%20%26%20ANDROID%20TV%5D%20%5BAD-FREE%5D_210821022506.apk",
+"icon": "https://i.imgur.com/236FHbg.png",
+"fanart": "",
+"description": "MX Player"
+}, {
+"name": "ES Pro",
+"version": "1.1.4.1",
+"url": "https://raw.githubusercontent.com/djp11r/repojp/mayb/etc/apps/ES%20Pro%20RB-Pro%201.1.4.1.apk",
+"icon": "https://i.imgur.com/EbdIgrG.png",
+"fanart": "",
+"description": "ES Pro"
+}, {
+"name": "Apps2Fire",
+"version": "3.3.5",
+"url": "https://raw.githubusercontent.com/djp11r/repojp/mayb/etc/apps/Apps2Fire_v3.3.5_-_Mod_%5BSap%5D_020320220411.apk",
+"icon": "https://i.imgur.com/AkFsqqn.png",
+"fanart": "",
+"description": "Apps2Fire"
+}
 ]
