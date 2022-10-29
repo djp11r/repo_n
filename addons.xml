@@ -2594,7 +2594,7 @@ Other languages with a great number of subtitles are: Danish, French, Swedish, D
     </extension>
 </addon>
 
-<addon id="plugin.video.deccandelight" version="2.0.29" name="Deccan Delight" provider-name="gujal">
+<addon id="plugin.video.deccandelight" version="2.0.30" name="Deccan Delight" provider-name="gujal">
 <requires>
 	<import addon="script.module.six"/>
 	<import addon="script.module.kodi-six"/>
@@ -2626,7 +2626,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 </extension>
 </addon>
 
-<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.50">
+<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.51">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests"/>
