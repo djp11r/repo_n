@@ -1,4 +1,4 @@
-<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.5.75">
+<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.5.76">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0" />
 		<import addon="context.infinity" />
@@ -18,21 +18,20 @@
 	<extension point="xbmc.addon.metadata">
 		<reuselanguageinvoker>true</reuselanguageinvoker>
 		<summary lang="en">Infinity We do not host any of the contents streamed</summary>
-		<description lang="en">[B]Infinity[/B][CR] This addon does not form part of the Kodi Media Centre. Please do not seek assistance with this addon from any of the Official Kodi Support Channels.[CR]The author does not host any of the content in this addon and takes no responsibility for content found</description>
+		<description lang="en">[B]Infinity[/B][CR] This addon does not form part of the Kodi Media Centre. Please do not seek assistance with this addon from any of the Official Kodi Support Channels.[CR]The author does not host any of the content in this addon and takes no responsibility for content found. We do not know anything about a lab under Raccoon City.</description>
 		<platform>all</platform>
 		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
 		<forum />
 		<website></website>
 		<source></source>
-		<disclaimer lang="en">The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
+		<disclaimer lang="en">The author of this addon does not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
 		<assets>
 			<icon>icon.png</icon>
 			<fanart>fanart.png</fanart>
 		</assets>
 		<news>
-[B][COLOR black]Update - v6.5.69 - August 26, 2022[/COLOR][/B]
---[I] Nice[I]
---[I] Settings format adjusted for latest kodi requirements.[I]
+[B][COLOR black]Update - v6.5.80 - Nov 6th, 2022[/COLOR][/B]
+--[BUG FIX][I] Fix for popup after video ends.[I]
 		</news>
 	</extension>
 </addon>
