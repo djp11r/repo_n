@@ -2594,7 +2594,7 @@ Other languages with a great number of subtitles are: Danish, French, Swedish, D
     </extension>
 </addon>
 
-<addon id="plugin.video.deccandelight" version="2.0.30" name="Deccan Delight" provider-name="gujal">
+<addon id="plugin.video.deccandelight" version="2.0.31" name="Deccan Delight" provider-name="gujal">
 <requires>
 	<import addon="script.module.six"/>
 	<import addon="script.module.kodi-six"/>
@@ -2626,7 +2626,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 </extension>
 </addon>
 
-<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.52">
+<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.53">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests"/>
@@ -2835,7 +2835,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 	</extension>
 </addon>
 
-<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.5.76">
+<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.5.85">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="context.infinity"/>
@@ -2867,8 +2867,11 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 			<fanart>fanart.png</fanart>
 		</assets>
 		<news>
-[B][COLOR black]Update - v6.5.80 - Nov 6th, 2022[/COLOR][/B]
---[BUG FIX][I] Fix for popup after video ends.[I]
+[B][COLOR black]Update - v6.5.85 - Nov 14th, 2022[/COLOR][/B]
+--[ENHANCEMENT][I] Changed amount of results pulled to generate based on list to 20 for tv and movies.[I]
+--[ENHANCEMENT][I] Added similar to lists for tv and movies.[I]
+--[FIX][I] Adjusted URL for similar shows.[I]
+--[FIX][I] Added some checks for real-debrid cloud files.[I]
 		</news>
 	</extension>
 </addon>
