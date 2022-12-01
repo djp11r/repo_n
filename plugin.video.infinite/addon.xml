@@ -1,4 +1,4 @@
-<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.53">
+<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.55">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
         <import addon="script.module.requests" />
@@ -16,27 +16,27 @@
         <menu id="kodi.core.main">
             <item library="resources/contextmenu/refresh_widgets.py">
                 <label>40001</label>
-                <visible>String.IsEqual(ListItem.Property(infinite_widget),true)</visible>
+                <visible>String.IsEqual(ListItem.Property(infinite.widget),true)</visible>
             </item>
             <item library="resources/contextmenu/mark_watched.py">
                 <label>40003</label>
-                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,episode)] + String.IsEqual(ListItem.Property(infinite_widget),true) + String.IsEqual(ListItem.Property(infinite_playcount),0)</visible>
+                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,episode)] + String.IsEqual(ListItem.Property(infinite.widget),true) + String.IsEqual(ListItem.Property(infinite.playcount),0)</visible>
             </item>
             <item library="resources/contextmenu/mark_unwatched.py">
                 <label>40004</label>
-                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,episode)] + String.IsEqual(ListItem.Property(infinite_widget),true) + String.IsEqual(ListItem.Property(infinite_playcount),1)</visible>
+                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,episode)] + String.IsEqual(ListItem.Property(infinite.widget),true) + String.IsEqual(ListItem.Property(infinite.playcount),1)</visible>
             </item>
             <item library="resources/contextmenu/clear_progress.py">
                 <label>40009</label>
-                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,episode)] + String.IsEqual(ListItem.Property(infinite_widget),true) + String.IsEqual(ListItem.Property(infinite_in_progress),true)</visible>
+                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,episode)] + String.IsEqual(ListItem.Property(infinite.widget),true) + String.IsEqual(ListItem.Property(infinite.in_progress),true)</visible>
             </item>
             <item library="resources/contextmenu/options.py">
                 <label>40007</label>
-                <visible>String.IsEqual(ListItem.Property(infinite_widget),true)</visible>
+                <visible>String.IsEqual(ListItem.Property(infinite.widget),true)</visible>
             </item>
             <item library="resources/contextmenu/extras.py">
                 <label>40006</label>
-                <visible>String.IsEqual(ListItem.Property(infinite_widget),true)</visible>
+                <visible>String.IsEqual(ListItem.Property(infinite.widget),true)</visible>
             </item>
         </menu>
     </extension>
@@ -47,11 +47,11 @@
         <platform>all</platform>
         <disclaimer lang="en_GB">The author of this addon does not host any of the content which is found and has no affiliation with any of the content providers. This addon simply searches websites for content.</disclaimer>
         <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-        <news>INFO: For latest changes see Changelog within Tools of add-on.</news>
         <assets>
             <icon>resources/media/icon.png</icon>
             <fanart>resources/media/fanart.png</fanart>
             <clearlogo>resources/media/clearlogo.png</clearlogo>
         </assets>
+        <news>INFO: For latest changes see Changelog within Tools of add-on.</news>
     </extension>
 </addon>

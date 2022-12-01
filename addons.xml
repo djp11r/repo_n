@@ -785,6 +785,33 @@ Adds 'record' button to Video OSD while youtube videos are playing.</description
     </extension>
 </addon>
 
+<addon id="plugin.program.autocompletion" name="AutoCompletion for virtual keyboard" version="2.1.1" provider-name="Philipp Temminghoff (phil65), sualfred, xulek, finkleandeinhorn">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.autocompletion" version="2.0.3"/>
+    </requires>
+    <extension point="xbmc.python.script" library="default.py">
+        <provides>executable</provides>
+    </extension>
+    <extension point="xbmc.python.pluginsource" library="plugin.py"/>
+
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en_GB">AutoCompletion for the virtual keyboard (needs skin support)</summary>
+        <description lang="en_GB">AutoCompletion for the virtual keyboard (needs skin support)</description>
+        <summary lang="es_ES">Autocompletar para el teclado virtual (necesita soporte de skin)</summary>
+        <description lang="es_ES">Autocompletar para el teclado virtual (necesita soporte de skin)</description>
+        <platform>all</platform>
+        <license>GPL-2.0-or-later</license>
+        <source>https://github.com/finkleandeinhorn/plugin.program.autocompletion</source>
+        <assets>
+            <icon>resources/icon.png</icon>
+            <screenshot>resources/screenshot-01.jpg</screenshot>
+            <screenshot>resources/screenshot-02.jpg</screenshot>
+            <screenshot>resources/screenshot-03.jpg</screenshot>
+        </assets>
+    </extension>
+</addon>
+
 <addon id="plugin.video.f4mTester" version="3.0.0" name="F4mTester" provider-name="Shani">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
@@ -1097,7 +1124,7 @@ Adds 'record' button to Video OSD while youtube videos are playing.</description
   </extension>
 </addon>
 
-<addon id="script.module.certifi" name="certifi" version="2022.5.18+matrix.1" provider-name="Certifi">
+<addon id="script.module.certifi" name="certifi" version="2022.9.24" provider-name="Certifi">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
   </requires>
@@ -1175,7 +1202,7 @@ Adds 'record' button to Video OSD while youtube videos are playing.</description
   </extension>
 </addon>
 
-<addon id="script.module.idna" name="idna" version="3.3.0+matrix.1" provider-name="Kim Davies">
+<addon id="script.module.idna" name="idna" version="3.4.0" provider-name="Kim Davies">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
   </requires>
@@ -1530,7 +1557,7 @@ v1.0.25 (marcelveldt)
   </extension>
 </addon>
 
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.840" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.850" provider-name="gujal">
     <requires>
         <!-- <import addon="xbmc.python" version="3.0.0" /> -->
         <import addon="script.module.six"/>
@@ -1861,7 +1888,7 @@ v1.0.25 (marcelveldt)
 	</extension>
 </addon>
 
-<addon id="script.module.urllib3" name="urllib3" version="1.26.9+matrix.1" provider-name="urllib3">
+<addon id="script.module.urllib3" name="urllib3" version="1.26.13+matrix.1" provider-name="urllib3">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
   </requires>
@@ -2594,7 +2621,7 @@ Other languages with a great number of subtitles are: Danish, French, Swedish, D
     </extension>
 </addon>
 
-<addon id="plugin.video.deccandelight" version="2.0.31" name="Deccan Delight" provider-name="gujal">
+<addon id="plugin.video.deccandelight" version="2.0.32" name="Deccan Delight" provider-name="gujal">
 <requires>
 	<import addon="script.module.six"/>
 	<import addon="script.module.kodi-six"/>
@@ -2626,7 +2653,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 </extension>
 </addon>
 
-<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.53">
+<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.55">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests"/>
@@ -2644,27 +2671,27 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
         <menu id="kodi.core.main">
             <item library="resources/contextmenu/refresh_widgets.py">
                 <label>40001</label>
-                <visible>String.IsEqual(ListItem.Property(infinite_widget),true)</visible>
+                <visible>String.IsEqual(ListItem.Property(infinite.widget),true)</visible>
             </item>
             <item library="resources/contextmenu/mark_watched.py">
                 <label>40003</label>
-                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,episode)] + String.IsEqual(ListItem.Property(infinite_widget),true) + String.IsEqual(ListItem.Property(infinite_playcount),0)</visible>
+                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,episode)] + String.IsEqual(ListItem.Property(infinite.widget),true) + String.IsEqual(ListItem.Property(infinite.playcount),0)</visible>
             </item>
             <item library="resources/contextmenu/mark_unwatched.py">
                 <label>40004</label>
-                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,episode)] + String.IsEqual(ListItem.Property(infinite_widget),true) + String.IsEqual(ListItem.Property(infinite_playcount),1)</visible>
+                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,episode)] + String.IsEqual(ListItem.Property(infinite.widget),true) + String.IsEqual(ListItem.Property(infinite.playcount),1)</visible>
             </item>
             <item library="resources/contextmenu/clear_progress.py">
                 <label>40009</label>
-                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,episode)] + String.IsEqual(ListItem.Property(infinite_widget),true) + String.IsEqual(ListItem.Property(infinite_in_progress),true)</visible>
+                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,episode)] + String.IsEqual(ListItem.Property(infinite.widget),true) + String.IsEqual(ListItem.Property(infinite.in_progress),true)</visible>
             </item>
             <item library="resources/contextmenu/options.py">
                 <label>40007</label>
-                <visible>String.IsEqual(ListItem.Property(infinite_widget),true)</visible>
+                <visible>String.IsEqual(ListItem.Property(infinite.widget),true)</visible>
             </item>
             <item library="resources/contextmenu/extras.py">
                 <label>40006</label>
-                <visible>String.IsEqual(ListItem.Property(infinite_widget),true)</visible>
+                <visible>String.IsEqual(ListItem.Property(infinite.widget),true)</visible>
             </item>
         </menu>
     </extension>
@@ -2675,12 +2702,12 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
         <platform>all</platform>
         <disclaimer lang="en_GB">The author of this addon does not host any of the content which is found and has no affiliation with any of the content providers. This addon simply searches websites for content.</disclaimer>
         <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-        <news>INFO: For latest changes see Changelog within Tools of add-on.</news>
         <assets>
             <icon>resources/media/icon.png</icon>
             <fanart>resources/media/fanart.png</fanart>
             <clearlogo>resources/media/clearlogo.png</clearlogo>
         </assets>
+        <news>INFO: For latest changes see Changelog within Tools of add-on.</news>
     </extension>
 </addon>
 
@@ -2835,7 +2862,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 	</extension>
 </addon>
 
-<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.5.85">
+<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.5.86">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="context.infinity"/>
@@ -2867,11 +2894,23 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 			<fanart>fanart.png</fanart>
 		</assets>
 		<news>
-[B][COLOR black]Update - v6.5.85 - Nov 14th, 2022[/COLOR][/B]
---[ENHANCEMENT][I] Changed amount of results pulled to generate based on list to 20 for tv and movies.[I]
---[ENHANCEMENT][I] Added similar to lists for tv and movies.[I]
---[FIX][I] Adjusted URL for similar shows.[I]
---[FIX][I] Added some checks for real-debrid cloud files.[I]
+[B][COLOR black]Update - v6.5.90-94 - Dec 1st, 2022[/COLOR][/B]
+--[FIX][I] Removed entire Sync Trakt Collection section from settings.[I]
+--[FIX][I] Adjusted Trakt Sync for devices that do not have "System.InternetState".[I]
+--[FIX][I] Adjustment for trakt watchlist and collection imports.[I]
+--[FIX][I] Fixed typo causing tables to not be dropped correctly when updating lists.[I]
+--[FIX][I] Changed name for recently released TMDB list. Small adjustment for logging.[I]
+--[FIX][I] Adjustment to watchlist activity for sync.[I]
+--[FIX][I] Additional logging for watchlist sync.[I]
+--[FIX][I] Trakt revoke now deletes Trakt Cache.[I]
+--[Enhancement][I] Movies and TV Source Select options broken into different settings.[I]
+--[ENHANCEMENT][I] Add collection to list imports.[I]
+--[ENHANCEMENT][I] Made manual import now and automatic import different settings.[I]
+--[ENHANCEMENT][I] Added recently released on media formats for lists.[I]
+--[ENHANCEMENT][I] Made changes to version comparison to allow for test version detection.[I]
+--[ENHANCEMENT][I] Movies and TV Source Select options broken into different settings.[I]
+--[INFORMATION][I] All list importing settings have been moved to the "Library" section of settings.[I]
+--[CREDIT][I] Thanks to user "-fr1sty" for reporting internetstate and library import issues.
 		</news>
 	</extension>
 </addon>
@@ -2928,7 +2967,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 	</extension>
 </addon>
 
-<addon id="script.jptools" name="JP Tools" provider-name="People" version="1.52">
+<addon id="script.jptools" name="JP Tools" provider-name="People" version="1.53">
     <requires>
         <import addon="script.module.requests"/>
         <import addon="script.module.beautifulsoup4"/>

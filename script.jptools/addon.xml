@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.jptools" name="JP Tools" provider-name="People" version="1.52">
+<addon id="script.jptools" name="JP Tools" provider-name="People" version="1.53">
     <requires>
         <import addon="script.module.requests" />
         <import addon="script.module.beautifulsoup4" />
