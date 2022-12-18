@@ -526,7 +526,7 @@ v1.1.0 (2020-01-17)
     </extension>
 </addon>
 
-<addon id="plugin.video.youtube" name="YouTube" version="6.8.20+matrix.1" provider-name="anxdpanic, bromix">
+<addon id="plugin.video.youtube" name="YouTube" version="6.8.23+matrix.1" provider-name="anxdpanic, bromix">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
     <import addon="script.module.six" version="1.11.0"/>
@@ -540,10 +540,7 @@ v1.1.0 (2020-01-17)
   <extension point="xbmc.python.module" library="resources/lib/"/>
   <extension point="xbmc.addon.metadata">
     <news>
-[fix] /uri2addon/ endpoint for playback of youtube.com urls
-[fix] Don't assume addon is installed in home directory |contrib: jfly|
-[fix] Subtitle language names
-[lang] translation updates from Weblate
+[revert] subscription groups/tags - causing breaking issues
         </news>
     <assets>
       <icon>icon.png</icon>
@@ -785,10 +782,10 @@ Adds 'record' button to Video OSD while youtube videos are playing.</description
     </extension>
 </addon>
 
-<addon id="plugin.program.autocompletion" name="AutoCompletion for virtual keyboard" version="2.1.1" provider-name="Philipp Temminghoff (phil65), sualfred, xulek, finkleandeinhorn">
+<addon id="plugin.program.autocompletion" name="AutoCompletion for virtual keyboard" version="2.1.2" provider-name="Philipp Temminghoff (phil65), sualfred, xulek, finkleandeinhorn">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
-        <import addon="script.module.autocompletion" version="2.0.3"/>
+        <import addon="script.module.autocompletion" version="2.0.5"/>
     </requires>
     <extension point="xbmc.python.script" library="default.py">
         <provides>executable</provides>
@@ -1557,7 +1554,7 @@ v1.0.25 (marcelveldt)
   </extension>
 </addon>
 
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.850" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.860" provider-name="gujal">
     <requires>
         <!-- <import addon="xbmc.python" version="3.0.0" /> -->
         <import addon="script.module.six"/>
@@ -1810,7 +1807,7 @@ v1.0.25 (marcelveldt)
   </extension>
 </addon>
 
-<addon id="script.module.tulip" name="Tulip Library" version="3.0.4" provider-name="Twilight0">
+<addon id="script.module.tulip" name="Tulip Library" version="3.1.0" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
         <import addon="script.module.kodi-six" version="0.0.2"/>
@@ -1821,27 +1818,19 @@ v1.0.25 (marcelveldt)
         <summary lang="en">Tulip library with helper functions for Kodi and its forks</summary>
         <description lang="en">Tulip library combines the best elements from Lambda's "lamlib" and tknorris's shared modules. Also includes various enhancements, newer and improved functions and Python 3 compatibility, though the latter is largely untested. Can also be as standalone utils</description>
         <platform>all</platform>
-        <reuselanguageinvoker>false</reuselanguageinvoker>
         <license>GPL-3.0-only</license>
         <source>https://github.com/Twilight0/script.module.tulip</source>
-        <news>[B]3.0.X[/B]
+        <news>[B]3.1.X[/B]
+- Update user agent strings
+- Added a few more utilities
+
+[B]3.0.X[/B]
 - Utilize certifi for net module
 - Add ability to save locally unencrypted m3u8 ts video content
 - Update user agent strings
 - Change the way kodi version is obtained
 - Add limit and username/password auth to net module
-- Convert url bytes object to string (python 3 only)
-
-[B]2.9.X[/B]
-- Net module taken from ResolveURL and adapted
-  &gt; Deprecate client.request function
-- Add futures for compatibility
-- Utilize futures on youtube module (default maximum workers 5)
-- Remove caching from library itself
-- Update user agent strings
-- Tweaks in compat module
-- Fixes in the bookmarking functions
-- Various other compatibility fixes</news>
+- Convert url bytes object to string (python 3 only)</news>
         <assets>
             <icon>icon.png</icon>
             <fanart>fanart.jpg</fanart>
@@ -2653,7 +2642,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 </extension>
 </addon>
 
-<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.55">
+<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.56">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests"/>
@@ -2862,7 +2851,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 	</extension>
 </addon>
 
-<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.5.86">
+<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.5.87">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="context.infinity"/>
@@ -2894,23 +2883,36 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 			<fanart>fanart.png</fanart>
 		</assets>
 		<news>
-[B][COLOR black]Update - v6.5.90-94 - Dec 1st, 2022[/COLOR][/B]
---[FIX][I] Removed entire Sync Trakt Collection section from settings.[I]
---[FIX][I] Adjusted Trakt Sync for devices that do not have "System.InternetState".[I]
---[FIX][I] Adjustment for trakt watchlist and collection imports.[I]
---[FIX][I] Fixed typo causing tables to not be dropped correctly when updating lists.[I]
---[FIX][I] Changed name for recently released TMDB list. Small adjustment for logging.[I]
---[FIX][I] Adjustment to watchlist activity for sync.[I]
---[FIX][I] Additional logging for watchlist sync.[I]
---[FIX][I] Trakt revoke now deletes Trakt Cache.[I]
---[Enhancement][I] Movies and TV Source Select options broken into different settings.[I]
---[ENHANCEMENT][I] Add collection to list imports.[I]
---[ENHANCEMENT][I] Made manual import now and automatic import different settings.[I]
---[ENHANCEMENT][I] Added recently released on media formats for lists.[I]
---[ENHANCEMENT][I] Made changes to version comparison to allow for test version detection.[I]
---[ENHANCEMENT][I] Movies and TV Source Select options broken into different settings.[I]
---[INFORMATION][I] All list importing settings have been moved to the "Library" section of settings.[I]
---[CREDIT][I] Thanks to user "-fr1sty" for reporting internetstate and library import issues.
+[B][COLOR black]Update - v6.5.96-99 - Dec 23rd, 2022[/COLOR][/B]
+--[ENHANCEMENT][I] 17 to 35 color selections! "Buddy the Elf, What's your favorite color?"[I]
+--[ENHANCEMENT][I] Playnext changed to allow for percentage or time or last subtitle time.[I]
+--[ENHANCEMENT][I] Playnext changed to allow themes to be used without skins.[I]
+--[ENHANCEMENT][I] Added color options for providers in source selection.[I]
+--[ENHANCEMENT][I] Adjusted Quality Icons[I]
+--[ENHANCEMENT][I] Added plain icons to go with colors for quality on sources, can be turned off in settings.[I]
+--[ENHANCEMENT][I] Changed source selection to use artwork for background.[I]
+--[ENHANCEMENT][I] Added developer option to use player with url only for resolver.[I]
+--[ENHANCEMENT][I] Added trending from tmdb for day and week for both movies and tv.[I]
+--[ENHANCEMENT][I] Full-Screen Scrape and Resolve[I]
+--[ENHANCEMENT][I] Icon-Only Scrape and Resolve[I]
+--[ENHANCEMENT][I] Changed progress to Umbrella Icon.[I]
+--[ENHANCEMENT][I] Adjusted Uncached Sources view and AH2 Playnext[I]
+--[ENHANCEMENT][I] Added Watched Percentage Marking Option in setting Playback.[I]
+--[ENHANCEMENT][I] Added ability to hide or show fanart as background on source select and scraping screens.[I]
+--[ENHANCEMENT][I] Added ability to only try 1 link on source selection.[I]
+--[ENHANCEMENT][I] Simkl Authentication added. More Coming.[I]
+--[ENHANCEMENT][I] Adjusted transparency on background art not being correct. Thanks Peter![I]
+--[FIX][I] Removed test version detection to stop accidentally deleting trakt and settings.[I]
+--[FIX][I] Adding missing still watching file in for ah2 style playnext.[/I]
+--[FIX][I] Changed playnext subtitle check to check if already downloaded.[/I]
+--[FIX][I] Added enable/ disable for EasyNews.[I]
+--[FIX][I] Changed logging when set to kodi log to use higher level so debug logs show without enabling Kodi debug.[I]
+--[FIX][I] Info logging changed to debug.[I]
+--[FIX][I] Fixed error (blank settings) caused when checking settings for changes.[/I]
+--[FIX][I] Added setting for providers Trakt and TMDB for searches.[/I]
+--[FIX][I] Added widget refreshes to Trakt Scrobbles.[/I]
+--[FIX][I] Fixed a typo in TV Show Collection import from Trakt.[/I]
+--[FIX][I] Adjusted for issue with full-screen scrape and using library files.[/I]
 		</news>
 	</extension>
 </addon>
@@ -2967,7 +2969,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 	</extension>
 </addon>
 
-<addon id="script.jptools" name="JP Tools" provider-name="People" version="1.53">
+<addon id="script.jptools" name="JP Tools" provider-name="People" version="1.54">
     <requires>
         <import addon="script.module.requests"/>
         <import addon="script.module.beautifulsoup4"/>
