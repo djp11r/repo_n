@@ -1,11 +1,11 @@
-<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.56">
+<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.57">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
         <import addon="script.module.requests" />
         <import addon="script.module.myaccounts" />
         <import addon="script.module.openscrapers" />
         <import addon="script.module.resolveurl" />
-        <import addon="script.module.inputstreamhelper" />
+        <!-- <import addon="script.module.inputstreamhelper" /> -->
     </requires>
     <extension library="resources/lib/fen.py" point="xbmc.python.pluginsource">
         <provides>video</provides>
