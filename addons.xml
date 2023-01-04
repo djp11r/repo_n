@@ -526,7 +526,7 @@ v1.1.0 (2020-01-17)
     </extension>
 </addon>
 
-<addon id="plugin.video.youtube" name="YouTube" version="6.8.23+matrix.1" provider-name="anxdpanic, bromix">
+<addon id="plugin.video.youtube" name="YouTube" version="6.8.24+matrix.1" provider-name="anxdpanic, bromix">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
     <import addon="script.module.six" version="1.11.0"/>
@@ -540,7 +540,10 @@ v1.1.0 (2020-01-17)
   <extension point="xbmc.python.module" library="resources/lib/"/>
   <extension point="xbmc.addon.metadata">
     <news>
-[revert] subscription groups/tags - causing breaking issues
+[fixup] resolve playback history not being updated
+[add] add opus audio support
+[upd] use more descript reasons for failed playback
+[upd] Translations updated from Kodi Weblate
         </news>
     <assets>
       <icon>icon.png</icon>
@@ -565,6 +568,7 @@ v1.1.0 (2020-01-17)
     <summary lang="he_IL">  YouTube</summary>
     <summary lang="hr_HR">Dodatak za YouTube</summary>
     <summary lang="hu_HU">YouTube kiegeszito</summary>
+    <summary lang="id_ID">Pengaya untuk YouTube</summary>
     <summary lang="it_IT">Plugin per YouTube</summary>
     <summary lang="ko_KR"> </summary>
     <summary lang="nb_NO">Tillegg for YouTube</summary>
@@ -589,6 +593,7 @@ v1.1.0 (2020-01-17)
     <description lang="he_IL">YouTube       .</description>
     <description lang="hr_HR">YouTube je jedna od najvecih stranica za dijeljenje video sadrzaja na svijetu.</description>
     <description lang="hu_HU">A YouTube vilag egyik legnagyobb videomegoszto weboldala.</description>
+    <description lang="id_ID">YouTube adalah salah satu situs web berbagi video terbesar di dunia.</description>
     <description lang="it_IT">YouTube e uno dei piu grandi siti web di condivisione video del mondo.</description>
     <description lang="ko_KR">        .</description>
     <description lang="nb_NO">YouTube er en av verdens strste nettsider for videodeling.</description>
@@ -610,6 +615,7 @@ v1.1.0 (2020-01-17)
     <disclaimer lang="fi_FI">Google ei tue tata lisaosaa</disclaimer>
     <disclaimer lang="fr_FR">Ce module n'est pas valide par Google</disclaimer>
     <disclaimer lang="hr_HR">Ovaj dodatak nije podrzan od strane Googlea</disclaimer>
+    <disclaimer lang="id_ID">Plugin ini tidak didukung oleh Google</disclaimer>
     <disclaimer lang="it_IT">Questo plugin non e approvato da Google</disclaimer>
     <disclaimer lang="ko_KR">  Google   </disclaimer>
     <disclaimer lang="nl_NL">Deze plug-in wordt niet door Google ondersteund</disclaimer>
@@ -1554,7 +1560,7 @@ v1.0.25 (marcelveldt)
   </extension>
 </addon>
 
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.861" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.870" provider-name="gujal">
     <requires>
         <!-- <import addon="xbmc.python" version="3.0.0" /> -->
         <import addon="script.module.six"/>
