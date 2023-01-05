@@ -1,17 +1,17 @@
-<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.57">
+<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.58">
     <requires>
-        <import addon="xbmc.python" version="3.0.0" />
-        <import addon="script.module.requests" />
-        <import addon="script.module.myaccounts" />
-        <import addon="script.module.openscrapers" />
-        <import addon="script.module.resolveurl" />
+        <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.requests"/>
+        <import addon="script.module.openscrapers"/>
+        <import addon="script.module.myaccounts"/>
+        <import addon="script.module.resolveurl"/>
         <!-- <import addon="script.module.inputstreamhelper" /> -->
     </requires>
     <extension library="resources/lib/fen.py" point="xbmc.python.pluginsource">
         <provides>video</provides>
     </extension>
-    <extension library="resources/lib/service.py" point="xbmc.service" />
-    <extension library="resources/lib/" point="xbmc.python.module" />
+    <extension library="resources/lib/service.py" point="xbmc.service"/>
+    <extension library="resources/lib/" point="xbmc.python.module"/>
     <extension point="kodi.context.item">
         <menu id="kodi.core.main">
             <item library="resources/contextmenu/refresh_widgets.py">

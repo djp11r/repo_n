@@ -2648,12 +2648,12 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 </extension>
 </addon>
 
-<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.57">
+<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.58">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests"/>
-        <import addon="script.module.myaccounts"/>
         <import addon="script.module.openscrapers"/>
+        <import addon="script.module.myaccounts"/>
         <import addon="script.module.resolveurl"/>
         <!-- <import addon="script.module.inputstreamhelper" /> -->
     </requires>
@@ -2857,16 +2857,16 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 	</extension>
 </addon>
 
-<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.5.89">
+<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.5.90">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="context.infinity"/>
-		<import addon="script.module.myaccounts"/>
 		<import addon="script.module.openscrapers"/>
 		<import addon="script.module.requests"/>
 		<import addon="script.module.beautifulsoup4"/>
 		<import addon="script.module.metahandler" optional="true"/>
 		<import addon="plugin.video.youtube" optional="true"/>
+		<import addon="script.module.myaccounts"/>
 		<import addon="script.module.resolveurl"/>
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="umbrella.py">
@@ -2889,14 +2889,21 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 			<fanart>fanart.png</fanart>
 		</assets>
 		<news>
-[B][COLOR black]Update - v6.6.03 - Dec 31st, 2022[/COLOR][/B]
---[FIX][I] Fixed setting that was backwards for try only 1 source on source select.[/I]
---[FIX][I] Corrected library items importing with a "." as first character making them hidden files.[/I]
---[FIX][I] Adjusted all debrid to return on 503[/I]
---[FIX][I] Added try and catch to startup settings check for Apple TV.[/I]
---[ENHANCEMENT][I] Added new Simkl Trending List for TV Shows.[/I]
---[ENHANCEMENT][I] Added new Simkl Trending List for Movies.[/I]
---[ENHANCEMENT][I] Simkl Must be authenticated for new trending lists to show. More Simkl features and lists coming soon.[/I]
+[B][COLOR black]Update - v6.6.04 - Jan 4th, 2023[/COLOR][/B]
+--[FIX][I] Cloud Scrapers Fixed.[/I]
+--[FIX][I] Change source selection screen to build all colors properties before constructing the window.[/I]
+--[FIX][I] Adding cache in for MDBList and Simkl Lists. All cache for 6 hours.[/I]
+--[FIX][I] Fixed issue with error on source select colors.[/I]
+--[FIX][I] Removed some logging.[/I]
+--[FIX][I] When creating source library folders they are created with the content set correctly now.[/I]
+--[FIX][I] Furk api pull from settings added.[/I]
+--[NEXUS][I] Removed all instances of Element Tree from code to help with crashes.[/I]
+--[ENHANCEMENT][I] Add new audio filter for aac.[/I]
+--[ENHANCEMENT][I] Moved reuselanguageInvoker setting to Settings: General.[/I]
+--[ENHANCEMENT][I] Added option to turn languageinvoker on and off directly from tools list.[/I]
+--[ENHANCEMENT][I] Added trending weekly and monthly in for Simkl, hidden by default.[/I]
+--[ENHANCEMENT][I] Added color support for Furk and FilePursuit[/I]
+--[ENHANCEMENT][I] Changed provider colors to only show for added providers in sources.[/I]
 		</news>
 	</extension>
 </addon>
