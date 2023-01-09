@@ -16,7 +16,7 @@
 	<extension point="xbmc.service" library="lib/service.py" start="startup" />
 	<extension point="xbmc.addon.metadata">
 		<reuselanguageinvoker>false</reuselanguageinvoker> 
-		<summary lang="en">OpenScrapers Module</summary>
+		<summary lang="en_GB">OpenScrapers Module</summary>
 		<description>Scrape common video host for URL's to be playable in Kodi, simplifying addon development of video plugins requiring multi video hosts.</description>
 		<platform>all</platform>
 		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
