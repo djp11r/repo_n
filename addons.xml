@@ -31,15 +31,15 @@ Launched in January 2013, it enables users to discover 20 years of rich content 
 </extension>
 </addon>
 
-<addon id="plugin.googledrive" name="Google Drive" version="1.4.11" provider-name="Carlos Guzman (cguZZman)">
+<addon id="plugin.googledrive" name="Google Drive" version="1.5.0" provider-name="Carlos Guzman (cguZZman)">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
-		<import addon="script.module.clouddrive.common" version="1.3.10"/>
+		<import addon="script.module.clouddrive.common" version="1.4.0"/>
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="entrypoint.py">
 		<provides>image audio video</provides>
 	</extension>
-	<extension point="xbmc.service" library="service.py"/>
+	<extension point="xbmc.service" library="service.py" start="login"/>
 	<extension point="xbmc.addon.metadata">
 		<platform>all</platform>
 		<summary lang="en_GB">Google Drive for KODI</summary>
@@ -51,7 +51,7 @@ Play all your media from Google Drive including Videos, Music and Pictures (incl
  - Search over your drive.
  - Auto-Refreshed slideshow.
  - Export your videos to your library (.strm files)
- - Use Google Drive as a source
+ - Use Google Drive as a source. **(Not currently working due to changes in the Google Drive API)
  - This program is not affiliated with or sponsored by Google.
 		</description>
 		<summary lang="he_IL"> Google Drive    </summary>
@@ -61,7 +61,6 @@ Play all your media from Google Drive including Videos, Music and Pictures (incl
   -    .
   -   .
   -      ( .strm)
-  -  -Google Drive
   -         Google.
 		</description>
 		<license>GPL-3.0-or-later</license>
@@ -73,8 +72,8 @@ Play all your media from Google Drive including Videos, Music and Pictures (incl
 			<fanart>fanart.jpg</fanart>
 		</assets>
 		<news>
-v1.4.11 released Jul 29, 2021:
-- Fix stream format selection
+v1.5.0 released Jan 21, 2023:
+- Kodi 20 fix
 		</news>
 		<disclaimer lang="en_GB">
 This cloud drive addon uses a third-party authentication mechanism commonly known as OAuth 2.0.
@@ -92,14 +91,14 @@ You can clone the project and host it in your own server.
 	</extension>
 </addon>
 
-<addon id="script.module.clouddrive.common" name="Cloud Drive Common Module" version="1.3.11" provider-name="Carlos Guzman (cguZZman)">
+<addon id="script.module.clouddrive.common" name="Cloud Drive Common Module" version="1.4.0" provider-name="Carlos Guzman (cguZZman)">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="script.module.dateutil"/>
 		<import addon="script.module.pyqrcode"/>
 	</requires>
 	<extension point="xbmc.python.module" library="/"/>
-	<extension point="xbmc.service" library="service.py"/>
+	<extension point="xbmc.service" library="service.py" start="login"/>
 	<extension point="xbmc.addon.metadata">
 		<platform>all</platform>
 		<summary lang="en_GB">Cloud Drive Common Module</summary>
@@ -113,8 +112,8 @@ You can clone the project and host it in your own server.
 			<icon>icon.png</icon>
 		</assets>
 		<news>
-v1.3.10 released Jul 29, 2021:
-- Add convert method from binary to string
+v1.4.0 released Jan 20, 2023:
+- Kodi 20 fix
 		</news>
 		<disclaimer lang="en_GB">
 This cloud drive addon uses a third-party authentication mechanism commonly known as OAuth 2.0.
@@ -132,7 +131,7 @@ You can clone the project and host it in your own server.
 	</extension>
 </addon>
 
-<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.32" provider-name="open">
+<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.33" provider-name="open">
 	<requires>
 		<import addon="script.module.beautifulsoup4"/>
 		<import addon="script.module.requests"/>
@@ -1560,7 +1559,7 @@ v1.0.25 (marcelveldt)
   </extension>
 </addon>
 
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.870" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.880" provider-name="gujal">
     <requires>
         <!-- <import addon="xbmc.python" version="3.0.0" /> -->
         <import addon="script.module.six"/>
@@ -2648,7 +2647,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 </extension>
 </addon>
 
-<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.58">
+<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.61">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests"/>
@@ -2706,14 +2705,14 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
     </extension>
 </addon>
 
-<addon id="context.infinity" name="Infinity - Global Context Menu Items" provider-name="Infinity" version="1.2.2">
+<addon id="context.infinity" name="Infinity - Global Context Menu Items" provider-name="Infinity" version="1.2.3">
 	<requires>
 		<import addon="script.module.requests" version="2.19.1"/>
 	</requires>
 	<extension point="kodi.context.item">
 		<menu id="kodi.core.main">
 			<item library="contextSettings.py">
-				<label>[B][COLOR yellowgreen]Infinity[/COLOR][/B] - CM Settings</label>
+				<label>[B][COLOR $INFO[Window(home).Property(context.infinity.highlightcolor)]]infinity[/COLOR][/B] - CM Settings</label>
 				<visible>
 					!String.IsEmpty(Window(home).Property(context.infinity.settings)) +
 					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
@@ -2721,16 +2720,16 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 				</visible>
 			</item>
 			<item library="addtoLibrary.py">
-				<label>[B][COLOR yellowgreen]Infinity[/COLOR][/B] - Add to Library</label>
+				<label>[B][COLOR $INFO[Window(home).Property(context.infinity.highlightcolor)]]infinity[/COLOR][/B] - Add to Library</label>
 				<visible>
-					!String.IsEmpty(Window(home).Property(context.infinity.settings)) +
+					!String.IsEmpty(Window(home).Property(context.infinity.addtoLibrary)) +
 					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
 					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
 					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,movie)]
 				</visible>
 			</item>
 			<item library="traktManager.py">
-				<label>[B][COLOR yellowgreen]Infinity[/COLOR][/B] - Trakt Manager</label>
+				<label>[B][COLOR $INFO[Window(home).Property(context.infinity.highlightcolor)]]infinity[/COLOR][/B] - Trakt Manager</label>
 				<visible>
 					!String.IsEmpty(Window(home).Property(context.infinity.traktManager)) +
 					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
@@ -2739,7 +2738,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 				</visible>
 			</item>
 			<item library="clearProviders.py">
-				<label>[B][COLOR yellowgreen]Infinity[/COLOR][/B] - Clear Providers</label>
+				<label>[B][COLOR $INFO[Window(home).Property(context.infinity.highlightcolor)]]infinity[/COLOR][/B] - Clear Providers</label>
 				<visible>
 					[!String.IsEmpty(Window(home).Property(context.infinity.clearProviders)) +
 					String.StartsWith(ListItem.FolderPath,plugin://plugin.video.infinity/?action=play) +
@@ -2751,7 +2750,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 				</visible>
 			</item>
 			<item library="clearBookmark.py">
-				<label>[B][COLOR yellowgreen]Infinity[/COLOR][/B] - Clear Item Bookmark</label>
+				<label>[B][COLOR $INFO[Window(home).Property(context.infinity.highlightcolor)]]infinity[/COLOR][/B] - Clear Item Bookmark</label>
 				<visible>
 					!String.IsEmpty(Window(home).Property(context.infinity.clearBookmark)) +
 					String.StartsWith(ListItem.FolderPath,plugin://plugin.video.infinity/?action=play) +
@@ -2761,7 +2760,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 				</visible>
 			</item>
 			<item library="rescrape.py">
-				<label>[B][COLOR red]Infinity[/COLOR][/B] - Rescrape Item</label>
+				<label>[B][COLOR $INFO[Window(home).Property(context.infinity.highlightcolor)]]infinity[/COLOR][/B] - Rescrape Item</label>
 				<visible>
 					[!String.IsEmpty(Window(home).Property(context.infinity.rescrape)) +
 					String.StartsWith(ListItem.FolderPath,plugin://plugin.video.infinity/?action=play) +
@@ -2770,7 +2769,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 				</visible>
 			</item>
 			<item library="libRescrape.py">
-				<label>[B][COLOR red]Infinity[/COLOR][/B] - Rescrape Lib Item</label>
+				<label>[B][COLOR $INFO[Window(home).Property(context.infinity.highlightcolor)]]infinity[/COLOR][/B] - Rescrape Lib Item</label>
 				<visible>
 					String.Contains(Container.FolderPath,videodb://) +
 					[String.Contains(Container.ListItem.Path,Window(home).Property(infinity.movieLib.path)) | String.Contains(Container.ListItem.Path,Window(home).Property(infinity.tvLib.path))] +
@@ -2778,7 +2777,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 				</visible>
 			</item>
 			<item library="playFromHere.py">
-				<label>[B][COLOR yellowgreen]Infinity[/COLOR][/B] - Play from here</label>
+				<label>[B][COLOR $INFO[Window(home).Property(context.infinity.highlightcolor)]]infinity[/COLOR][/B] - Play from here</label>
 				<visible>
 					!String.IsEmpty(Window(home).Property(context.infinity.playFromHere)) +
 					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
@@ -2787,7 +2786,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 				</visible>
 			</item>
 			<item library="autoPlay.py">
-				<label>[B][COLOR yellowgreen]Infinity[/COLOR][/B] - Auto Play</label>
+				<label>[B][COLOR $INFO[Window(home).Property(context.infinity.highlightcolor)]]infinity[/COLOR][/B] - Auto Play</label>
 				<visible>
 					String.IsEmpty(Window(home).Property(infinity.autoPlay.enabled)) +
 					!String.IsEmpty(Window(home).Property(context.infinity.autoPlay)) +
@@ -2797,7 +2796,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 				</visible>
 			</item>
 			<item library="sourceSelect.py">
-				<label>[B][COLOR yellowgreen]Infinity[/COLOR][/B] - Source Select</label>
+				<label>[B][COLOR $INFO[Window(home).Property(context.infinity.highlightcolor)]]infinity[/COLOR][/B] - Source Select</label>
 				<visible>
 					!String.IsEmpty(Window(home).Property(infinity.autoPlay.enabled)) +
 					!String.IsEmpty(Window(home).Property(context.infinity.sourceSelect)) +
@@ -2807,7 +2806,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 				</visible>
 			</item>
 			<item library="findSimilar.py">
-				<label>[B][COLOR yellowgreen]Infinity[/COLOR][/B] - Find Similar</label>
+				<label>[B][COLOR $INFO[Window(home).Property(context.infinity.highlightcolor)]]infinity[/COLOR][/B] - Find Similar</label>
 				<visible>
 					!String.IsEmpty(Window(home).Property(context.infinity.findSimilar)) +
 					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
@@ -2816,7 +2815,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 				</visible>
 			</item>
 			<item library="browseSeries.py">
-				<label>[B][COLOR yellowgreen]Infinity[/COLOR][/B] - Browse Series</label>
+				<label>[B][COLOR $INFO[Window(home).Property(context.infinity.highlightcolor)]]infinity[/COLOR][/B] - Browse Series</label>
 				<visible>
 					!String.IsEmpty(Window(home).Property(context.infinity.browseSeries)) +
 					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
@@ -2825,7 +2824,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 				</visible>
 			</item>
 			<item library="browseEpisodes.py">
-				<label>[B][COLOR yellowgreen]Infinity[/COLOR][/B] - Browse Episodes</label>
+				<label>[B][COLOR $INFO[Window(home).Property(context.infinity.highlightcolor)]]infinity[/COLOR][/B] - Browse Episodes</label>
 				<visible>
 					!String.IsEmpty(Window(home).Property(context.infinity.browseEpisodes)) +
 					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
@@ -2851,16 +2850,16 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 			<screenshot/>
 		</assets>
 		<news>
-[B][COLOR red]Update - v1.2.7 - Sept 1st, 2022[/COLOR][/B]
-[COLOR yellow]--[/COLOR][I] Changed to new settings format.[/I]
+[B][COLOR red]Update - v1.2.8 - Jan 9th, 2022[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Changed to allow highlight color to be used for context.[/I]
 		</news>
 	</extension>
 </addon>
 
-<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.5.90">
+<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.5.93">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
-		<import addon="context.infinity"/>
+		<import addon="context.infinity" optional="true"/>
 		<import addon="script.module.openscrapers"/>
 		<import addon="script.module.requests"/>
 		<import addon="script.module.beautifulsoup4"/>
@@ -2889,21 +2888,19 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 			<fanart>fanart.png</fanart>
 		</assets>
 		<news>
-[B][COLOR black]Update - v6.6.04 - Jan 4th, 2023[/COLOR][/B]
---[FIX][I] Cloud Scrapers Fixed.[/I]
---[FIX][I] Change source selection screen to build all colors properties before constructing the window.[/I]
---[FIX][I] Adding cache in for MDBList and Simkl Lists. All cache for 6 hours.[/I]
---[FIX][I] Fixed issue with error on source select colors.[/I]
---[FIX][I] Removed some logging.[/I]
---[FIX][I] When creating source library folders they are created with the content set correctly now.[/I]
---[FIX][I] Furk api pull from settings added.[/I]
---[NEXUS][I] Removed all instances of Element Tree from code to help with crashes.[/I]
---[ENHANCEMENT][I] Add new audio filter for aac.[/I]
---[ENHANCEMENT][I] Moved reuselanguageInvoker setting to Settings: General.[/I]
---[ENHANCEMENT][I] Added option to turn languageinvoker on and off directly from tools list.[/I]
---[ENHANCEMENT][I] Added trending weekly and monthly in for Simkl, hidden by default.[/I]
---[ENHANCEMENT][I] Added color support for Furk and FilePursuit[/I]
---[ENHANCEMENT][I] Changed provider colors to only show for added providers in sources.[/I]
+[B][COLOR black]Update - v6.6.10 - Jan 18th, 2023[/COLOR][/B]
+--[ENHANCEMENT][I] Set trakt recently released trending to use current year only after 6th month of year.[/I]
+--[ENHANCEMENT][I] Made codes from authorization auto-copy to clipboard.[/I]
+--[ENHANCEMENT][I] Two way library mark watched sync with Trakt. Enable in Trakt settings.[/I]
+--[FIX][I] Added busy spinner when gathering trakt lists for import management window.[/I]
+--[FIX][I] Added NoneType condition for playnext issue.[/I]
+--[FIX][I] Made Hide Movies in Cinema also hide unreleased movies in all lists.[/I]
+--[FIX][I] Sort by date watched fixed for trakt lists.[/I]
+--[FIX][I] DirectProgress Scraping combined with Playnext causing skip episode fixed.[/I]
+--[FIX][I] Highlight Color instead of hard coded blue now used on codes in prompts for account authorizations.[/I]
+--[FIX][I] Added metadatahandler 5.0.1a to repo with fixes for local indicators.[/I]
+--[FIX][I] Using local for indicator for watched status now requires a newer version of metahandler due to fixing an issue with metadatahandler exception on cast.[/I]
+--[INFORMATION][I] Yep Yep... Sitting on my hands all week.[/I]
 		</news>
 	</extension>
 </addon>

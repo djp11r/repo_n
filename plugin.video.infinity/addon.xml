@@ -1,7 +1,7 @@
-<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.5.90">
+<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.5.93">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
-		<import addon="context.infinity"/>
+		<import addon="context.infinity" optional="true"/>
 		<import addon="script.module.openscrapers"/>
 		<import addon="script.module.requests"/>
 		<import addon="script.module.beautifulsoup4"/>
@@ -30,21 +30,19 @@
 			<fanart>fanart.png</fanart>
 		</assets>
 		<news>
-[B][COLOR black]Update - v6.6.04 - Jan 4th, 2023[/COLOR][/B]
---[FIX][I] Cloud Scrapers Fixed.[/I]
---[FIX][I] Change source selection screen to build all colors properties before constructing the window.[/I]
---[FIX][I] Adding cache in for MDBList and Simkl Lists. All cache for 6 hours.[/I]
---[FIX][I] Fixed issue with error on source select colors.[/I]
---[FIX][I] Removed some logging.[/I]
---[FIX][I] When creating source library folders they are created with the content set correctly now.[/I]
---[FIX][I] Furk api pull from settings added.[/I]
---[NEXUS][I] Removed all instances of Element Tree from code to help with crashes.[/I]
---[ENHANCEMENT][I] Add new audio filter for aac.[/I]
---[ENHANCEMENT][I] Moved reuselanguageInvoker setting to Settings: General.[/I]
---[ENHANCEMENT][I] Added option to turn languageinvoker on and off directly from tools list.[/I]
---[ENHANCEMENT][I] Added trending weekly and monthly in for Simkl, hidden by default.[/I]
---[ENHANCEMENT][I] Added color support for Furk and FilePursuit[/I]
---[ENHANCEMENT][I] Changed provider colors to only show for added providers in sources.[/I]
+[B][COLOR black]Update - v6.6.10 - Jan 18th, 2023[/COLOR][/B]
+--[ENHANCEMENT][I] Set trakt recently released trending to use current year only after 6th month of year.[/I]
+--[ENHANCEMENT][I] Made codes from authorization auto-copy to clipboard.[/I]
+--[ENHANCEMENT][I] Two way library mark watched sync with Trakt. Enable in Trakt settings.[/I]
+--[FIX][I] Added busy spinner when gathering trakt lists for import management window.[/I]
+--[FIX][I] Added NoneType condition for playnext issue.[/I]
+--[FIX][I] Made Hide Movies in Cinema also hide unreleased movies in all lists.[/I]
+--[FIX][I] Sort by date watched fixed for trakt lists.[/I]
+--[FIX][I] DirectProgress Scraping combined with Playnext causing skip episode fixed.[/I]
+--[FIX][I] Highlight Color instead of hard coded blue now used on codes in prompts for account authorizations.[/I]
+--[FIX][I] Added metadatahandler 5.0.1a to repo with fixes for local indicators.[/I]
+--[FIX][I] Using local for indicator for watched status now requires a newer version of metahandler due to fixing an issue with metadatahandler exception on cast.[/I]
+--[INFORMATION][I] Yep Yep... Sitting on my hands all week.[/I]
 		</news>
 	</extension>
 </addon>
