@@ -131,7 +131,7 @@ You can clone the project and host it in your own server.
 	</extension>
 </addon>
 
-<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.33" provider-name="open">
+<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.34" provider-name="open">
 	<requires>
 		<import addon="script.module.beautifulsoup4"/>
 		<import addon="script.module.requests"/>
@@ -1559,7 +1559,7 @@ v1.0.25 (marcelveldt)
   </extension>
 </addon>
 
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.880" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.881" provider-name="gujal">
     <requires>
         <!-- <import addon="xbmc.python" version="3.0.0" /> -->
         <import addon="script.module.six"/>
@@ -2647,7 +2647,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 </extension>
 </addon>
 
-<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.61">
+<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.62">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests"/>
@@ -2665,27 +2665,27 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
         <menu id="kodi.core.main">
             <item library="resources/contextmenu/refresh_widgets.py">
                 <label>40001</label>
-                <visible>String.IsEqual(ListItem.Property(infinite.widget),true)</visible>
+                <visible>String.IsEqual(ListItem.Property(infinite.widget),true) + !String.StartsWith(Window(home).Property(infinite.kodi_version),20)</visible>
             </item>
             <item library="resources/contextmenu/mark_watched.py">
                 <label>40003</label>
-                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,episode)] + String.IsEqual(ListItem.Property(infinite.widget),true) + String.IsEqual(ListItem.Property(infinite.playcount),0)</visible>
+                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,episode)] + String.IsEqual(ListItem.Property(infinite.widget),true) + String.IsEqual(ListItem.Property(infinite.playcount),0) + !String.StartsWith(Window(home).Property(infinite.kodi_version),20)</visible>
             </item>
             <item library="resources/contextmenu/mark_unwatched.py">
                 <label>40004</label>
-                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,episode)] + String.IsEqual(ListItem.Property(infinite.widget),true) + String.IsEqual(ListItem.Property(infinite.playcount),1)</visible>
+                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,episode)] + String.IsEqual(ListItem.Property(infinite.widget),true) + String.IsEqual(ListItem.Property(infinite.playcount),1) + !String.StartsWith(Window(home).Property(infinite.kodi_version),20)</visible>
             </item>
             <item library="resources/contextmenu/clear_progress.py">
                 <label>40009</label>
-                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,episode)] + String.IsEqual(ListItem.Property(infinite.widget),true) + String.IsEqual(ListItem.Property(infinite.in_progress),true)</visible>
+                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,episode)] + String.IsEqual(ListItem.Property(infinite.widget),true) + String.IsEqual(ListItem.Property(infinite.in_progress),true) + !String.StartsWith(Window(home).Property(infinite.kodi_version),20)</visible>
             </item>
             <item library="resources/contextmenu/options.py">
                 <label>40007</label>
-                <visible>String.IsEqual(ListItem.Property(infinite.widget),true)</visible>
+                <visible>String.IsEqual(ListItem.Property(infinite.widget),true) + !String.StartsWith(Window(home).Property(infinite.kodi_version),20)</visible>
             </item>
             <item library="resources/contextmenu/extras.py">
                 <label>40006</label>
-                <visible>String.IsEqual(ListItem.Property(infinite.widget),true)</visible>
+                <visible>String.IsEqual(ListItem.Property(infinite.widget),true) + !String.StartsWith(Window(home).Property(infinite.kodi_version),20)</visible>
             </item>
         </menu>
     </extension>
@@ -2856,7 +2856,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 	</extension>
 </addon>
 
-<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.5.93">
+<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.5.94">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="context.infinity" optional="true"/>
@@ -2888,19 +2888,8 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 			<fanart>fanart.png</fanart>
 		</assets>
 		<news>
-[B][COLOR black]Update - v6.6.10 - Jan 18th, 2023[/COLOR][/B]
---[ENHANCEMENT][I] Set trakt recently released trending to use current year only after 6th month of year.[/I]
---[ENHANCEMENT][I] Made codes from authorization auto-copy to clipboard.[/I]
---[ENHANCEMENT][I] Two way library mark watched sync with Trakt. Enable in Trakt settings.[/I]
---[FIX][I] Added busy spinner when gathering trakt lists for import management window.[/I]
---[FIX][I] Added NoneType condition for playnext issue.[/I]
---[FIX][I] Made Hide Movies in Cinema also hide unreleased movies in all lists.[/I]
---[FIX][I] Sort by date watched fixed for trakt lists.[/I]
---[FIX][I] DirectProgress Scraping combined with Playnext causing skip episode fixed.[/I]
---[FIX][I] Highlight Color instead of hard coded blue now used on codes in prompts for account authorizations.[/I]
---[FIX][I] Added metadatahandler 5.0.1a to repo with fixes for local indicators.[/I]
---[FIX][I] Using local for indicator for watched status now requires a newer version of metahandler due to fixing an issue with metadatahandler exception on cast.[/I]
---[INFORMATION][I] Yep Yep... Sitting on my hands all week.[/I]
+[B][COLOR black]Update - v6.6.11 - Jan 23rd, 2023[/COLOR][/B]
+--[FIX][I] Fixed add to cloud for debrid.[/I]
 		</news>
 	</extension>
 </addon>
