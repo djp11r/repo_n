@@ -1,4 +1,4 @@
-<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.5.94">
+<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.5.95">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="context.infinity" optional="true"/>
@@ -30,8 +30,11 @@
 			<fanart>fanart.png</fanart>
 		</assets>
 		<news>
-[B][COLOR black]Update - v6.6.11 - Jan 23rd, 2023[/COLOR][/B]
---[FIX][I] Fixed add to cloud for debrid.[/I]
+[B][COLOR black]Update - v6.6.13 - Feb 2nd, 2023[/COLOR][/B]
+--[FIX][I] Multiple bug fixes under the hood related to Nexus and Kodi 20.[/I]
+--[FIX][I] Corrected add to cloud errors.[/I]
+--[ENHANCEMENT][I] Added similar to and recommended from Library.[/I]
+--[ENHANCEMENT][I] Adjusted recommended lists from TMDB to remove some (adult) results.[/I]
 		</news>
 	</extension>
 </addon>
