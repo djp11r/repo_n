@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="repository.JPB" name="[COLOR lime][B]J[/B][/COLOR]PB Repo" version="1.15" provider-name="JPB">
+<addon id="repository.JPB" name="[COLOR lime][B]J[/B][/COLOR]PB Repo" version="1.16" provider-name="JPB">
 	<extension point="xbmc.addon.repository" name="[COLOR lime][B]J[/B]PB Repo">
 		<dir>
 			<info compressed="false">https://raw.githubusercontent.com/djp11r/repo_n/mayb/addons.xml</info>
@@ -12,16 +12,20 @@
 			<datadir zip="true">https://raw.githubusercontent.com/djp11r/additinal_repo_n/mayb/</datadir>
 		</dir>
         <dir>
-            <info compressed="false">https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/Gujal00/smrzips/master/zips/</datadir>
-        </dir>
+	        <info compressed="false">https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml</info>
+	        <checksum>https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml.md5</checksum>
+	        <datadir zip="true">https://raw.githubusercontent.com/Gujal00/smrzips/master/zips/</datadir>
+		</dir>
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary>The Best Third Party Addons and Tools for Kodi</summary>
-		<description>Enjoy access to Indian media sources like desirulez.net</description>
+		<description>Enjoy access to ...</description>
 		<disclaimer lang="en">Repository has non-comercial nature. Created by enthusiasts, acting in good faith.hereby disclaims and negates all other warranties, including without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights. Further, video add-ons don't warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials on the Internet web site where from data is retrieved or otherwise relating to such materials or on any sites linked to this addon. Videos are streamed directly from video-hosting websites that are having full rights to remove such access to video if required. These add-ons access website contents like a normal web browser and show content to users.</disclaimer>
 		<platform>all</platform>
+		<assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
 	</extension>
 </addon>
 

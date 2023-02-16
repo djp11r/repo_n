@@ -39,7 +39,7 @@ Launched in January 2013, it enables users to discover 20 years of rich content 
 	<extension point="xbmc.python.pluginsource" library="entrypoint.py">
 		<provides>image audio video</provides>
 	</extension>
-	<extension point="xbmc.service" library="service.py" start="login"/>
+	<extension point="xbmc.service" library="service.py"/>
 	<extension point="xbmc.addon.metadata">
 		<platform>all</platform>
 		<summary lang="en_GB">Google Drive for KODI</summary>
@@ -98,7 +98,7 @@ You can clone the project and host it in your own server.
 		<import addon="script.module.pyqrcode"/>
 	</requires>
 	<extension point="xbmc.python.module" library="/"/>
-	<extension point="xbmc.service" library="service.py" start="login"/>
+	<extension point="xbmc.service" library="service.py"/>
 	<extension point="xbmc.addon.metadata">
 		<platform>all</platform>
 		<summary lang="en_GB">Cloud Drive Common Module</summary>
@@ -131,7 +131,7 @@ You can clone the project and host it in your own server.
 	</extension>
 </addon>
 
-<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.35" provider-name="open">
+<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.37" provider-name="open">
 	<requires>
 		<import addon="script.module.beautifulsoup4"/>
 		<import addon="script.module.requests"/>
@@ -1559,7 +1559,7 @@ v1.0.25 (marcelveldt)
   </extension>
 </addon>
 
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.910" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.920" provider-name="gujal">
     <requires>
         <!-- <import addon="xbmc.python" version="3.0.0" /> -->
         <import addon="script.module.six"/>
@@ -2041,7 +2041,7 @@ v1.0.25 (marcelveldt)
 	</extension>
 </addon>
 
-<addon id="script.skinshortcuts" name="Skin Shortcuts" version="2.0.1" provider-name="BigNoid, marcelveldt, SiLVO">
+<addon id="script.skinshortcuts" name="Skin Shortcuts" version="2.0.3" provider-name="BigNoid, marcelveldt, SiLVO, anxdpanic">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.unidecode" version="1.1.1+matrix.2"/>
@@ -2050,9 +2050,9 @@ v1.0.25 (marcelveldt)
     <extension point="xbmc.python.library" library="resources/lib/entry_point.py"/>
     <extension point="xbmc.addon.metadata">
         <news>
-[fix] some widgets not working |contrib: bumpaneer|
-[fix] new widget properties not being properly saved and applied |contrib: bumpaneer|
-[fix] fix configuration of widgets/actions on some skins |contrib: eXoterr|
+[fix] translations in PVR |contrib: Dis90|
+[fix] titles missing in some dialogs
+[fix] handle missing profiles.xml gracefully (fixes Apple TV)
 [lang] update translations from Weblate
         </news>
         <platform>all</platform>
@@ -2063,17 +2063,20 @@ v1.0.25 (marcelveldt)
             <icon>resources/media/icon.png</icon>
             <fanart>resources/media/fanart.jpg</fanart>
         </assets>
+        <description lang="ar_SA">       ""     (   )</description>
         <description lang="cs_CZ">Doplnek pro vzhledy poskytujici jednoduchy management a seznamy uzivatelskych zkratek (vyzaduje podporu vzhledu)</description>
         <description lang="da_DK">Add-on til skins der giver enkel styring og lister over brugergenveje (krver skin-understttelse)</description>
-        <description lang="de_DE">Addon fur Skins zum einfachen Bearbeiten und Auflisten von benutzerdefinierten Verknupfungen (erfordert Skin-Unterstutzung)</description>
+        <description lang="de_DE">Addon fur Skins zum einfachen Bearbeiten und Auflisten von benutzerdefinierten Verknupfungen (erfordert Skinunterstutzung)</description>
         <description lang="el_GR">  ,              (     )</description>
         <description lang="en_GB">Add-on for skins to provide simple managing and listing of user shortcuts (requires skin support)</description>
         <description lang="en_NZ">Add-on for skins to provide simple managing and listing of user shortcuts (requires skin support)</description>
         <description lang="en_US">Add-on for skins to provide simple managing and listing of user shortcuts (requires skin support)</description>
         <description lang="es_ES">Complemento para las pieles para proporcionar una gestion sencilla y lista de atajos de usuario (requiere que la piel lo soporte)</description>
-        <description lang="fi_FI">Lisaosa ulkoasuille joka tarjoaa helpon hallinnan ja kayttajien pikakuvakkeiden luetteloimisen (vaatii tuen ulkoasulta)</description>
+        <description lang="fi_FI">Lisaosa, joka mahdollistaa ulkoasujen valikkokohteiden ja omien pikavalintojen lisayksen ja niiden muokkauksen (vaatii tuen ulkoasulta)</description>
         <description lang="fr_CA">Addiciel pour habillages qui fournit une gestion simple et un listage des raccourcis utilisateurs (exige la prise en charge de l'habillage)</description>
+        <description lang="fr_FR">Module complementaire pour les skins pour fournir une gestion et une liste simples de raccourcis utilisateur (necessite la prise en charge des skins)</description>
         <description lang="gl_ES">Complemento que fornece aos temas dunha xestion sinxela dos atallos dos usuarios (require soporte do tema)</description>
+        <description lang="hr_HR">Dodatak za presvlake koji omogucuje jednostavno upravljanje i prikaz precaca korisnika (zahtijeva podrsku presvlake)</description>
         <description lang="hu_HU">Felszin kiegeszito amely konnyen kezelhetove es listazhatova teszi a felhasznaloi parancsikonokat (Felszin tamogatas szukseges)</description>
         <description lang="is_IS">Vibot fyrir vimot til a halda utan um flytivisa og fa yfirlit yfir a (arfnast stunings fra vimoti)</description>
         <description lang="it_IT">Add-on per gli skin per consentire un facile gestione ed elenco delle scorciatoie utente (richiede che lo skin lo supporti)</description>
@@ -2647,14 +2650,14 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 </extension>
 </addon>
 
-<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.65">
+<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.67">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests"/>
         <import addon="script.module.openscrapers"/>
         <import addon="script.module.myaccounts"/>
         <import addon="script.module.resolveurl"/>
-        <!-- <import addon="script.module.inputstreamhelper" /> -->
+        <import addon="script.module.inputstreamhelper"/>
     </requires>
     <extension library="resources/lib/fen.py" point="xbmc.python.pluginsource">
         <provides>video</provides>
@@ -2691,10 +2694,10 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
     </extension>
     <extension point="xbmc.addon.metadata">
         <reuselanguageinvoker>true</reuselanguageinvoker>
-        <summary lang="en_GB">Mainly used for English and Hindi content.</summary>
-        <description lang="en_GB">This add-on is intended for advanced Kodi users only. Mainly used for Furk and Easynews(web) account access. An External Scraper package may be used. You must own the content of any media you play through this addon.</description>
+        <summary lang="en">Mainly used for English and Hindi content.</summary>
+        <description lang="en">This add-on is intended for advanced Kodi users only. Mainly used for Furk and Easynews(web) account access. An External Scraper package may be used. You must own the content of any media you play through this addon.</description>
         <platform>all</platform>
-        <disclaimer lang="en_GB">The author of this addon does not host any of the content which is found and has no affiliation with any of the content providers. This addon simply searches websites for content.</disclaimer>
+        <disclaimer lang="en">The author of this addon does not host any of the content which is found and has no affiliation with any of the content providers. This addon simply searches websites for content.</disclaimer>
         <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
         <assets>
             <icon>resources/media/icon.png</icon>
@@ -2856,7 +2859,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 	</extension>
 </addon>
 
-<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.5.95">
+<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.5.96">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="script.module.openscrapers"/>
@@ -3004,10 +3007,8 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 			<fanart>fanart.png</fanart>
 		</assets>
 		<news>
-[B][COLOR black]Update - v6.6.143 - Feb 9th, 2023[/COLOR][/B]
---[FIX][I] Context items removed on seasons, episodes, tvshows, and movies on Kodi 20.[/I]
---[FIX][I] Added option for full context menu from widgets in Kodi 20.[/I]
---[FIX][I] Moved context addon into plugin.[/I]
+[B][COLOR black]Update - v6.6.18 - Feb 21th, 2023[/COLOR][/B]
+--[FIX][I] Fixed issue with playlist creation for playnext from widgets.[/I]
 		</news>
 	</extension>
 </addon>
@@ -3038,7 +3039,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
   </extension>
 </addon>
 
-<addon id="repository.JPB" name="[COLOR lime][B]J[/B][/COLOR]PB Repo" version="1.15" provider-name="JPB">
+<addon id="repository.JPB" name="[COLOR lime][B]J[/B][/COLOR]PB Repo" version="1.16" provider-name="JPB">
 	<extension point="xbmc.addon.repository" name="[COLOR lime][B]J[/B]PB Repo">
 		<dir>
 			<info compressed="false">https://raw.githubusercontent.com/djp11r/repo_n/mayb/addons.xml</info>
@@ -3051,20 +3052,24 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 			<datadir zip="true">https://raw.githubusercontent.com/djp11r/additinal_repo_n/mayb/</datadir>
 		</dir>
         <dir>
-            <info compressed="false">https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/Gujal00/smrzips/master/zips/</datadir>
-        </dir>
+	        <info compressed="false">https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml</info>
+	        <checksum>https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml.md5</checksum>
+	        <datadir zip="true">https://raw.githubusercontent.com/Gujal00/smrzips/master/zips/</datadir>
+		</dir>
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary>The Best Third Party Addons and Tools for Kodi</summary>
-		<description>Enjoy access to Indian media sources like desirulez.net</description>
+		<description>Enjoy access to ...</description>
 		<disclaimer lang="en">Repository has non-comercial nature. Created by enthusiasts, acting in good faith.hereby disclaims and negates all other warranties, including without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights. Further, video add-ons don't warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials on the Internet web site where from data is retrieved or otherwise relating to such materials or on any sites linked to this addon. Videos are streamed directly from video-hosting websites that are having full rights to remove such access to video if required. These add-ons access website contents like a normal web browser and show content to users.</disclaimer>
 		<platform>all</platform>
+		<assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
 	</extension>
 </addon>
 
-<addon id="script.jptools" name="JP Tools" provider-name="People" version="1.54">
+<addon id="script.jptools" name="JP Tools" provider-name="People" version="1.55">
     <requires>
         <import addon="script.module.requests"/>
         <import addon="script.module.beautifulsoup4"/>

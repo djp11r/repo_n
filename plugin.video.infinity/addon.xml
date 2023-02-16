@@ -1,7 +1,6 @@
-<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.5.95">
+<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.5.96">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
-		<import addon="context.infinity" optional="true"/>
 		<import addon="script.module.openscrapers"/>
 		<import addon="script.module.requests"/>
 		<import addon="script.module.beautifulsoup4"/>
@@ -12,6 +11,123 @@
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="umbrella.py">
 		<provides>video</provides>
+	</extension>
+	<extension point="kodi.context.item">
+		<menu id="kodi.core.main">
+			<item library="resources\lib\context\addtoLibrary.py">
+				<label>[B][COLOR $INFO[Window(home).Property(context.infinity.highlightcolor)]]infinity[/COLOR][/B] - Add to Library</label>
+				<visible>
+					!String.IsEmpty(Window(home).Property(context.infinity.addtoLibrary)) +
+					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
+					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
+					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+			</item>
+			<item library="resources\lib\context\traktManager.py">
+				<label>[B][COLOR $INFO[Window(home).Property(context.infinity.highlightcolor)]]infinity[/COLOR][/B] - Trakt Manager</label>
+				<visible>
+					!String.IsEmpty(Window(home).Property(context.infinity.traktManager)) +
+					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
+					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
+					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+			</item>
+			<item library="resources\lib\context\clearProviders.py">
+				<label>[B][COLOR $INFO[Window(home).Property(context.infinity.highlightcolor)]]infinity[/COLOR][/B] - Clear Providers</label>
+				<visible>
+					[!String.IsEmpty(Window(home).Property(context.infinity.clearProviders)) +
+					String.StartsWith(ListItem.FolderPath,plugin://plugin.video.infinity/?action=play) +
+					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
+					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]] |
+					[String.Contains(Container.FolderPath,videodb://) +
+					[String.Contains(Container.ListItem.Path,Window(home).Property(infinity.movieLib.path)) | String.Contains(Container.ListItem.Path,Window(home).Property(infinity.tvLib.path))] +
+					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]]
+				</visible>
+			</item>
+			<item library="resources\lib\context\clearBookmark.py">
+				<label>[B][COLOR $INFO[Window(home).Property(context.infinity.highlightcolor)]]infinity[/COLOR][/B] - Clear Item Bookmark</label>
+				<visible>
+					!String.IsEmpty(Window(home).Property(context.infinity.clearBookmark)) +
+					String.StartsWith(ListItem.FolderPath,plugin://plugin.video.infinity/?action=play) +
+					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
+					ListItem.IsResumable +
+					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+			</item>
+			<item library="resources\lib\context\rescrape.py">
+				<label>[B][COLOR $INFO[Window(home).Property(context.infinity.highlightcolor)]]infinity[/COLOR][/B] - Rescrape Item</label>
+				<visible>
+					[!String.IsEmpty(Window(home).Property(context.infinity.rescrape)) +
+					String.StartsWith(ListItem.FolderPath,plugin://plugin.video.infinity/?action=play) +
+					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
+					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]]
+				</visible>
+			</item>
+			<item library="resources\lib\context\libRescrape.py">
+				<label>[B][COLOR $INFO[Window(home).Property(context.infinity.highlightcolor)]]infinity[/COLOR][/B] - Rescrape Lib Item</label>
+				<visible>
+					String.Contains(Container.FolderPath,videodb://) +
+					[String.Contains(Container.ListItem.Path,Window(home).Property(infinity.movieLib.path)) | String.Contains(Container.ListItem.Path,Window(home).Property(infinity.tvLib.path))] +
+					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+			</item>
+			<item library="resources\lib\context\playFromHere.py">
+				<label>[B][COLOR $INFO[Window(home).Property(context.infinity.highlightcolor)]]infinity[/COLOR][/B] - Play from here</label>
+				<visible>
+					!String.IsEmpty(Window(home).Property(context.infinity.playFromHere)) +
+					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
+					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
+					String.IsEqual(ListItem.dbtype,episode)
+				</visible>
+			</item>
+			<item library="resources\lib\context\autoPlay.py">
+				<label>[B][COLOR $INFO[Window(home).Property(context.infinity.highlightcolor)]]infinity[/COLOR][/B] - Auto Play</label>
+				<visible>
+					String.IsEmpty(Window(home).Property(infinity.autoPlay.enabled)) +
+					!String.IsEmpty(Window(home).Property(context.infinity.autoPlay)) +
+					String.StartsWith(ListItem.FolderPath,plugin://plugin.video.infinity/?action=play) +
+					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
+					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+			</item>
+			<item library="resources\lib\context\sourceSelect.py">
+				<label>[B][COLOR $INFO[Window(home).Property(context.infinity.highlightcolor)]]infinity[/COLOR][/B] - Source Select</label>
+				<visible>
+					!String.IsEmpty(Window(home).Property(infinity.autoPlay.enabled)) +
+					!String.IsEmpty(Window(home).Property(context.infinity.sourceSelect)) +
+					String.StartsWith(ListItem.FolderPath,plugin://plugin.video.infinity/?action=play) +
+					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
+					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+			</item>
+			<item library="resources\lib\context\findSimilar.py">
+				<label>[B][COLOR $INFO[Window(home).Property(context.infinity.highlightcolor)]]infinity[/COLOR][/B] - Find Similar</label>
+				<visible>
+					!String.IsEmpty(Window(home).Property(context.infinity.findSimilar)) +
+					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
+					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
+					[String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+			</item>
+			<item library="resources\lib\context\browseSeries.py">
+				<label>[B][COLOR $INFO[Window(home).Property(context.infinity.highlightcolor)]]infinity[/COLOR][/B] - Browse Series</label>
+				<visible>
+					!String.IsEmpty(Window(home).Property(context.infinity.browseSeries)) +
+					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
+					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
+					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,tvshow)]
+				</visible>
+			</item>
+			<item library="resources\lib\context\browseEpisodes.py">
+				<label>[B][COLOR $INFO[Window(home).Property(context.infinity.highlightcolor)]]infinity[/COLOR][/B] - Browse Episodes</label>
+				<visible>
+					!String.IsEmpty(Window(home).Property(context.infinity.browseEpisodes)) +
+					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
+					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
+					String.IsEqual(ListItem.dbtype,episode)
+				</visible>
+			</item>
+		</menu>
 	</extension>
 	<extension point="xbmc.service" library="service.py" start="startup"/>
 	<extension point="xbmc.python.module" library="resources/lib/"/>
@@ -30,11 +146,8 @@
 			<fanart>fanart.png</fanart>
 		</assets>
 		<news>
-[B][COLOR black]Update - v6.6.13 - Feb 2nd, 2023[/COLOR][/B]
---[FIX][I] Multiple bug fixes under the hood related to Nexus and Kodi 20.[/I]
---[FIX][I] Corrected add to cloud errors.[/I]
---[ENHANCEMENT][I] Added similar to and recommended from Library.[/I]
---[ENHANCEMENT][I] Adjusted recommended lists from TMDB to remove some (adult) results.[/I]
+[B][COLOR black]Update - v6.6.18 - Feb 21th, 2023[/COLOR][/B]
+--[FIX][I] Fixed issue with playlist creation for playnext from widgets.[/I]
 		</news>
 	</extension>
 </addon>
