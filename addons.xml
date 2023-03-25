@@ -131,7 +131,7 @@ You can clone the project and host it in your own server.
 	</extension>
 </addon>
 
-<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.38" provider-name="open">
+<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.41" provider-name="open">
 	<requires>
 		<import addon="script.module.beautifulsoup4"/>
 		<import addon="script.module.requests"/>
@@ -1221,7 +1221,7 @@ Adds 'record' button to Video OSD while youtube videos are playing.</description
   </extension>
 </addon>
 
-<addon id="script.module.infotagger" name="InfoTagger" provider-name="jurialmunkey" version="0.0.5">
+<addon id="script.module.infotagger" name="InfoTagger" provider-name="jurialmunkey" version="0.0.7">
   <requires>
     <import addon="xbmc.python" version="3.0.1"/>
   </requires>
@@ -1440,7 +1440,7 @@ v1.0.25 (marcelveldt)
 	</extension>
 </addon>
 
-<addon id="script.module.myaccounts" version="2.1.1" name="My Accounts" provider-name="">
+<addon id="script.module.myaccounts" version="2.1.2" name="My Accounts" provider-name="">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="script.module.requests" version="2.19.1"/>
@@ -1577,7 +1577,7 @@ v1.0.25 (marcelveldt)
   </extension>
 </addon>
 
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.940" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.970" provider-name="gujal">
     <requires>
         <!-- <import addon="xbmc.python" version="3.0.0" /> -->
         <import addon="script.module.six"/>
@@ -2668,7 +2668,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 </extension>
 </addon>
 
-<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.73">
+<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.76">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests"/>
@@ -2877,7 +2877,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 	</extension>
 </addon>
 
-<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.5.96">
+<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.5.99">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="script.module.openscrapers"/>
@@ -2887,6 +2887,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 		<import addon="plugin.video.youtube" optional="true"/>
 		<import addon="script.module.myaccounts"/>
 		<import addon="script.module.resolveurl"/>
+		<import addon="script.module.pytz"/>
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="umbrella.py">
 		<provides>video</provides>
@@ -3025,9 +3026,17 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 			<fanart>fanart.png</fanart>
 		</assets>
 		<news>
-[B][COLOR black]Update - v6.6.182 - Feb 21th, 2023[/COLOR][/B]
---[FIX][I] Fixed issue with playlist creation for playnext from widgets.[/I]
---[FIX][I] Adjustment made where hidden items in widgets still show in search.[/I]
+[B][COLOR black]Update - v6.6.203 - May 2nd, 2023[/COLOR][/B]
+--[FIX][I] Added option for prioritize direct to top of results.[/I]
+--[FIX][I] Fixed MP4 filtering.[/I]
+--[FIX][I] Added Progress by TV Shows and removed all caching for progress from trakt.[/I]
+--[FIX][I] Adjusted icon to match format name for case sensitive systems.[/I]
+--[FIX][I] Changed library sync to use temp table and added container refresh.[/I]
+--[FIX][I] Changed similar from library to use a temp database.[/I]
+--[FIX][I] Changed deleted method for database when syncing cached movies.[/I]
+--[FIX][I] Added ability to clear cached movies database table.[/I]
+--[FIX][I] Added AppleTV+ quality filter.[/I]
+--[CHANGE][I] Removed all changes made for TV Show Progress. Feature will not be added. Use TMDBHelper.[/I]
 		</news>
 	</extension>
 </addon>
@@ -3088,7 +3097,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 	</extension>
 </addon>
 
-<addon id="script.jptools" name="JP Tools" provider-name="People" version="1.57">
+<addon id="script.jptools" name="JP Tools" provider-name="People" version="1.59">
     <requires>
         <import addon="script.module.requests"/>
         <import addon="script.module.beautifulsoup4"/>
