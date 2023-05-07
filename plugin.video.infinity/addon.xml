@@ -1,4 +1,4 @@
-<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.5.99">
+<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.00">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="script.module.openscrapers"/>
@@ -67,7 +67,7 @@
 			<item library="resources\lib\context\libRescrape.py">
 				<label>[B][COLOR $INFO[Window(home).Property(context.infinity.highlightcolor)]]infinity[/COLOR][/B] - Rescrape Lib Item</label>
 				<visible>
-					String.Contains(Container.FolderPath,videodb://) +
+					[String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.ListItem.FolderPath,videodb://)] +
 					[String.Contains(Container.ListItem.Path,Window(home).Property(infinity.movieLib.path)) | String.Contains(Container.ListItem.Path,Window(home).Property(infinity.tvLib.path))] +
 					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]
 				</visible>
@@ -147,17 +147,13 @@
 			<fanart>fanart.png</fanart>
 		</assets>
 		<news>
-[B][COLOR black]Update - v6.6.203 - May 2nd, 2023[/COLOR][/B]
---[FIX][I] Added option for prioritize direct to top of results.[/I]
---[FIX][I] Fixed MP4 filtering.[/I]
---[FIX][I] Added Progress by TV Shows and removed all caching for progress from trakt.[/I]
---[FIX][I] Adjusted icon to match format name for case sensitive systems.[/I]
---[FIX][I] Changed library sync to use temp table and added container refresh.[/I]
---[FIX][I] Changed similar from library to use a temp database.[/I]
---[FIX][I] Changed deleted method for database when syncing cached movies.[/I]
---[FIX][I] Added ability to clear cached movies database table.[/I]
---[FIX][I] Added AppleTV+ quality filter.[/I]
---[CHANGE][I] Removed all changes made for TV Show Progress. Feature will not be added. Use TMDBHelper.[/I]
+[B][COLOR black]Update - v6.6.219 - May 17th, 2023[/COLOR][/B]
+--[Fix][I] Attempted fix for no meta sent from widgets created from library. Causing CRASHES[/I]
+--[Fix][I] Adjusted filters to better identify HDR.[/I]
+--[Enhancement][I] Lazy ass TV Shows Progress added.[/I]
+--[Logging][I] Significant changes to logging.[/I]
+--[Logging][I] Additional logging for source select.[/I]
+--[Logging][I] Red Coat logging.... FFS[/I]
 		</news>
 	</extension>
 </addon>
