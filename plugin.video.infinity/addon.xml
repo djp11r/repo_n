@@ -1,4 +1,4 @@
-<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.00">
+<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.01">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="script.module.openscrapers"/>
@@ -147,13 +147,14 @@
 			<fanart>fanart.png</fanart>
 		</assets>
 		<news>
-[B][COLOR black]Update - v6.6.219 - May 17th, 2023[/COLOR][/B]
---[Fix][I] Attempted fix for no meta sent from widgets created from library. Causing CRASHES[/I]
---[Fix][I] Adjusted filters to better identify HDR.[/I]
---[Enhancement][I] Lazy ass TV Shows Progress added.[/I]
---[Logging][I] Significant changes to logging.[/I]
---[Logging][I] Additional logging for source select.[/I]
---[Logging][I] Red Coat logging.... FFS[/I]
+[B]Update - v6.6.224 - June 12th, 2023[/B]
+--[Enhancement] Added new custom progress dialog.
+--[Enhancement] Added new custom ok dialog.
+--[Enhancement] Added new custom confirm dialog.
+--[Enhancement] Added new movie list for released this month.
+--[Enhancement] Added new movie list for released this month on physical or digital.
+--[Enhancement] Added import now option for auto imported trakt lists.
+--[Enhancement] Changed import now method due to red coat moaning.
 		</news>
 	</extension>
 </addon>

@@ -131,7 +131,7 @@ You can clone the project and host it in your own server.
 	</extension>
 </addon>
 
-<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.42" provider-name="open">
+<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.43" provider-name="open">
 	<requires>
 		<import addon="script.module.beautifulsoup4"/>
 		<import addon="script.module.requests"/>
@@ -525,7 +525,7 @@ v1.1.0 (2020-01-17)
     </extension>
 </addon>
 
-<addon id="plugin.video.youtube" name="YouTube" version="7.0.1" provider-name="anxdpanic, bromix">
+<addon id="plugin.video.youtube" name="YouTube" version="7.0.2~alpha7" provider-name="anxdpanic, bromix">
     <requires>
         <import addon="xbmc.python" version="3.0.1"/>
         <import addon="script.module.requests" version="2.12.4"/>
@@ -540,7 +540,8 @@ v1.1.0 (2020-01-17)
     <extension point="xbmc.python.module" library="resources/lib/"/>
     <extension point="xbmc.addon.metadata">
         <news>
-[fix] video duration not showing in lists
+[fix] error when filtering short videos
+[fix] fix playback |contrib: MoojMidge|
 [upd] Translations updated from Kodi Weblate
         </news>
         <assets>
@@ -1240,7 +1241,7 @@ Adds 'record' button to Video OSD while youtube videos are playing.</description
 
 </addon>
 
-<addon id="script.module.inputstreamhelper" name="InputStream Helper" version="0.6.0+matrix.1" provider-name="emilsvennesson, dagwieers, mediaminister, horstle">
+<addon id="script.module.inputstreamhelper" name="InputStream Helper" version="0.6.1+matrix.1" provider-name="emilsvennesson, dagwieers, mediaminister, horstle">
   <requires>
     <!--py3 compliant-->
     <import addon="xbmc.python" version="3.0.0"/>
@@ -1266,10 +1267,14 @@ Adds 'record' button to Video OSD while youtube videos are playing.</description
     <description lang="hr_HR">Jednostavan Kodi modul koji olaksava razvijanje dodataka koji se temelje na InputStream dodatku i reprodukciji DRM zasticenog sadrzaja.</description>
     <description lang="ru_RU">   Kodi,     ,   InputStream    DRM .</description>
     <news>
+v0.6.1 (2023-05-30)
+- Performance improvements on Linux ARM
+- This will be the last release for Python 2 i.e. Kodi 18 (Leia) and below. The next release will require Python 3 and Kodi 19 (Matrix) or higher.
+
 v0.6.0 (2023-05-03)
-- Initial support for AARCH64 Linux (@horstle)
-- Initial support for AARCH64 Macs (@mediaminister)
-- New option to install a specific version on most platforms (@horstle)
+- Initial support for AARCH64 Linux
+- Initial support for AARCH64 Macs
+- New option to install a specific version on most platforms
 
 v0.5.10 (2022-04-18)
 - Fix automatic submission of release
@@ -1631,7 +1636,7 @@ v1.0.25 (marcelveldt)
   </extension>
 </addon>
 
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.980" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.101" provider-name="gujal">
     <requires>
         <!-- <import addon="xbmc.python" version="3.0.0" /> -->
         <import addon="script.module.six"/>
@@ -2690,7 +2695,7 @@ Other languages with a great number of subtitles are: Danish, French, Swedish, D
     </extension>
 </addon>
 
-<addon id="plugin.video.deccandelight" version="2.0.34" name="Deccan Delight" provider-name="gujal">
+<addon id="plugin.video.deccandelight" version="2.0.35" name="Deccan Delight" provider-name="gujal">
 <requires>
 	<import addon="script.module.six"/>
 	<import addon="script.module.kodi-six"/>
@@ -2722,7 +2727,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 </extension>
 </addon>
 
-<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.80">
+<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.82">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests"/>
@@ -2740,27 +2745,27 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
         <menu id="kodi.core.main">
             <item library="resources/contextmenu/refresh_widgets.py">
                 <label>[B]$ADDON[plugin.video.infinite 32611][/B]</label>
-                <visible>String.IsEqual(ListItem.Property(infinite.widget),true) + !String.StartsWith(Window(home).Property(infinite.kodi_version),20)</visible>
+                <visible>String.IsEqual(ListItem.Property(infinite.external),true) + !String.StartsWith(Window(home).Property(infinite.kodi_version),20)</visible>
             </item>
             <item library="resources/contextmenu/mark_watched.py">
                 <label>[B]$ADDON[plugin.video.infinite 33130][/B]</label>
-                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,episode)] + String.IsEqual(ListItem.Property(infinite.widget),true) + String.IsEqual(ListItem.Property(infinite.playcount),0) + !String.StartsWith(Window(home).Property(infinite.kodi_version),20)</visible>
+                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,episode)] + String.IsEqual(ListItem.Property(infinite.external),true) + String.IsEqual(ListItem.Property(infinite.playcount),0) + !String.StartsWith(Window(home).Property(infinite.kodi_version),20)</visible>
             </item>
             <item library="resources/contextmenu/mark_unwatched.py">
                 <label>[B]$ADDON[plugin.video.infinite 33131][/B]</label>
-                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,episode)] + String.IsEqual(ListItem.Property(infinite.widget),true) + String.IsEqual(ListItem.Property(infinite.playcount),1) + !String.StartsWith(Window(home).Property(infinite.kodi_version),20)</visible>
+                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,episode)] + String.IsEqual(ListItem.Property(infinite.external),true) + String.IsEqual(ListItem.Property(infinite.playcount),1) + !String.StartsWith(Window(home).Property(infinite.kodi_version),20)</visible>
             </item>
             <item library="resources/contextmenu/clear_progress.py">
                 <label>32651</label>
-                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,episode)] + String.IsEqual(ListItem.Property(infinite.widget),true) + String.IsEqual(ListItem.Property(infinite.in_progress),true) + !String.StartsWith(Window(home).Property(infinite.kodi_version),20)</visible>
+                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,episode)] + String.IsEqual(ListItem.Property(infinite.external),true) + String.IsEqual(ListItem.Property(infinite.in_progress),true) + !String.StartsWith(Window(home).Property(infinite.kodi_version),20)</visible>
             </item>
             <item library="resources/contextmenu/options.py">
                 <label>32646</label>
-                <visible>String.IsEqual(ListItem.Property(infinite.widget),true) + !String.StartsWith(Window(home).Property(infinite.kodi_version),20)</visible>
+                <visible>String.IsEqual(ListItem.Property(infinite.external),true) + !String.StartsWith(Window(home).Property(infinite.kodi_version),20)</visible>
             </item>
             <item library="resources/contextmenu/extras.py">
                 <label>32645</label>
-                <visible>String.IsEqual(ListItem.Property(infinite.widget),true) + !String.StartsWith(Window(home).Property(infinite.kodi_version),20)</visible>
+                <visible>String.IsEqual(ListItem.Property(infinite.external),true) + !String.StartsWith(Window(home).Property(infinite.kodi_version),20)</visible>
             </item>
         </menu>
     </extension>
@@ -2931,7 +2936,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 	</extension>
 </addon>
 
-<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.00">
+<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.01">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="script.module.openscrapers"/>
@@ -3080,13 +3085,10 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 			<fanart>fanart.png</fanart>
 		</assets>
 		<news>
-[B][COLOR black]Update - v6.6.219 - May 17th, 2023[/COLOR][/B]
---[Fix][I] Attempted fix for no meta sent from widgets created from library. Causing CRASHES[/I]
---[Fix][I] Adjusted filters to better identify HDR.[/I]
---[Enhancement][I] Lazy ass TV Shows Progress added.[/I]
---[Logging][I] Significant changes to logging.[/I]
---[Logging][I] Additional logging for source select.[/I]
---[Logging][I] Red Coat logging.... FFS[/I]
+[B]Update - v6.6.241 - June 23rd, 2023[/B]
+--[ENHANCEMENT] Added Poster artwork on resolving popup.
+--[ENHANCEMENT] Modified limit of hidden trakt items to sync from 1000 to 2000.
+--[ENHANCEMENT] Applied trakt hidden items filter to Progress Shows - More later once decided among users..
 		</news>
 	</extension>
 </addon>
@@ -3147,7 +3149,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 	</extension>
 </addon>
 
-<addon id="script.jptools" name="JP Tools" provider-name="People" version="1.59">
+<addon id="script.jptools" name="JP Tools" provider-name="People" version="1.60">
     <requires>
         <import addon="script.module.requests"/>
         <import addon="script.module.beautifulsoup4"/>

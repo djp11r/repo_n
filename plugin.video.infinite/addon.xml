@@ -1,4 +1,4 @@
-<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.80">
+<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.82">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests"/>
@@ -16,27 +16,27 @@
         <menu id="kodi.core.main">
             <item library="resources/contextmenu/refresh_widgets.py">
                 <label>[B]$ADDON[plugin.video.infinite 32611][/B]</label>
-                <visible>String.IsEqual(ListItem.Property(infinite.widget),true) + !String.StartsWith(Window(home).Property(infinite.kodi_version),20)</visible>
+                <visible>String.IsEqual(ListItem.Property(infinite.external),true) + !String.StartsWith(Window(home).Property(infinite.kodi_version),20)</visible>
             </item>
             <item library="resources/contextmenu/mark_watched.py">
                 <label>[B]$ADDON[plugin.video.infinite 33130][/B]</label>
-                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,episode)] + String.IsEqual(ListItem.Property(infinite.widget),true) + String.IsEqual(ListItem.Property(infinite.playcount),0) + !String.StartsWith(Window(home).Property(infinite.kodi_version),20)</visible>
+                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,episode)] + String.IsEqual(ListItem.Property(infinite.external),true) + String.IsEqual(ListItem.Property(infinite.playcount),0) + !String.StartsWith(Window(home).Property(infinite.kodi_version),20)</visible>
             </item>
             <item library="resources/contextmenu/mark_unwatched.py">
                 <label>[B]$ADDON[plugin.video.infinite 33131][/B]</label>
-                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,episode)] + String.IsEqual(ListItem.Property(infinite.widget),true) + String.IsEqual(ListItem.Property(infinite.playcount),1) + !String.StartsWith(Window(home).Property(infinite.kodi_version),20)</visible>
+                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,episode)] + String.IsEqual(ListItem.Property(infinite.external),true) + String.IsEqual(ListItem.Property(infinite.playcount),1) + !String.StartsWith(Window(home).Property(infinite.kodi_version),20)</visible>
             </item>
             <item library="resources/contextmenu/clear_progress.py">
                 <label>32651</label>
-                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,episode)] + String.IsEqual(ListItem.Property(infinite.widget),true) + String.IsEqual(ListItem.Property(infinite.in_progress),true) + !String.StartsWith(Window(home).Property(infinite.kodi_version),20)</visible>
+                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,episode)] + String.IsEqual(ListItem.Property(infinite.external),true) + String.IsEqual(ListItem.Property(infinite.in_progress),true) + !String.StartsWith(Window(home).Property(infinite.kodi_version),20)</visible>
             </item>
             <item library="resources/contextmenu/options.py">
                 <label>32646</label>
-                <visible>String.IsEqual(ListItem.Property(infinite.widget),true) + !String.StartsWith(Window(home).Property(infinite.kodi_version),20)</visible>
+                <visible>String.IsEqual(ListItem.Property(infinite.external),true) + !String.StartsWith(Window(home).Property(infinite.kodi_version),20)</visible>
             </item>
             <item library="resources/contextmenu/extras.py">
                 <label>32645</label>
-                <visible>String.IsEqual(ListItem.Property(infinite.widget),true) + !String.StartsWith(Window(home).Property(infinite.kodi_version),20)</visible>
+                <visible>String.IsEqual(ListItem.Property(infinite.external),true) + !String.StartsWith(Window(home).Property(infinite.kodi_version),20)</visible>
             </item>
         </menu>
     </extension>
