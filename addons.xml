@@ -2727,7 +2727,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 </extension>
 </addon>
 
-<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.82">
+<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.83">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests"/>
@@ -2954,7 +2954,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 	<extension point="kodi.context.item">
 		<menu id="kodi.core.main">
 			<item library="resources\lib\context\addtoLibrary.py">
-				<label>[B][COLOR $INFO[Window(home).Property(context.infinity.highlightcolor)]]infinity[/COLOR][/B] - Add to Library</label>
+				<label>$INFO[Window(home).Property(context.infinity.showinfinity)]Add to Library</label>
 				<visible>
 					!String.IsEmpty(Window(home).Property(context.infinity.addtoLibrary)) +
 					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
@@ -2963,7 +2963,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 				</visible>
 			</item>
 			<item library="resources\lib\context\traktManager.py">
-				<label>[B][COLOR $INFO[Window(home).Property(context.infinity.highlightcolor)]]infinity[/COLOR][/B] - Trakt Manager</label>
+				<label>$INFO[Window(home).Property(context.infinity.showinfinity)]Trakt Manager</label>
 				<visible>
 					!String.IsEmpty(Window(home).Property(context.infinity.traktManager)) +
 					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
@@ -2972,7 +2972,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 				</visible>
 			</item>
 			<item library="resources\lib\context\clearProviders.py">
-				<label>[B][COLOR $INFO[Window(home).Property(context.infinity.highlightcolor)]]infinity[/COLOR][/B] - Clear Providers</label>
+				<label>$INFO[Window(home).Property(context.infinity.showinfinity)]Clear Providers</label>
 				<visible>
 					[!String.IsEmpty(Window(home).Property(context.infinity.clearProviders)) +
 					String.StartsWith(ListItem.FolderPath,plugin://plugin.video.infinity/?action=play) +
@@ -2984,7 +2984,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 				</visible>
 			</item>
 			<item library="resources\lib\context\clearBookmark.py">
-				<label>[B][COLOR $INFO[Window(home).Property(context.infinity.highlightcolor)]]infinity[/COLOR][/B] - Clear Item Bookmark</label>
+				<label>$INFO[Window(home).Property(context.infinity.showinfinity)]Clear Item Bookmark</label>
 				<visible>
 					!String.IsEmpty(Window(home).Property(context.infinity.clearBookmark)) +
 					String.StartsWith(ListItem.FolderPath,plugin://plugin.video.infinity/?action=play) +
@@ -2994,7 +2994,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 				</visible>
 			</item>
 			<item library="resources\lib\context\rescrape.py">
-				<label>[B][COLOR $INFO[Window(home).Property(context.infinity.highlightcolor)]]infinity[/COLOR][/B] - Rescrape Item</label>
+				<label>$INFO[Window(home).Property(context.infinity.showinfinity)]Rescrape Item</label>
 				<visible>
 					[!String.IsEmpty(Window(home).Property(context.infinity.rescrape)) +
 					String.StartsWith(ListItem.FolderPath,plugin://plugin.video.infinity/?action=play) +
@@ -3003,7 +3003,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 				</visible>
 			</item>
 			<item library="resources\lib\context\libRescrape.py">
-				<label>[B][COLOR $INFO[Window(home).Property(context.infinity.highlightcolor)]]infinity[/COLOR][/B] - Rescrape Lib Item</label>
+				<label>$INFO[Window(home).Property(context.infinity.showinfinity)]Rescrape Lib Item</label>
 				<visible>
 					[String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.ListItem.FolderPath,videodb://)] +
 					[String.Contains(Container.ListItem.Path,Window(home).Property(infinity.movieLib.path)) | String.Contains(Container.ListItem.Path,Window(home).Property(infinity.tvLib.path))] +
@@ -3011,7 +3011,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 				</visible>
 			</item>
 			<item library="resources\lib\context\playFromHere.py">
-				<label>[B][COLOR $INFO[Window(home).Property(context.infinity.highlightcolor)]]infinity[/COLOR][/B] - Play from here</label>
+				<label>$INFO[Window(home).Property(context.infinity.showinfinity)]Play from here</label>
 				<visible>
 					!String.IsEmpty(Window(home).Property(context.infinity.playFromHere)) +
 					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
@@ -3020,7 +3020,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 				</visible>
 			</item>
 			<item library="resources\lib\context\autoPlay.py">
-				<label>[B][COLOR $INFO[Window(home).Property(context.infinity.highlightcolor)]]infinity[/COLOR][/B] - Auto Play</label>
+				<label>$INFO[Window(home).Property(context.infinity.showinfinity)]Auto Play</label>
 				<visible>
 					String.IsEmpty(Window(home).Property(infinity.autoPlay.enabled)) +
 					!String.IsEmpty(Window(home).Property(context.infinity.autoPlay)) +
@@ -3030,7 +3030,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 				</visible>
 			</item>
 			<item library="resources\lib\context\sourceSelect.py">
-				<label>[B][COLOR $INFO[Window(home).Property(context.infinity.highlightcolor)]]infinity[/COLOR][/B] - Source Select</label>
+				<label>$INFO[Window(home).Property(context.infinity.showinfinity)]Source Select</label>
 				<visible>
 					!String.IsEmpty(Window(home).Property(infinity.autoPlay.enabled)) +
 					!String.IsEmpty(Window(home).Property(context.infinity.sourceSelect)) +
@@ -3040,7 +3040,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 				</visible>
 			</item>
 			<item library="resources\lib\context\findSimilar.py">
-				<label>[B][COLOR $INFO[Window(home).Property(context.infinity.highlightcolor)]]infinity[/COLOR][/B] - Find Similar</label>
+				<label>$INFO[Window(home).Property(context.infinity.showinfinity)]Find Similar</label>
 				<visible>
 					!String.IsEmpty(Window(home).Property(context.infinity.findSimilar)) +
 					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
@@ -3049,7 +3049,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 				</visible>
 			</item>
 			<item library="resources\lib\context\browseSeries.py">
-				<label>[B][COLOR $INFO[Window(home).Property(context.infinity.highlightcolor)]]infinity[/COLOR][/B] - Browse Series</label>
+				<label>$INFO[Window(home).Property(context.infinity.showinfinity)]Browse Series</label>
 				<visible>
 					!String.IsEmpty(Window(home).Property(context.infinity.browseSeries)) +
 					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
@@ -3058,7 +3058,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 				</visible>
 			</item>
 			<item library="resources\lib\context\browseEpisodes.py">
-				<label>[B][COLOR $INFO[Window(home).Property(context.infinity.highlightcolor)]]infinity[/COLOR][/B] - Browse Episodes</label>
+				<label>$INFO[Window(home).Property(context.infinity.showinfinity)]Browse Episodes</label>
 				<visible>
 					!String.IsEmpty(Window(home).Property(context.infinity.browseEpisodes)) +
 					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
@@ -3085,10 +3085,14 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 			<fanart>fanart.png</fanart>
 		</assets>
 		<news>
-[B]Update - v6.6.241 - June 23rd, 2023[/B]
+[B]Update - v6.6.249 - June 29th, 2023[/B]
 --[ENHANCEMENT] Added Poster artwork on resolving popup.
 --[ENHANCEMENT] Modified limit of hidden trakt items to sync from 1000 to 2000.
 --[ENHANCEMENT] Applied trakt hidden items filter to Progress Shows - More later once decided among users..
+--[ENHANCEMENT] Added option to remove Umbrella text from context menu items.
+--[LOGGING] Added some logging to track play action.
+--[REMOVAL] Removed Furk from addon. It will no longer be supported.
+--[FIX] Added code to kill busy dialog when filtering sources completed.
 		</news>
 	</extension>
 </addon>
