@@ -1,4 +1,4 @@
-<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.01">
+<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.03">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="script.module.openscrapers"/>
@@ -22,6 +22,15 @@
 					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
 					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
 					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+			</item>
+			<item library="resources\lib\context\playTrailer.py">
+				<label>$INFO[Window(home).Property(context.infinity.showinfinity)]Play Trailer</label>
+				<visible>
+					!String.IsEmpty(Window(home).Property(context.infinity.playTrailer)) +
+					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
+					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
+					[String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,movie)]
 				</visible>
 			</item>
 			<item library="resources\lib\context\traktManager.py">
@@ -147,13 +156,9 @@
 			<fanart>fanart.png</fanart>
 		</assets>
 		<news>
-[B]Update - v6.6.247 - June 28th, 2023[/B]
---[ENHANCEMENT] Added Poster artwork on resolving popup.
---[ENHANCEMENT] Modified limit of hidden trakt items to sync from 1000 to 2000.
---[ENHANCEMENT] Applied trakt hidden items filter to Progress Shows - More later once decided among users..
---[ENHANCEMENT] Added option to remove Umbrella text from context menu items.
---[LOGGING] Added some logging to track play action.
---[REMOVAL] Removed Furk from addon. It will no longer be supported.
+[B]Update - v6.6.261 - July 28th, 2023[/B]
+--[Fix] Dark color compare fix for blank values.
+
 		</news>
 	</extension>
 </addon>

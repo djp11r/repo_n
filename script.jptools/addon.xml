@@ -8,6 +8,7 @@
     <extension library="resources/lib/script_entry.py" point="xbmc.python.pluginsource">
         <provides>executable</provides>
     </extension>
+    <extension library="resources/lib/" point="xbmc.python.module"/>
     <extension library="resources/lib/service_entry.py" point="xbmc.service" start="startup" />
     <extension point="xbmc.addon.metadata">
         <summary lang="en_GB">A Streamlined Utility Tool for Kodi.</summary>
@@ -16,8 +17,8 @@
         <platform>all</platform>
         <license>The MIT License</license>
         <assets>
-            <icon>icon.png</icon>
-            <fanart>fanart.jpg</fanart>
+            <icon>resources/media/icon.png</icon>
+            <fanart>resources/media/fanart.jpg</fanart>
         </assets>
     </extension>
 </addon>
