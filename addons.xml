@@ -100,7 +100,7 @@ You can clone the project and host it in your own server.
 	</extension>
 </addon>
 
-<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.44" provider-name="open">
+<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.45" provider-name="open">
 	<requires>
 		<import addon="script.module.beautifulsoup4"/>
 		<import addon="script.module.requests"/>
@@ -1076,10 +1076,10 @@ Adds 'record' button to Video OSD while youtube videos are playing.</description
   </extension>
 </addon>
 
-<addon id="script.module.beautifulsoup4" name="BeautifulSoup4" version="4.9.3+matrix.1" provider-name="Leonard Richardson (leonardr@segfault.org)">
+<addon id="script.module.beautifulsoup4" name="beautifulsoup4" version="4.12.2" provider-name="Leonard Richardson">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
-    <import addon="script.module.soupsieve" version="2.0.0+matrix.1"/>
+    <import addon="script.module.soupsieve" version="2.4.1"/>
   </requires>
   <extension point="xbmc.python.module" library="lib"/>
   <extension point="xbmc.addon.metadata">
@@ -1090,7 +1090,7 @@ Adds 'record' button to Video OSD while youtube videos are playing.</description
     <website>https://www.crummy.com/software/BeautifulSoup/</website>
 	<source>https://code.launchpad.net/beautifulsoup</source>
     <assets>
-      <icon>icon.png</icon>
+      <icon>resources/icon.png</icon>
     </assets>
   </extension>
 </addon>
@@ -1605,7 +1605,7 @@ v1.0.25 (marcelveldt)
   </extension>
 </addon>
 
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.104" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.108" provider-name="gujal">
     <requires>
         <!-- <import addon="xbmc.python" version="3.0.0" /> -->
         <import addon="script.module.six"/>
@@ -1704,22 +1704,20 @@ v1.0.25 (marcelveldt)
     </extension>
 </addon>
 
-<addon id="script.module.simplejson" name="simplejson" version="3.17.0+matrix.2" provider-name="Bob Ippolito">
+<addon id="script.module.simplejson" name="simplejson" version="3.19.1+matrix.1" provider-name="Bob Ippolito">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
   </requires>
   <extension point="xbmc.python.module" library="lib"/>
   <extension point="xbmc.addon.metadata">
-    <platform>all</platform>
-    <language/>
     <summary lang="en_GB">Simple, fast, extensible JSON encoder/decoder for Python</summary>
     <description lang="en_GB">Simple, fast, extensible JSON encoder/decoder for Python</description>
-    <disclaimer lang="en_GB">Code taken from https://pypi.org/project/simplejson/</disclaimer>
-    <license>MIT License, Academic Free License v. 2.1</license>
-    <website>https://pypi.org/project/simplejson/</website>
+    <license>MIT</license>
+    <platform>all</platform>
+    <website>https://github.com/simplejson/simplejson</website>
     <source>https://github.com/simplejson/simplejson</source>
     <assets>
-      <icon>icon.png</icon>
+      <icon>resources/icon.png</icon>
     </assets>
   </extension>
 </addon>
@@ -1780,22 +1778,22 @@ v1.0.25 (marcelveldt)
   </extension>
 </addon>
 
-<addon id="script.module.soupsieve" name="Soup Sieve" version="2.1.0+matrix.1" provider-name="Isaac Muse">
-	<requires>
-		<import addon="xbmc.python" version="3.0.0"/>
-	</requires>
-	<extension point="xbmc.python.module" library="lib"/>
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en_GB">A CSS selector library</summary>
-		<description lang="en_GB">Soup Sieve is a CSS selector library designed to be used with Beautiful Soup 4. It aims to provide selecting, matching, and filtering using modern CSS selectors.</description>
-		<license>MIT</license>
-		<platform>all</platform>
-		<website>https://pypi.org/project/soupsieve/</website>
-		<source>https://github.com/facelessuser/soupsieve</source>
-		<assets>
-			<icon>icon.png</icon>
-		</assets>
-	</extension>
+<addon id="script.module.soupsieve" name="soupsieve" version="2.4.1" provider-name="Isaac Muse">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">A modern CSS selector implementation for Beautiful Soup.</summary>
+    <description lang="en_GB">A modern CSS selector implementation for Beautiful Soup.</description>
+    <license>MIT</license>
+    <platform>all</platform>
+    <website>https://facelessuser.github.io/soupsieve/</website>
+    <source>https://github.com/facelessuser/soupsieve</source>
+    <assets>
+      <icon>resources/icon.png</icon>
+    </assets>
+  </extension>
 </addon>
 
 <addon id="script.module.streamlink" name="Streamlink Library" version="1.7.0" provider-name="jairox">
@@ -1909,23 +1907,22 @@ v1.0.25 (marcelveldt)
   </extension>
 </addon>
 
-<addon id="script.module.unidecode" name="unidecode" version="1.1.1+matrix.2" provider-name="Tomaz Solc (Tomaz.solc@tablix.org)">
-	<requires>
-		<import addon="xbmc.python" version="3.0.0"/>
-	</requires>
-	<extension point="xbmc.python.module" library="lib"/>
-	<extension point="xbmc.addon.metadata">
-		<platform>all</platform>
-		<summary lang="en_GB">ASCII transliterations of Unicode text by Sean M. Burke and Tomaz Solc</summary>
-		<description lang="en_GB">ASCII transliterations of Unicode text by Sean M. Burke and Tomaz Solc</description>
-		<disclaimer lang="en_GB">Code taken from https://pypi.org/project/Unidecode</disclaimer>
-		<license>GPL-2.0-or-later</license>
-		<website>https://pypi.org/project/Unidecode</website>
-		<source>https://pypi.org/project/Unidecode</source>
-		<assets>
-			<icon>icon.png</icon>
-		</assets>
-	</extension>
+<addon id="script.module.unidecode" name="Unidecode" version="1.3.6" provider-name="Tomaz Solc">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">ASCII transliterations of Unicode text</summary>
+    <description lang="en_GB">Unidecode, lossy ASCII transliterations of Unicode text</description>
+    <license>GPL-2.0-or-later</license>
+    <platform>all</platform>
+    <website>https://pypi.org/project/Unidecode</website>
+    <source>https://pypi.org/project/Unidecode</source>
+    <assets>
+      <icon>resources/icon.png</icon>
+    </assets>
+  </extension>
 </addon>
 
 <addon id="script.module.urllib3" name="urllib3" version="1.26.16+matrix.1" provider-name="urllib3">
@@ -2664,7 +2661,7 @@ Other languages with a great number of subtitles are: Danish, French, Swedish, D
     </extension>
 </addon>
 
-<addon id="plugin.video.deccandelight" version="2.0.36" name="Deccan Delight" provider-name="gujal">
+<addon id="plugin.video.deccandelight" version="2.0.37" name="Deccan Delight" provider-name="gujal">
 <requires>
 	<import addon="script.module.six"/>
 	<import addon="script.module.kodi-six"/>
@@ -2693,10 +2690,11 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 		<screenshot>resources/images/screenshot-01.jpg</screenshot>
 		<screenshot>resources/images/screenshot-02.jpg</screenshot>
 	</assets>
+	<reuselanguageinvoker>false</reuselanguageinvoker>
 </extension>
 </addon>
 
-<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.85">
+<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.87">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests"/>
@@ -2713,9 +2711,9 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
     <extension point="xbmc.addon.metadata">
         <reuselanguageinvoker>true</reuselanguageinvoker>
         <summary lang="en">Mainly used for English and Hindi content.</summary>
-        <description lang="en">This add-on is intended for advanced Kodi users only. Mainly used for Furk and Easynews(web) account access. An External Scraper package may be used. You must own the content of any media you play through this addon.</description>
+        <description lang="en">This add-on is intended for advanced Kodi users only. You must own the content of any media you play through this addon.</description>
         <platform>all</platform>
-        <disclaimer lang="en">The author of this addon does not host any of the content which is found and has no affiliation with any of the content providers. This addon simply searches websites for content.</disclaimer>
+        <disclaimer lang="en">The author of this addon does not host any of the content which is found and has no affiliation with any of the content providers.</disclaimer>
         <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
         <assets>
             <icon>resources/media/icon.png</icon>
@@ -2877,7 +2875,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 	</extension>
 </addon>
 
-<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.03">
+<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.05">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="script.module.openscrapers"/>
@@ -3035,9 +3033,14 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 			<fanart>fanart.png</fanart>
 		</assets>
 		<news>
-[B]Update - v6.6.261 - July 28th, 2023[/B]
---[Fix] Dark color compare fix for blank values.
-
+[B]Update - v6.6.307 - September 6th, 2023[/B]
+--[Enhancement] Added ability to show titles on all sections. (Remake any widgets made from Umbrella)
+--[Enhancement] Changed text on resolving popups to no longer be bold.
+--[Enhancement] Added new search function for trakt lists from skin.
+--[Fix] Changed code for movie and show collection and watchlist import to improve speed.
+--[Fix] Made changes to tv show and seasonal level information to avoid imdb id being overwritten.
+--[Fix] Removed special characters in multiple places.
+--[Fix] Fixed sort.
 		</news>
 	</extension>
 </addon>
@@ -3098,7 +3101,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 	</extension>
 </addon>
 
-<addon id="script.jptools" name="JP Tools" provider-name="People" version="1.60">
+<addon id="script.jptools" name="JP Tools" provider-name="People" version="1.61">
     <requires>
         <import addon="script.module.requests"/>
         <import addon="script.module.beautifulsoup4"/>

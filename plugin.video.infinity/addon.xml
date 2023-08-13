@@ -1,4 +1,4 @@
-<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.03">
+<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.05">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="script.module.openscrapers"/>
@@ -156,9 +156,14 @@
 			<fanart>fanart.png</fanart>
 		</assets>
 		<news>
-[B]Update - v6.6.261 - July 28th, 2023[/B]
---[Fix] Dark color compare fix for blank values.
-
+[B]Update - v6.6.307 - September 6th, 2023[/B]
+--[Enhancement] Added ability to show titles on all sections. (Remake any widgets made from Umbrella)
+--[Enhancement] Changed text on resolving popups to no longer be bold.
+--[Enhancement] Added new search function for trakt lists from skin.
+--[Fix] Changed code for movie and show collection and watchlist import to improve speed.
+--[Fix] Made changes to tv show and seasonal level information to avoid imdb id being overwritten.
+--[Fix] Removed special characters in multiple places.
+--[Fix] Fixed sort.
 		</news>
 	</extension>
 </addon>
