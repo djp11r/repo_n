@@ -1,4 +1,4 @@
-<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.05">
+<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.07">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="script.module.openscrapers"/>
@@ -22,6 +22,15 @@
 					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
 					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
 					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+			</item>
+			<item library="resources\lib\context\addtoFavourite.py">
+				<label>$INFO[Window(home).Property(context.infinity.showUmbrella)]Add/Remove Favourite</label>
+				<visible>
+					!String.IsEmpty(Window(home).Property(context.infinity.addtoFavourite)) +
+					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
+					String.IsEqual(ListItem.Property(isUmbrella_widget),true) +
+					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,movie)]
 				</visible>
 			</item>
 			<item library="resources\lib\context\playTrailer.py">
@@ -73,8 +82,16 @@
 					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]]
 				</visible>
 			</item>
+			<item library="resources\lib\context\addLibtoFavourite.py">
+				<label>$INFO[Window(home).Property(context.infinity.showinfinity)]Add/Remove Favourite</label>
+				<visible>
+					[String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.ListItem.FolderPath,videodb://)] +
+					[String.Contains(Container.ListItem.Path,Window(home).Property(infinity.movieLib.path)) | String.Contains(Container.ListItem.Path,Window(home).Property(infinity.tvLib.path))] +
+					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+			</item>
 			<item library="resources\lib\context\libRescrape.py">
-				<label>$INFO[Window(home).Property(context.infinity.showinfinity)]Rescrape Lib Item</label>
+				<label>$INFO[Window(home).Property(context.infinity.showUmbrella)]Rescrape Lib Item</label>
 				<visible>
 					[String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.ListItem.FolderPath,videodb://)] +
 					[String.Contains(Container.ListItem.Path,Window(home).Property(infinity.movieLib.path)) | String.Contains(Container.ListItem.Path,Window(home).Property(infinity.tvLib.path))] +
@@ -156,14 +173,23 @@
 			<fanart>fanart.png</fanart>
 		</assets>
 		<news>
-[B]Update - v6.6.307 - September 6th, 2023[/B]
+[B]Update - v6.6.31 - September 16th, 2023[/B]
+--[Enhancement] Added Umbrella Favourites Movies, TV Shows, and Episodes can now be added as favourites.
 --[Enhancement] Added ability to show titles on all sections. (Remake any widgets made from Umbrella)
+--[Enhancement] Added new list for Digital Releases.
+--[Enhancement] Added setting to show or hide release year with movies in general settings.
+--[Enhancement] Added Trakt section for skin.
+--[Enhancement] Added People search for skin.
+--[Enhancement] Added sorting for favourites.
 --[Enhancement] Changed text on resolving popups to no longer be bold.
 --[Enhancement] Added new search function for trakt lists from skin.
+--[Enhancement] Added context menu item to return to movie or tv shows main list.
+--[Fix] Removed Refresh Container from Similar from Library.
+--[Fix] Removed Copy to Clipboard from Authorization screens.
 --[Fix] Changed code for movie and show collection and watchlist import to improve speed.
 --[Fix] Made changes to tv show and seasonal level information to avoid imdb id being overwritten.
---[Fix] Removed special characters in multiple places.
---[Fix] Fixed sort.
+--[Fix] Changed all occurences of container names to encode for url.
+--[Fix] Fixed sort TV Shows sort.
 		</news>
 	</extension>
 </addon>

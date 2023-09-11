@@ -8,7 +8,7 @@
 	<extension point="xbmc.python.pluginsource" library="entrypoint.py">
 		<provides>image audio video</provides>
 	</extension>
-	<extension point="xbmc.service" library="service.py" start="login"/>
+	<extension point="xbmc.service" library="service.py"/>
 	<extension point="xbmc.addon.metadata">
 		<platform>all</platform>
 		<summary lang="en_GB">Google Drive for KODI</summary>
@@ -67,7 +67,7 @@ You can clone the project and host it in your own server.
 		<import addon="script.module.pyqrcode"/>
 	</requires>
 	<extension point="xbmc.python.module" library="/"/>
-	<extension point="xbmc.service" library="service.py" start="login"/>
+	<extension point="xbmc.service" library="service.py"/>
 	<extension point="xbmc.addon.metadata">
 		<platform>all</platform>
 		<summary lang="en_GB">Cloud Drive Common Module</summary>
@@ -100,7 +100,7 @@ You can clone the project and host it in your own server.
 	</extension>
 </addon>
 
-<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.45" provider-name="open">
+<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.46" provider-name="open">
 	<requires>
 		<import addon="script.module.beautifulsoup4"/>
 		<import addon="script.module.requests"/>
@@ -494,7 +494,7 @@ v1.1.0 (2020-01-17)
     </extension>
 </addon>
 
-<addon id="plugin.video.youtube" name="YouTube" version="7.0.2~alpha8" provider-name="anxdpanic, bromix">
+<addon id="plugin.video.youtube" name="YouTube" version="7.0.2.1" provider-name="anxdpanic, bromix">
     <requires>
         <import addon="xbmc.python" version="3.0.1"/>
         <import addon="script.module.requests" version="2.12.4"/>
@@ -509,8 +509,14 @@ v1.1.0 (2020-01-17)
     <extension point="xbmc.python.module" library="resources/lib/"/>
     <extension point="xbmc.addon.metadata">
         <news>
-[fix] error when filtering short videos
-[fix] fix playback |contrib: MoojMidge|
+[new] quality and stream feature selection
+[new] enable HLS live streams
+[new] stream and language labelling
+[chg] separately enable local/remote history
+[chg] restore unsupported compatibility for Kodi v19 (Matrix)
+[fix] fix various playback issues |contrib: various|
+[fix] Limit host connections getting subscription feeds |contrib: cas--|
+[fix] fix handling of connection failures
 [upd] Translations updated from Kodi Weblate
         </news>
         <assets>
@@ -1605,7 +1611,7 @@ v1.0.25 (marcelveldt)
   </extension>
 </addon>
 
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.108" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.111" provider-name="gujal">
     <requires>
         <!-- <import addon="xbmc.python" version="3.0.0" /> -->
         <import addon="script.module.six"/>
@@ -1943,10 +1949,10 @@ v1.0.25 (marcelveldt)
   </extension>
 </addon>
 
-<addon id="script.module.web-pdb" name="Web-PDB" version="1.5.6+matrix.1" provider-name="Roman V.M.">
+<addon id="script.module.web-pdb" name="Web-PDB" version="1.6.2" provider-name="Roman V.M.">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
-    <import addon="script.module.bottle" version="0.12.0"/>
+    <import addon="script.module.bottle"/>
   </requires>
   <extension point="xbmc.python.script" library="main.py">
     <provides>executable</provides>
@@ -1963,7 +1969,8 @@ v1.0.25 (marcelveldt)
       <icon>icon.png</icon>
       <screenshot>resources/screenshot.jpg</screenshot>
     </assets>
-    <news>- 1.5.6: Fixed not being able to assign a local variable via the debugger console.</news>
+    <news>- 1.6.2: Various internal changes.
+- 1.6.0: Dropped Python 2 compatibility.</news>
   </extension>
 </addon>
 
@@ -2003,7 +2010,7 @@ v1.0.25 (marcelveldt)
     </extension>
 </addon>
 
-<addon id="script.module.youtube.dl" name="youtube-dl Control" version="21.1217.0+matrix.1" provider-name="ytdl-org,ruuk,sy6sy2,wwark">
+<addon id="script.module.youtube.dl" name="youtube-dl Control" version="23.926.0" provider-name="ytdl-org,ruuk,sy6sy2,wwark">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.addon.signals" version="0.0.5+matrix.1"/>
@@ -2694,7 +2701,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 </extension>
 </addon>
 
-<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.87">
+<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.88">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests"/>
@@ -2875,7 +2882,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 	</extension>
 </addon>
 
-<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.05">
+<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.07">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="script.module.openscrapers"/>
@@ -2899,6 +2906,15 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
 					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
 					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+			</item>
+			<item library="resources\lib\context\addtoFavourite.py">
+				<label>$INFO[Window(home).Property(context.infinity.showUmbrella)]Add/Remove Favourite</label>
+				<visible>
+					!String.IsEmpty(Window(home).Property(context.infinity.addtoFavourite)) +
+					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
+					String.IsEqual(ListItem.Property(isUmbrella_widget),true) +
+					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,movie)]
 				</visible>
 			</item>
 			<item library="resources\lib\context\playTrailer.py">
@@ -2950,8 +2966,16 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]]
 				</visible>
 			</item>
+			<item library="resources\lib\context\addLibtoFavourite.py">
+				<label>$INFO[Window(home).Property(context.infinity.showinfinity)]Add/Remove Favourite</label>
+				<visible>
+					[String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.ListItem.FolderPath,videodb://)] +
+					[String.Contains(Container.ListItem.Path,Window(home).Property(infinity.movieLib.path)) | String.Contains(Container.ListItem.Path,Window(home).Property(infinity.tvLib.path))] +
+					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+			</item>
 			<item library="resources\lib\context\libRescrape.py">
-				<label>$INFO[Window(home).Property(context.infinity.showinfinity)]Rescrape Lib Item</label>
+				<label>$INFO[Window(home).Property(context.infinity.showUmbrella)]Rescrape Lib Item</label>
 				<visible>
 					[String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.ListItem.FolderPath,videodb://)] +
 					[String.Contains(Container.ListItem.Path,Window(home).Property(infinity.movieLib.path)) | String.Contains(Container.ListItem.Path,Window(home).Property(infinity.tvLib.path))] +
@@ -3033,22 +3057,29 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 			<fanart>fanart.png</fanart>
 		</assets>
 		<news>
-[B]Update - v6.6.307 - September 6th, 2023[/B]
+[B]Update - v6.6.31 - September 16th, 2023[/B]
+--[Enhancement] Added Umbrella Favourites Movies, TV Shows, and Episodes can now be added as favourites.
 --[Enhancement] Added ability to show titles on all sections. (Remake any widgets made from Umbrella)
+--[Enhancement] Added new list for Digital Releases.
+--[Enhancement] Added setting to show or hide release year with movies in general settings.
+--[Enhancement] Added Trakt section for skin.
+--[Enhancement] Added People search for skin.
+--[Enhancement] Added sorting for favourites.
 --[Enhancement] Changed text on resolving popups to no longer be bold.
 --[Enhancement] Added new search function for trakt lists from skin.
+--[Enhancement] Added context menu item to return to movie or tv shows main list.
+--[Fix] Removed Refresh Container from Similar from Library.
+--[Fix] Removed Copy to Clipboard from Authorization screens.
 --[Fix] Changed code for movie and show collection and watchlist import to improve speed.
 --[Fix] Made changes to tv show and seasonal level information to avoid imdb id being overwritten.
---[Fix] Removed special characters in multiple places.
---[Fix] Fixed sort.
+--[Fix] Changed all occurences of container names to encode for url.
+--[Fix] Fixed sort TV Shows sort.
 		</news>
 	</extension>
 </addon>
 
 <addon id="plugin.video.bapsyt" name="BAPS " version="1.1.0" provider-name="JP">
   <requires>
-
-
     <import addon="plugin.video.youtube"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
@@ -3101,7 +3132,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 	</extension>
 </addon>
 
-<addon id="script.jptools" name="JP Tools" provider-name="People" version="1.61">
+<addon id="script.jptools" name="JP Tools" provider-name="People" version="1.62">
     <requires>
         <import addon="script.module.requests"/>
         <import addon="script.module.beautifulsoup4"/>
