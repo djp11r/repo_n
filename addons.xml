@@ -100,7 +100,7 @@ You can clone the project and host it in your own server.
 	</extension>
 </addon>
 
-<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.46" provider-name="open">
+<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.47" provider-name="open">
 	<requires>
 		<import addon="script.module.beautifulsoup4"/>
 		<import addon="script.module.requests"/>
@@ -1611,7 +1611,7 @@ v1.0.25 (marcelveldt)
   </extension>
 </addon>
 
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.112" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.113" provider-name="gujal">
     <requires>
         <!-- <import addon="xbmc.python" version="3.0.0" /> -->
         <import addon="script.module.six"/>
@@ -2710,7 +2710,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
         <import addon="script.module.resolveurl"/>
         <import addon="script.module.inputstreamhelper"/>
     </requires>
-    <extension library="resources/lib/fen.py" point="xbmc.python.pluginsource">
+    <extension library="resources/lib/fenlight.py" point="xbmc.python.pluginsource">
         <provides>video</provides>
     </extension>
     <extension library="resources/lib/service.py" point="xbmc.service"/>
@@ -2885,11 +2885,11 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 <addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.07">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
-		<import addon="script.module.openscrapers"/>
 		<import addon="script.module.requests"/>
 		<import addon="script.module.beautifulsoup4"/>
 		<import addon="script.module.metahandler" optional="true"/>
 		<import addon="plugin.video.youtube" optional="true"/>
+		<import addon="script.module.openscrapers"/>
 		<import addon="script.module.myaccounts"/>
 		<import addon="script.module.resolveurl"/>
 		<import addon="script.module.pytz"/>
@@ -3057,23 +3057,10 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 			<fanart>fanart.png</fanart>
 		</assets>
 		<news>
-[B]Update - v6.6.31 - September 16th, 2023[/B]
---[Enhancement] Added Umbrella Favourites Movies, TV Shows, and Episodes can now be added as favourites.
---[Enhancement] Added ability to show titles on all sections. (Remake any widgets made from Umbrella)
---[Enhancement] Added new list for Digital Releases.
---[Enhancement] Added setting to show or hide release year with movies in general settings.
---[Enhancement] Added Trakt section for skin.
---[Enhancement] Added People search for skin.
---[Enhancement] Added sorting for favourites.
---[Enhancement] Changed text on resolving popups to no longer be bold.
---[Enhancement] Added new search function for trakt lists from skin.
---[Enhancement] Added context menu item to return to movie or tv shows main list.
---[Fix] Removed Refresh Container from Similar from Library.
---[Fix] Removed Copy to Clipboard from Authorization screens.
---[Fix] Changed code for movie and show collection and watchlist import to improve speed.
---[Fix] Made changes to tv show and seasonal level information to avoid imdb id being overwritten.
---[Fix] Changed all occurences of container names to encode for url.
---[Fix] Fixed sort TV Shows sort.
+[B]Update - v6.6.330 - October 18th, 2023[/B]
+--[ENHANCEMENT] First internal scraper completed. Plex is now built in.
+--[INFO] This version could be very broken. This is for testing.
+--[INFO] Easynews, File Pursuit, and Google Drive will all be moved to internal scrapers also.
 		</news>
 	</extension>
 </addon>
