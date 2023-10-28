@@ -100,7 +100,7 @@ You can clone the project and host it in your own server.
 	</extension>
 </addon>
 
-<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.47" provider-name="open">
+<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.48" provider-name="open">
 	<requires>
 		<import addon="script.module.beautifulsoup4"/>
 		<import addon="script.module.requests"/>
@@ -2701,7 +2701,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 </extension>
 </addon>
 
-<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.92">
+<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.93">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests"/>
@@ -2882,7 +2882,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 	</extension>
 </addon>
 
-<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.07">
+<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.08">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="script.module.requests"/>
@@ -3119,7 +3119,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 	</extension>
 </addon>
 
-<addon id="script.jptools" name="JP Tools" provider-name="People" version="1.62">
+<addon id="script.jptools" name="JP Tools" provider-name="People" version="1.63">
     <requires>
         <import addon="script.module.requests"/>
         <import addon="script.module.beautifulsoup4"/>
