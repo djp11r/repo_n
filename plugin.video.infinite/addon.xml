@@ -1,4 +1,4 @@
-<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.95">
+<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.97">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests"/>
@@ -21,8 +21,7 @@
         <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
         <assets>
             <icon>resources/media/icon.png</icon>
-            <fanart>resources/media/fanart.png</fanart>
-            <clearlogo>resources/media/clearlogo.png</clearlogo>
+            <fanart>resources/media/fanart.jpg</fanart>
         </assets>
         <news>INFO: For latest changes see Changelog within Tools of add-on.</news>
     </extension>
