@@ -100,7 +100,7 @@ You can clone the project and host it in your own server.
 	</extension>
 </addon>
 
-<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.49" provider-name="open">
+<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.50" provider-name="open">
 	<requires>
 		<import addon="script.module.beautifulsoup4"/>
 		<import addon="script.module.requests"/>
@@ -1164,6 +1164,24 @@ Adds 'record' button to Video OSD while youtube videos are playing.</description
   </extension>
 </addon>
 
+<addon id="script.module.future" name="future" version="0.18.3+matrix.1" provider-name="Ed Schofield">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Clean single-source support for Python 3 and 2</summary>
+    <description lang="en_GB">future is the missing compatibility layer between Python 2 and Python 3. It allows you to use a single, clean Python 3.x-compatible codebase to support both Python 2 and Python 3 with minimal overhead.</description>
+    <license>MIT</license>
+    <platform>all</platform>
+    <website>https://python-future.org</website>
+    <source>https://github.com/PythonCharmers/python-future</source>
+    <assets>
+      <icon>resources/icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+
 <addon id="script.module.futures" name="futures" version="2.2.0" provider-name="Brian Quinlan">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -1611,7 +1629,7 @@ v1.0.25 (marcelveldt)
   </extension>
 </addon>
 
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.116" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.118" provider-name="gujal">
     <requires>
         <!-- <import addon="xbmc.python" version="3.0.0" /> -->
         <import addon="script.module.six"/>
@@ -1743,20 +1761,20 @@ v1.0.25 (marcelveldt)
   </extension>
 </addon>
 
-<addon id="script.module.six" name="six" version="1.15.0+matrix.1" provider-name="gutworth">
+<addon id="script.module.six" name="six" version="1.16.0+matrix.1" provider-name="Benjamin Peterson">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
   </requires>
   <extension point="xbmc.python.module" library="lib"/>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en_GB">Python 2 and 3 compatibility utilities.</summary>
-    <description lang="en_GB">Six is a Python 2 and 3 compatibility library. It provides utility functions for smoothing over the differences between the Python versions with the goal of writing Python code that is compatible on both Python versions. See the documentation for more information on what is provided.</description>
-    <platform>all</platform>
+    <summary lang="en_GB">Python 2 and 3 compatibility utilities</summary>
+    <description lang="en_GB">Python 2 and 3 compatibility utilities</description>
     <license>MIT</license>
+    <platform>all</platform>
+    <website>https://github.com/benjaminp/six</website>
     <source>https://github.com/benjaminp/six</source>
-    <website>https://pypi.org/project/six/</website>
     <assets>
-      <icon>icon.png</icon>
+      <icon>resources/icon.png</icon>
     </assets>
   </extension>
 </addon>
@@ -1931,7 +1949,7 @@ v1.0.25 (marcelveldt)
   </extension>
 </addon>
 
-<addon id="script.module.urllib3" name="urllib3" version="1.26.16+matrix.1" provider-name="urllib3">
+<addon id="script.module.urllib3" name="urllib3" version="2.1.0" provider-name="urllib3">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
   </requires>
@@ -2668,14 +2686,13 @@ Other languages with a great number of subtitles are: Danish, French, Swedish, D
     </extension>
 </addon>
 
-<addon id="plugin.video.deccandelight" version="2.0.39" name="Deccan Delight" provider-name="gujal">
+<addon id="plugin.video.deccandelight" version="2.0.41" name="Deccan Delight" provider-name="gujal">
 <requires>
 	<import addon="script.module.six"/>
 	<import addon="script.module.kodi-six"/>
 	<import addon="script.module.beautifulsoup4" version="4.0.0"/>
 	<import addon="script.module.html5lib"/>
 	<import addon="script.module.resolveurl" version="5.1.0"/>
-	<import addon="script.module.metahandler" version="5.0.0"/>
 	<import addon="plugin.video.youtube" optional="true"/>
 	<import addon="plugin.video.imdb.trailers" optional="true"/>
 </requires>
@@ -2700,7 +2717,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 </extension>
 </addon>
 
-<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.4.96">
+<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.5.00">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests"/>
@@ -2880,7 +2897,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 	</extension>
 </addon>
 
-<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.09">
+<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.10">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="script.module.requests"/>
@@ -3055,14 +3072,14 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 			<fanart>fanart.png</fanart>
 		</assets>
 		<news>
-[B]Update - v6.6.34 - October 31st, 2023[/B]
---[THANKS] Thanks to u/Omars-comin and u/Mammoth-Bullfrog-274 for testing.
---[FIX] Changes made for database name difference in Kodi 21.
---[ENHANCEMENT] Plex is now built in.
---[ENHANCEMENT] Easynews is now built in.
---[ENHANCEMENT] FilePursuit is now built in.
---[ENHANCEMENT] GDrive is now built in.
---[FIX] Change made to resolve scrobble failure.
+[B]Update - v6.6.353 - November 20th, 2023[/B]
+--[Enhancement] Added language filter for trakt genres.
+--[Enhancement] Added Decades for Trakt genres.
+--[Enhancement] Added Trakt genres for TV and Movies.
+--[Enhancement] Added new icons for different genres from trakt.
+--[Fix] Changes made for IMDb lists now have an amount. Set the setting in Settings:General
+--[Fix] Several IMDb lists removed due to changes in IMDb website.
+--[Fix] 3 second delay added for view to resolve bug of view not being set correctly in some instances.
 
 		</news>
 	</extension>
@@ -3122,11 +3139,13 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 	</extension>
 </addon>
 
-<addon id="script.jptools" name="JP Tools" provider-name="People" version="1.63">
+<addon id="script.jptools" name="JP Tools" provider-name="People" version="1.64">
     <requires>
         <import addon="script.module.requests"/>
         <import addon="script.module.beautifulsoup4"/>
         <import addon="script.module.youtube.dl"/>
+        <import addon="script.module.resolveurl"/>
+        <import addon="script.module.inputstreamhelper"/>
     </requires>
     <extension library="resources/lib/script_entry.py" point="xbmc.python.pluginsource">
         <provides>executable</provides>
