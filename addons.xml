@@ -100,7 +100,7 @@ You can clone the project and host it in your own server.
 	</extension>
 </addon>
 
-<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.50" provider-name="open">
+<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.51" provider-name="open">
 	<requires>
 		<import addon="script.module.beautifulsoup4"/>
 		<import addon="script.module.requests"/>
@@ -1629,7 +1629,7 @@ v1.0.25 (marcelveldt)
   </extension>
 </addon>
 
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.118" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.121" provider-name="gujal">
     <requires>
         <!-- <import addon="xbmc.python" version="3.0.0" /> -->
         <import addon="script.module.six"/>
@@ -2344,7 +2344,7 @@ Release type detection improved.</news>
   </extension>
 </addon>
 
-<addon id="service.subtitles.a4ksubtitles" name="a4kSubtitles" version="3.3.0" provider-name="Unknown">
+<addon id="service.subtitles.a4ksubtitles" name="a4kSubtitles" version="3.9.0" provider-name="Unknown">
     <requires>
       <import addon="script.module.requests"/>
       <import addon="vfs.libarchive" optional="true"/>
@@ -2369,6 +2369,28 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
             <screenshot>screenshot-03.png</screenshot>
         </assets>
         <news>
+[v3.9.0]:
+  * Improve SDH and forced preferences handling.
+
+[v3.8.0]:
+  * Switch to new OpenSubtitles API.
+    Note: username and password are now mandatory for using OpenSubtitles.
+  * Fixes for Brazilian Portuguese language codes handling.
+
+[v3.7.0]:
+  * New option to auto select and enable embedded subtitles (was previously always enabled)
+  * New option to prefer forced subtitles on auto selection (was previously always enabled)
+  * New option to prefer SDH subtitles on auto selection
+
+[v3.6.0]:
+  * Use group of title matches in the results ordering
+
+[v3.5.0]:
+  * URI decode result names
+
+[v3.4.0]:
+  * Improve results ordering
+
 [v3.3.0]:
   * Improve Subscene support
 
@@ -2717,7 +2739,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 </extension>
 </addon>
 
-<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.5.00">
+<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.5.01">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests"/>
@@ -2897,7 +2919,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 	</extension>
 </addon>
 
-<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.10">
+<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.11">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="script.module.requests"/>
@@ -3072,15 +3094,9 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 			<fanart>fanart.png</fanart>
 		</assets>
 		<news>
-[B]Update - v6.6.353 - November 20th, 2023[/B]
---[Enhancement] Added language filter for trakt genres.
---[Enhancement] Added Decades for Trakt genres.
---[Enhancement] Added Trakt genres for TV and Movies.
---[Enhancement] Added new icons for different genres from trakt.
---[Fix] Changes made for IMDb lists now have an amount. Set the setting in Settings:General
---[Fix] Several IMDb lists removed due to changes in IMDb website.
---[Fix] 3 second delay added for view to resolve bug of view not being set correctly in some instances.
-
+[B]Update - v6.6.402 - Decemeber 15th, 2023[/B]
+--[Enhancement] Subtitle service change.
+--[Enhancement] Subtitle download for playnext service changed.
 		</news>
 	</extension>
 </addon>
