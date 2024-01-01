@@ -100,7 +100,7 @@ You can clone the project and host it in your own server.
 	</extension>
 </addon>
 
-<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.51" provider-name="open">
+<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.52" provider-name="open">
 	<requires>
 		<import addon="script.module.beautifulsoup4"/>
 		<import addon="script.module.requests"/>
@@ -494,30 +494,56 @@ v1.1.0 (2020-01-17)
     </extension>
 </addon>
 
-<addon id="plugin.video.youtube" name="YouTube" version="7.0.2.2" provider-name="anxdpanic, bromix">
+<addon id="plugin.video.youtube" name="YouTube" version="7.0.2.3" provider-name="anxdpanic, bromix">
     <requires>
         <import addon="xbmc.python" version="3.0.1"/>
         <import addon="script.module.requests" version="2.12.4"/>
-        <import addon="inputstream.adaptive" version="20.3.1"/>
+        <import addon="inputstream.adaptive" version="20.0.0"/>
         <import addon="script.module.inputstreamhelper" version="0.2.2" optional="true"/>
         <import addon="script.module.infotagger" version="0.0.5"/>
     </requires>
-    <extension point="xbmc.python.pluginsource" library="resources/lib/default.py">
+    <extension point="xbmc.python.pluginsource" library="resources/lib/plugin.py">
         <provides>video</provides>
     </extension>
-    <extension point="xbmc.service" library="resources/lib/startup.py"/>
+    <extension point="xbmc.service" library="resources/lib/service.py"/>
     <extension point="xbmc.python.module" library="resources/lib/"/>
+    <extension point="xbmc.python.script" library="resources/lib/youtube_plugin/script.py">
+        <provides>executable</provides>
+    </extension>
     <extension point="xbmc.addon.metadata">
         <news>
-[new] quality and stream feature selection
-[new] enable HLS live streams
-[new] stream and language labelling
-[chg] separately enable local/remote history
-[chg] restore unsupported compatibility for Kodi v19 (Matrix)
-[fix] fix various playback issues |contrib: various|
-[fix] Limit host connections getting subscription feeds |contrib: cas--|
-[fix] fix handling of connection failures
-[upd] Translations updated from Kodi Weblate
+### New
+- Add display of extra video information (premieres, views, comments, likes) #18, #464, #503
+- Add support for Clips #450
+- Add ability to combine playlists #480
+- Add support for timestamps in links #502
+- Add initial support for higher bitrate streams #505
+- Add ability to limit video FPS at max resolution #539
+- Add local Watch Later and History for use when not logged in or custom playlist not set
+- Update main menu items:
+  - New Recommended videos (similar to YouTube home page, will use login if available)
+  - Old Recommended videos renamed to Related videos (requires local/remote history enabled)
+  - Popular right now renamed to Trending
+
+### Changed
+- Local history made optional and enabled by default
+- Existing user data will be lost due to changes in data format:
+  - Search, local history, and local watch later is stored per user
+  - Function and data cache will be wiped (will also become per user in future)
+- Disable OPUS audio by default #537
+
+### Fixed
+- Fix sharing links #115, #250, #538
+- Fix date and sorting issues #411, #425, #434
+- Fix issue with switching between H264/AV1 streams #532
+- Fix prompt for subtitles #534
+- Fix issues with corrupt user data #536
+- Fix issues with live streams #530, #540
+- Fix issues with loading large playlists #545
+- Fix Recommendations, Related Videos, and Auto-play next #508
+- Fix queuing from current playlist #549
+- Fix issues with randomising playlists #485
+- Workaround for crashes #113, #540
         </news>
         <assets>
             <icon>resources/media/icon.png</icon>
@@ -550,6 +576,7 @@ v1.1.0 (2020-01-17)
         <summary lang="pl_PL">Wtyczka YouTube</summary>
         <summary lang="ru_RU"> YouTube</summary>
         <summary lang="sk_SK">Doplnok pre YouTube</summary>
+        <summary lang="sv_SE">Plugin for YouTube</summary>
         <summary lang="tr_TR">YouTube icin eklenti</summary>
         <summary lang="vi_VN">Plugin danh cho YouTube</summary>
         <summary lang="zh_CN"/>
@@ -575,6 +602,7 @@ v1.1.0 (2020-01-17)
         <description lang="pl_PL">YouTube jest jednym z najwiekszych na swiecie serwisow udostepniania wideo.</description>
         <description lang="ru_RU">YouTube -   ,    ,    .</description>
         <description lang="sk_SK">YouTube je jednou z najvacsich stranok na zdielanie videa na svete.</description>
+        <description lang="sv_SE">YouTube ar en av de storsta videodelningssajterna i varlden.</description>
         <description lang="tr_TR">YouTube, dunya uzerindeki en buyuk video paylasma platformlarndan birisidir.</description>
         <description lang="vi_VN">YouTube la mot trong nhung trang web chia se video lon nhat tren the gioi.</description>
         <description lang="zh_CN"/>
@@ -596,6 +624,7 @@ v1.1.0 (2020-01-17)
         <disclaimer lang="pl_PL">Ta wtyczka nie jest zatwierdzona przez Google</disclaimer>
         <disclaimer lang="ru_RU">   Google</disclaimer>
         <disclaimer lang="sk_SK">Tento doplnok nie je schvaleny spolocnostou Google</disclaimer>
+        <disclaimer lang="sv_SE">Detta plugin ar inte godkant av Google</disclaimer>
         <disclaimer lang="tr_TR">Bu eklenti Google tarafndan uretilmemistir</disclaimer>
         <disclaimer lang="vi_VN">Plugin nay khong uoc xac nhan boi Google</disclaimer>
         <disclaimer lang="zh_CN"/>
@@ -1629,7 +1658,7 @@ v1.0.25 (marcelveldt)
   </extension>
 </addon>
 
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.121" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.124" provider-name="gujal">
     <requires>
         <!-- <import addon="xbmc.python" version="3.0.0" /> -->
         <import addon="script.module.six"/>
@@ -2344,7 +2373,7 @@ Release type detection improved.</news>
   </extension>
 </addon>
 
-<addon id="service.subtitles.a4ksubtitles" name="a4kSubtitles" version="3.9.0" provider-name="Unknown">
+<addon id="service.subtitles.a4ksubtitles" name="a4kSubtitles" version="3.12.0" provider-name="Unknown">
     <requires>
       <import addon="script.module.requests"/>
       <import addon="vfs.libarchive" optional="true"/>
@@ -2369,8 +2398,17 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
             <screenshot>screenshot-03.png</screenshot>
         </assets>
         <news>
+[v3.12.0]:
+  * Fix OpenSubtitles not working for titles with IMDB ID less than 1_000_000
+
+[v3.11.0]:
+  * Fix auto-selection and add debug logs.
+
+[v3.10.0]:
+  * Small fix in SDH vs Forced flags checking.
+
 [v3.9.0]:
-  * Improve SDH and forced preferences handling.
+  * Improve SDH and Forced preferences handling.
 
 [v3.8.0]:
   * Switch to new OpenSubtitles API.
@@ -2378,8 +2416,8 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
   * Fixes for Brazilian Portuguese language codes handling.
 
 [v3.7.0]:
-  * New option to auto select and enable embedded subtitles (was previously always enabled)
-  * New option to prefer forced subtitles on auto selection (was previously always enabled)
+  * New option to auto-select and enable embedded subtitles (was previously always enabled)
+  * New option to prefer Forced subtitles on auto selection (was previously always enabled)
   * New option to prefer SDH subtitles on auto selection
 
 [v3.6.0]:
@@ -2739,7 +2777,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 </extension>
 </addon>
 
-<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.5.01">
+<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.5.02">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests"/>
@@ -2919,7 +2957,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 	</extension>
 </addon>
 
-<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.11">
+<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.12">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="script.module.requests"/>
