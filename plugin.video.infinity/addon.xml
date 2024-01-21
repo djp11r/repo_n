@@ -1,4 +1,4 @@
-<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.12">
+<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.13">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="script.module.requests"/>
@@ -16,7 +16,7 @@
 	<extension point="kodi.context.item">
 		<menu id="kodi.core.main">
 			<item library="resources\lib\context\addtoLibrary.py">
-				<label>$INFO[Window(home).Property(context.infinity.showinfinity)]Add to Library</label>
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Add to Library</label>
 				<visible>
 					!String.IsEmpty(Window(home).Property(context.infinity.addtoLibrary)) +
 					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
@@ -25,16 +25,16 @@
 				</visible>
 			</item>
 			<item library="resources\lib\context\addtoFavourite.py">
-				<label>$INFO[Window(home).Property(context.infinity.showUmbrella)]Add/Remove Favourite</label>
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Add/Remove Favourite</label>
 				<visible>
 					!String.IsEmpty(Window(home).Property(context.infinity.addtoFavourite)) +
 					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
-					String.IsEqual(ListItem.Property(isUmbrella_widget),true) +
+					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
 					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,movie)]
 				</visible>
 			</item>
 			<item library="resources\lib\context\playTrailer.py">
-				<label>$INFO[Window(home).Property(context.infinity.showinfinity)]Play Trailer</label>
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Play Trailer</label>
 				<visible>
 					!String.IsEmpty(Window(home).Property(context.infinity.playTrailer)) +
 					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
@@ -42,8 +42,17 @@
 					[String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,movie)]
 				</visible>
 			</item>
+			<item library="resources\lib\context\playTrailerSelect.py">
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Play Trailer (Select)</label>
+				<visible>
+					!String.IsEmpty(Window(home).Property(context.infinity.playTrailerSelect)) +
+					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
+					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
+					[String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+			</item>
 			<item library="resources\lib\context\traktManager.py">
-				<label>$INFO[Window(home).Property(context.infinity.showinfinity)]Trakt Manager</label>
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Trakt Manager</label>
 				<visible>
 					!String.IsEmpty(Window(home).Property(context.infinity.traktManager)) +
 					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
@@ -52,7 +61,7 @@
 				</visible>
 			</item>
 			<item library="resources\lib\context\clearProviders.py">
-				<label>$INFO[Window(home).Property(context.infinity.showinfinity)]Clear Providers</label>
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Clear Providers</label>
 				<visible>
 					[!String.IsEmpty(Window(home).Property(context.infinity.clearProviders)) +
 					String.StartsWith(ListItem.FolderPath,plugin://plugin.video.infinity/?action=play) +
@@ -64,7 +73,7 @@
 				</visible>
 			</item>
 			<item library="resources\lib\context\clearBookmark.py">
-				<label>$INFO[Window(home).Property(context.infinity.showinfinity)]Clear Item Bookmark</label>
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Clear Item Bookmark</label>
 				<visible>
 					!String.IsEmpty(Window(home).Property(context.infinity.clearBookmark)) +
 					String.StartsWith(ListItem.FolderPath,plugin://plugin.video.infinity/?action=play) +
@@ -74,7 +83,7 @@
 				</visible>
 			</item>
 			<item library="resources\lib\context\rescrape.py">
-				<label>$INFO[Window(home).Property(context.infinity.showinfinity)]Rescrape Item</label>
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Rescrape Item</label>
 				<visible>
 					[!String.IsEmpty(Window(home).Property(context.infinity.rescrape)) +
 					String.StartsWith(ListItem.FolderPath,plugin://plugin.video.infinity/?action=play) +
@@ -83,7 +92,7 @@
 				</visible>
 			</item>
 			<item library="resources\lib\context\addLibtoFavourite.py">
-				<label>$INFO[Window(home).Property(context.infinity.showinfinity)]Add/Remove Favourite</label>
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Add/Remove Favourite</label>
 				<visible>
 					[String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.ListItem.FolderPath,videodb://)] +
 					[String.Contains(Container.ListItem.Path,Window(home).Property(infinity.movieLib.path)) | String.Contains(Container.ListItem.Path,Window(home).Property(infinity.tvLib.path))] +
@@ -91,7 +100,7 @@
 				</visible>
 			</item>
 			<item library="resources\lib\context\libRescrape.py">
-				<label>$INFO[Window(home).Property(context.infinity.showUmbrella)]Rescrape Lib Item</label>
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Rescrape Lib Item</label>
 				<visible>
 					[String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.ListItem.FolderPath,videodb://)] +
 					[String.Contains(Container.ListItem.Path,Window(home).Property(infinity.movieLib.path)) | String.Contains(Container.ListItem.Path,Window(home).Property(infinity.tvLib.path))] +
@@ -99,7 +108,7 @@
 				</visible>
 			</item>
 			<item library="resources\lib\context\playFromHere.py">
-				<label>$INFO[Window(home).Property(context.infinity.showinfinity)]Play from here</label>
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Play from here</label>
 				<visible>
 					!String.IsEmpty(Window(home).Property(context.infinity.playFromHere)) +
 					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
@@ -108,7 +117,7 @@
 				</visible>
 			</item>
 			<item library="resources\lib\context\autoPlay.py">
-				<label>$INFO[Window(home).Property(context.infinity.showinfinity)]Auto Play</label>
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Auto Play</label>
 				<visible>
 					String.IsEmpty(Window(home).Property(infinity.autoPlay.enabled)) +
 					!String.IsEmpty(Window(home).Property(context.infinity.autoPlay)) +
@@ -118,7 +127,7 @@
 				</visible>
 			</item>
 			<item library="resources\lib\context\sourceSelect.py">
-				<label>$INFO[Window(home).Property(context.infinity.showinfinity)]Source Select</label>
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Source Select</label>
 				<visible>
 					!String.IsEmpty(Window(home).Property(infinity.autoPlay.enabled)) +
 					!String.IsEmpty(Window(home).Property(context.infinity.sourceSelect)) +
@@ -128,7 +137,7 @@
 				</visible>
 			</item>
 			<item library="resources\lib\context\findSimilar.py">
-				<label>$INFO[Window(home).Property(context.infinity.showinfinity)]Find Similar</label>
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Find Similar</label>
 				<visible>
 					!String.IsEmpty(Window(home).Property(context.infinity.findSimilar)) +
 					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
@@ -137,7 +146,7 @@
 				</visible>
 			</item>
 			<item library="resources\lib\context\browseSeries.py">
-				<label>$INFO[Window(home).Property(context.infinity.showinfinity)]Browse Series</label>
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Browse Series</label>
 				<visible>
 					!String.IsEmpty(Window(home).Property(context.infinity.browseSeries)) +
 					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
@@ -146,7 +155,7 @@
 				</visible>
 			</item>
 			<item library="resources\lib\context\browseEpisodes.py">
-				<label>$INFO[Window(home).Property(context.infinity.showinfinity)]Browse Episodes</label>
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Browse Episodes</label>
 				<visible>
 					!String.IsEmpty(Window(home).Property(context.infinity.browseEpisodes)) +
 					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
@@ -173,9 +182,10 @@
 			<fanart>fanart.png</fanart>
 		</assets>
 		<news>
-[B]Update - v6.6.402 - Decemeber 15th, 2023[/B]
---[Enhancement] Subtitle service change.
---[Enhancement] Subtitle download for playnext service changed.
+[B]Update - v6.6.443 - February 1st, 2024[/B]
+--[Enhancement] Added episode type for certain skins.
+--[Enhancement] Removed trakt as episode label provider and changed logic to include mid-season premier and series finale.
+--[Fix] Changed scrobble on pause to only happen if before marking watched percentage.
 		</news>
 	</extension>
 </addon>

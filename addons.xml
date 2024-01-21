@@ -100,7 +100,7 @@ You can clone the project and host it in your own server.
 	</extension>
 </addon>
 
-<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.52" provider-name="open">
+<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.53" provider-name="open">
 	<requires>
 		<import addon="script.module.beautifulsoup4"/>
 		<import addon="script.module.requests"/>
@@ -494,7 +494,7 @@ v1.1.0 (2020-01-17)
     </extension>
 </addon>
 
-<addon id="plugin.video.youtube" name="YouTube" version="7.0.2.3" provider-name="anxdpanic, bromix">
+<addon id="plugin.video.youtube" name="YouTube" version="7.0.3.2" provider-name="anxdpanic, bromix">
     <requires>
         <import addon="xbmc.python" version="3.0.1"/>
         <import addon="script.module.requests" version="2.12.4"/>
@@ -507,44 +507,10 @@ v1.1.0 (2020-01-17)
     </extension>
     <extension point="xbmc.service" library="resources/lib/service.py"/>
     <extension point="xbmc.python.module" library="resources/lib/"/>
-    <extension point="xbmc.python.script" library="resources/lib/youtube_plugin/script.py">
+    <extension point="xbmc.python.script" library="resources/lib/script.py">
         <provides>executable</provides>
     </extension>
     <extension point="xbmc.addon.metadata">
-        <news>
-### New
-- Add display of extra video information (premieres, views, comments, likes) #18, #464, #503
-- Add support for Clips #450
-- Add ability to combine playlists #480
-- Add support for timestamps in links #502
-- Add initial support for higher bitrate streams #505
-- Add ability to limit video FPS at max resolution #539
-- Add local Watch Later and History for use when not logged in or custom playlist not set
-- Update main menu items:
-  - New Recommended videos (similar to YouTube home page, will use login if available)
-  - Old Recommended videos renamed to Related videos (requires local/remote history enabled)
-  - Popular right now renamed to Trending
-
-### Changed
-- Local history made optional and enabled by default
-- Existing user data will be lost due to changes in data format:
-  - Search, local history, and local watch later is stored per user
-  - Function and data cache will be wiped (will also become per user in future)
-- Disable OPUS audio by default #537
-
-### Fixed
-- Fix sharing links #115, #250, #538
-- Fix date and sorting issues #411, #425, #434
-- Fix issue with switching between H264/AV1 streams #532
-- Fix prompt for subtitles #534
-- Fix issues with corrupt user data #536
-- Fix issues with live streams #530, #540
-- Fix issues with loading large playlists #545
-- Fix Recommendations, Related Videos, and Auto-play next #508
-- Fix queuing from current playlist #549
-- Fix issues with randomising playlists #485
-- Workaround for crashes #113, #540
-        </news>
         <assets>
             <icon>resources/media/icon.png</icon>
             <fanart>resources/media/fanart.jpg</fanart>
@@ -1658,7 +1624,7 @@ v1.0.25 (marcelveldt)
   </extension>
 </addon>
 
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.124" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.127" provider-name="gujal">
     <requires>
         <!-- <import addon="xbmc.python" version="3.0.0" /> -->
         <import addon="script.module.six"/>
@@ -2373,7 +2339,7 @@ Release type detection improved.</news>
   </extension>
 </addon>
 
-<addon id="service.subtitles.a4ksubtitles" name="a4kSubtitles" version="3.12.0" provider-name="Unknown">
+<addon id="service.subtitles.a4ksubtitles" name="a4kSubtitles" version="3.13.0" provider-name="Unknown">
     <requires>
       <import addon="script.module.requests"/>
       <import addon="vfs.libarchive" optional="true"/>
@@ -2398,6 +2364,9 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
             <screenshot>screenshot-03.png</screenshot>
         </assets>
         <news>
+[v3.13.0]:
+  * Show proper error message of wrong username for OpenSubtitles
+
 [v3.12.0]:
   * Fix OpenSubtitles not working for titles with IMDB ID less than 1_000_000
 
@@ -2777,7 +2746,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 </extension>
 </addon>
 
-<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="2.5.02">
+<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="3.0.00">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests"/>
@@ -2957,7 +2926,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 	</extension>
 </addon>
 
-<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.12">
+<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.13">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="script.module.requests"/>
@@ -2975,7 +2944,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 	<extension point="kodi.context.item">
 		<menu id="kodi.core.main">
 			<item library="resources\lib\context\addtoLibrary.py">
-				<label>$INFO[Window(home).Property(context.infinity.showinfinity)]Add to Library</label>
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Add to Library</label>
 				<visible>
 					!String.IsEmpty(Window(home).Property(context.infinity.addtoLibrary)) +
 					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
@@ -2984,16 +2953,16 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 				</visible>
 			</item>
 			<item library="resources\lib\context\addtoFavourite.py">
-				<label>$INFO[Window(home).Property(context.infinity.showUmbrella)]Add/Remove Favourite</label>
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Add/Remove Favourite</label>
 				<visible>
 					!String.IsEmpty(Window(home).Property(context.infinity.addtoFavourite)) +
 					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
-					String.IsEqual(ListItem.Property(isUmbrella_widget),true) +
+					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
 					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,movie)]
 				</visible>
 			</item>
 			<item library="resources\lib\context\playTrailer.py">
-				<label>$INFO[Window(home).Property(context.infinity.showinfinity)]Play Trailer</label>
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Play Trailer</label>
 				<visible>
 					!String.IsEmpty(Window(home).Property(context.infinity.playTrailer)) +
 					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
@@ -3001,8 +2970,17 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 					[String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,movie)]
 				</visible>
 			</item>
+			<item library="resources\lib\context\playTrailerSelect.py">
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Play Trailer (Select)</label>
+				<visible>
+					!String.IsEmpty(Window(home).Property(context.infinity.playTrailerSelect)) +
+					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
+					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
+					[String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+			</item>
 			<item library="resources\lib\context\traktManager.py">
-				<label>$INFO[Window(home).Property(context.infinity.showinfinity)]Trakt Manager</label>
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Trakt Manager</label>
 				<visible>
 					!String.IsEmpty(Window(home).Property(context.infinity.traktManager)) +
 					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
@@ -3011,7 +2989,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 				</visible>
 			</item>
 			<item library="resources\lib\context\clearProviders.py">
-				<label>$INFO[Window(home).Property(context.infinity.showinfinity)]Clear Providers</label>
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Clear Providers</label>
 				<visible>
 					[!String.IsEmpty(Window(home).Property(context.infinity.clearProviders)) +
 					String.StartsWith(ListItem.FolderPath,plugin://plugin.video.infinity/?action=play) +
@@ -3023,7 +3001,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 				</visible>
 			</item>
 			<item library="resources\lib\context\clearBookmark.py">
-				<label>$INFO[Window(home).Property(context.infinity.showinfinity)]Clear Item Bookmark</label>
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Clear Item Bookmark</label>
 				<visible>
 					!String.IsEmpty(Window(home).Property(context.infinity.clearBookmark)) +
 					String.StartsWith(ListItem.FolderPath,plugin://plugin.video.infinity/?action=play) +
@@ -3033,7 +3011,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 				</visible>
 			</item>
 			<item library="resources\lib\context\rescrape.py">
-				<label>$INFO[Window(home).Property(context.infinity.showinfinity)]Rescrape Item</label>
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Rescrape Item</label>
 				<visible>
 					[!String.IsEmpty(Window(home).Property(context.infinity.rescrape)) +
 					String.StartsWith(ListItem.FolderPath,plugin://plugin.video.infinity/?action=play) +
@@ -3042,7 +3020,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 				</visible>
 			</item>
 			<item library="resources\lib\context\addLibtoFavourite.py">
-				<label>$INFO[Window(home).Property(context.infinity.showinfinity)]Add/Remove Favourite</label>
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Add/Remove Favourite</label>
 				<visible>
 					[String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.ListItem.FolderPath,videodb://)] +
 					[String.Contains(Container.ListItem.Path,Window(home).Property(infinity.movieLib.path)) | String.Contains(Container.ListItem.Path,Window(home).Property(infinity.tvLib.path))] +
@@ -3050,7 +3028,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 				</visible>
 			</item>
 			<item library="resources\lib\context\libRescrape.py">
-				<label>$INFO[Window(home).Property(context.infinity.showUmbrella)]Rescrape Lib Item</label>
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Rescrape Lib Item</label>
 				<visible>
 					[String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.ListItem.FolderPath,videodb://)] +
 					[String.Contains(Container.ListItem.Path,Window(home).Property(infinity.movieLib.path)) | String.Contains(Container.ListItem.Path,Window(home).Property(infinity.tvLib.path))] +
@@ -3058,7 +3036,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 				</visible>
 			</item>
 			<item library="resources\lib\context\playFromHere.py">
-				<label>$INFO[Window(home).Property(context.infinity.showinfinity)]Play from here</label>
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Play from here</label>
 				<visible>
 					!String.IsEmpty(Window(home).Property(context.infinity.playFromHere)) +
 					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
@@ -3067,7 +3045,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 				</visible>
 			</item>
 			<item library="resources\lib\context\autoPlay.py">
-				<label>$INFO[Window(home).Property(context.infinity.showinfinity)]Auto Play</label>
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Auto Play</label>
 				<visible>
 					String.IsEmpty(Window(home).Property(infinity.autoPlay.enabled)) +
 					!String.IsEmpty(Window(home).Property(context.infinity.autoPlay)) +
@@ -3077,7 +3055,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 				</visible>
 			</item>
 			<item library="resources\lib\context\sourceSelect.py">
-				<label>$INFO[Window(home).Property(context.infinity.showinfinity)]Source Select</label>
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Source Select</label>
 				<visible>
 					!String.IsEmpty(Window(home).Property(infinity.autoPlay.enabled)) +
 					!String.IsEmpty(Window(home).Property(context.infinity.sourceSelect)) +
@@ -3087,7 +3065,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 				</visible>
 			</item>
 			<item library="resources\lib\context\findSimilar.py">
-				<label>$INFO[Window(home).Property(context.infinity.showinfinity)]Find Similar</label>
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Find Similar</label>
 				<visible>
 					!String.IsEmpty(Window(home).Property(context.infinity.findSimilar)) +
 					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
@@ -3096,7 +3074,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 				</visible>
 			</item>
 			<item library="resources\lib\context\browseSeries.py">
-				<label>$INFO[Window(home).Property(context.infinity.showinfinity)]Browse Series</label>
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Browse Series</label>
 				<visible>
 					!String.IsEmpty(Window(home).Property(context.infinity.browseSeries)) +
 					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
@@ -3105,7 +3083,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 				</visible>
 			</item>
 			<item library="resources\lib\context\browseEpisodes.py">
-				<label>$INFO[Window(home).Property(context.infinity.showinfinity)]Browse Episodes</label>
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Browse Episodes</label>
 				<visible>
 					!String.IsEmpty(Window(home).Property(context.infinity.browseEpisodes)) +
 					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
@@ -3132,9 +3110,10 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 			<fanart>fanart.png</fanart>
 		</assets>
 		<news>
-[B]Update - v6.6.402 - Decemeber 15th, 2023[/B]
---[Enhancement] Subtitle service change.
---[Enhancement] Subtitle download for playnext service changed.
+[B]Update - v6.6.443 - February 1st, 2024[/B]
+--[Enhancement] Added episode type for certain skins.
+--[Enhancement] Removed trakt as episode label provider and changed logic to include mid-season premier and series finale.
+--[Fix] Changed scrobble on pause to only happen if before marking watched percentage.
 		</news>
 	</extension>
 </addon>
