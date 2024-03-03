@@ -1,4 +1,4 @@
-<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.13">
+<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.15">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="script.module.requests"/>
@@ -182,10 +182,6 @@
 			<fanart>fanart.png</fanart>
 		</assets>
 		<news>
-[B]Update - v6.6.443 - February 1st, 2024[/B]
---[Enhancement] Added episode type for certain skins.
---[Enhancement] Removed trakt as episode label provider and changed logic to include mid-season premier and series finale.
---[Fix] Changed scrobble on pause to only happen if before marking watched percentage.
 		</news>
 	</extension>
 </addon>

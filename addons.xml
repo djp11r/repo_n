@@ -100,15 +100,15 @@ You can clone the project and host it in your own server.
 	</extension>
 </addon>
 
-<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.53" provider-name="open">
+<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.54" provider-name="open">
 	<requires>
-		<import addon="script.module.beautifulsoup4"/>
 		<import addon="script.module.requests"/>
-		<import addon="script.module.six"/>
-		<import addon="script.module.certifi"/>
-		<import addon="script.module.kodi-six"/>
-		<import addon="script.module.simplejson"/>
-		<import addon="script.module.myaccounts"/>
+		<import addon="script.module.beautifulsoup4" optional="true"/>
+		<import addon="script.module.six" optional="true"/>
+		<import addon="script.module.certifi" optional="true"/>
+		<import addon="script.module.kodi-six" optional="true"/>
+		<import addon="script.module.simplejson" optional="true"/>
+		<import addon="script.module.myaccounts" optional="true"/>
 	</requires>
 	<extension point="xbmc.python.module" library="lib"/>
 	<extension point="xbmc.python.pluginsource" library="lib/default.py">
@@ -494,13 +494,12 @@ v1.1.0 (2020-01-17)
     </extension>
 </addon>
 
-<addon id="plugin.video.youtube" name="YouTube" version="7.0.3.2" provider-name="anxdpanic, bromix">
+<addon id="plugin.video.youtube" name="YouTube" version="7.0.6.3" provider-name="anxdpanic, bromix, MoojMidge">
     <requires>
-        <import addon="xbmc.python" version="3.0.1"/>
-        <import addon="script.module.requests" version="2.12.4"/>
-        <import addon="inputstream.adaptive" version="20.0.0"/>
+        <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.requests" version="2.27.1"/>
+        <import addon="inputstream.adaptive" version="19.0.0"/>
         <import addon="script.module.inputstreamhelper" version="0.2.2" optional="true"/>
-        <import addon="script.module.infotagger" version="0.0.5"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="resources/lib/plugin.py">
         <provides>video</provides>
@@ -527,7 +526,7 @@ v1.1.0 (2020-01-17)
         <summary lang="de_DE">Plugin fur YouTube</summary>
         <summary lang="el_GR"> YouTube</summary>
         <summary lang="en_GB">Plugin for YouTube</summary>
-        <summary lang="es_ES">Plugin para YouTube</summary>
+        <summary lang="es_ES">Complemento para YouTube</summary>
         <summary lang="es_MX">Complemento para YouTube</summary>
         <summary lang="fi_FI">YouTube-lisaosa</summary>
         <summary lang="fr_FR">Plugin pour YouTube</summary>
@@ -544,6 +543,7 @@ v1.1.0 (2020-01-17)
         <summary lang="sk_SK">Doplnok pre YouTube</summary>
         <summary lang="sv_SE">Plugin for YouTube</summary>
         <summary lang="tr_TR">YouTube icin eklenti</summary>
+        <summary lang="uk_UA">  YouTube</summary>
         <summary lang="vi_VN">Plugin danh cho YouTube</summary>
         <summary lang="zh_CN"/>
         <summary lang="zh_TW">YouTube</summary>
@@ -553,7 +553,7 @@ v1.1.0 (2020-01-17)
         <description lang="de_DE">YouTube ist eines der groten Video-Sharing-Websites der Welt.</description>
         <description lang="el_GR"> YouTube          .</description>
         <description lang="en_GB">YouTube is one of the biggest video-sharing websites of the world.</description>
-        <description lang="es_ES">YouTube es uno de los sitios web mas grande del mundo para compartir videos.</description>
+        <description lang="es_ES">YouTube es uno de los sitios web para compartir videos mas grandes del mundo.</description>
         <description lang="es_MX">YouTube es uno de los mas grandes sitios web de intercambio de videos del mundo.</description>
         <description lang="fi_FI">YouTube on yksi maailman suurimmista videoiden jakosivustoista.</description>
         <description lang="fr_FR">YouTube est l'un des plus grands sites de partage videos du monde.</description>
@@ -570,6 +570,7 @@ v1.1.0 (2020-01-17)
         <description lang="sk_SK">YouTube je jednou z najvacsich stranok na zdielanie videa na svete.</description>
         <description lang="sv_SE">YouTube ar en av de storsta videodelningssajterna i varlden.</description>
         <description lang="tr_TR">YouTube, dunya uzerindeki en buyuk video paylasma platformlarndan birisidir.</description>
+        <description lang="uk_UA">YouTube       .</description>
         <description lang="vi_VN">YouTube la mot trong nhung trang web chia se video lon nhat tren the gioi.</description>
         <description lang="zh_CN"/>
         <description lang="zh_TW">Youtube </description>
@@ -592,6 +593,7 @@ v1.1.0 (2020-01-17)
         <disclaimer lang="sk_SK">Tento doplnok nie je schvaleny spolocnostou Google</disclaimer>
         <disclaimer lang="sv_SE">Detta plugin ar inte godkant av Google</disclaimer>
         <disclaimer lang="tr_TR">Bu eklenti Google tarafndan uretilmemistir</disclaimer>
+        <disclaimer lang="uk_UA">       Google</disclaimer>
         <disclaimer lang="vi_VN">Plugin nay khong uoc xac nhan boi Google</disclaimer>
         <disclaimer lang="zh_CN"/>
         <disclaimer lang="zh_TW">Google</disclaimer>
@@ -757,7 +759,7 @@ Adds 'record' button to Video OSD while youtube videos are playing.</description
     </extension>
 </addon>
 
-<addon id="plugin.program.autocompletion" name="AutoCompletion for virtual keyboard" version="2.1.2" provider-name="Philipp Temminghoff (phil65), sualfred, xulek, finkleandeinhorn">
+<addon id="plugin.program.autocompletion" name="AutoCompletion for virtual keyboard" version="2.1.3" provider-name="phil65, sualfred, xulek, finkleandeinhorn, Ivar Brandt">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.autocompletion" version="2.0.5"/>
@@ -774,7 +776,7 @@ Adds 'record' button to Video OSD while youtube videos are playing.</description
         <description lang="es_ES">Autocompletar para el teclado virtual (necesita soporte de skin)</description>
         <platform>all</platform>
         <license>GPL-2.0-or-later</license>
-        <source>https://github.com/finkleandeinhorn/plugin.program.autocompletion</source>
+        <source>https://github.com/ivarbrandt/plugin.program.autocompletion</source>
         <assets>
             <icon>resources/icon.png</icon>
             <screenshot>resources/screenshot-01.jpg</screenshot>
@@ -1364,9 +1366,9 @@ v0.5.9 (2022-03-22)
   </extension>
 </addon>
 
-<addon id="script.module.kodi-six" name="Kodi Six" version="0.1.3" provider-name="Roman V.M.">
+<addon id="script.module.kodi-six" name="Kodi Six" version="0.1.3.1" provider-name="Roman V.M.">
   <requires>
-    <import addon="xbmc.python" version="2.26.0"/>
+    <import addon="xbmc.python" version="3.0.0"/>
   </requires>
   <extension point="xbmc.python.module" library="libs"/>
   <extension point="xbmc.addon.metadata">
@@ -1487,7 +1489,7 @@ v1.0.25 (marcelveldt)
 	</extension>
 </addon>
 
-<addon id="script.module.myaccounts" version="2.1.3" name="My Accounts" provider-name="j">
+<addon id="script.module.myaccounts" version="2.1.4" name="My Accounts" provider-name="j">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="script.module.requests" version="2.19.1"/>
@@ -1624,7 +1626,7 @@ v1.0.25 (marcelveldt)
   </extension>
 </addon>
 
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.127" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.133" provider-name="gujal">
     <requires>
         <!-- <import addon="xbmc.python" version="3.0.0" /> -->
         <import addon="script.module.six"/>
@@ -1661,7 +1663,7 @@ v1.0.25 (marcelveldt)
     <extension point="xbmc.addon.metadata">
         <summary lang="en_GB">Routing module for plugins</summary>
         <description lang="en_GB">Library for building and parsing plugin URLs.</description>
-        <license>GPL 3.0</license>
+        <license>GPL-3.0</license>
         <platform>all</platform>
         <language>en_GB</language>
         <source>https://github.com/tamland/kodi-plugin-routing</source>
@@ -2339,7 +2341,7 @@ Release type detection improved.</news>
   </extension>
 </addon>
 
-<addon id="service.subtitles.a4ksubtitles" name="a4kSubtitles" version="3.13.0" provider-name="Unknown">
+<addon id="service.subtitles.a4ksubtitles" name="a4kSubtitles" version="3.14.0" provider-name="Unknown">
     <requires>
       <import addon="script.module.requests"/>
       <import addon="vfs.libarchive" optional="true"/>
@@ -2364,6 +2366,9 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
             <screenshot>screenshot-03.png</screenshot>
         </assets>
         <news>
+[v3.14.0]:
+  * Handle invalid `VideoPlayer.IMDBNumber` meta
+
 [v3.13.0]:
   * Show proper error message of wrong username for OpenSubtitles
 
@@ -2715,7 +2720,7 @@ Other languages with a great number of subtitles are: Danish, French, Swedish, D
     </extension>
 </addon>
 
-<addon id="plugin.video.deccandelight" version="2.0.41" name="Deccan Delight" provider-name="gujal">
+<addon id="plugin.video.deccandelight" version="2.0.42" name="Deccan Delight" provider-name="gujal">
 <requires>
 	<import addon="script.module.six"/>
 	<import addon="script.module.kodi-six"/>
@@ -2730,12 +2735,10 @@ Other languages with a great number of subtitles are: Danish, French, Swedish, D
 </extension>
 <extension point="xbmc.addon.metadata">
 	<summary>Entertainment from the Deccan region of India</summary>
-	<description>This addon provides access to entertainment in various Deccan languages such as Tamil, Telugu, Malayalam, Kannada, and Hindi
-DeccanDelight is and always will be free and open-source. None of its code and resources may be sold or redistributed for any commercial purposes.
-DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any of the content displayed in the addon, it simply scrapes ad financed public websites.</description>
+	<description>This addon provides access to entertainment in various Deccan languages such as Tamil, Telugu, Malayalam, Kannada, and Hindi[CR]DeccanDelight is and always will be free and open-source. None of its code and resources may be sold or redistributed for any commercial purposes.[CR]DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any of the content displayed in the addon, it simply scrapes ad financed public websites.</description>
 	<platform>all</platform>
 	<website>https://github.com/Gujal00/GujalKodiWork</website>
-	<disclaimer>DeccanDelight and its developers are not in any way affiliated with Kodi or any of the sites and providers used in the addon.</disclaimer>
+	<disclaimer>DeccanDelight and its developers are not in any way affiliated with Kodi or any of the sites used in the addon.</disclaimer>
 	<assets>
 		<icon>icon.png</icon>
 		<fanart>fanart.png</fanart>
@@ -2746,7 +2749,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 </extension>
 </addon>
 
-<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="3.0.00">
+<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="3.0.01">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests"/>
@@ -2762,7 +2765,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
     <extension library="resources/lib/" point="xbmc.python.module"/>
     <extension point="xbmc.addon.metadata">
         <reuselanguageinvoker>true</reuselanguageinvoker>
-        <summary lang="en">Mainly used for English and Hindi content.</summary>
+        <summary lang="en">We do not host any of the contents. Mainly used for English and Hindi content.</summary>
         <description lang="en">This add-on is intended for advanced Kodi users only. You must own the content of any media you play through this addon.</description>
         <platform>all</platform>
         <disclaimer lang="en">The author of this addon does not host any of the content which is found and has no affiliation with any of the content providers.</disclaimer>
@@ -2926,7 +2929,7 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 	</extension>
 </addon>
 
-<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.13">
+<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.15">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="script.module.requests"/>
@@ -3110,10 +3113,6 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 			<fanart>fanart.png</fanart>
 		</assets>
 		<news>
-[B]Update - v6.6.443 - February 1st, 2024[/B]
---[Enhancement] Added episode type for certain skins.
---[Enhancement] Removed trakt as episode label provider and changed logic to include mid-season premier and series finale.
---[Fix] Changed scrobble on pause to only happen if before marking watched percentage.
 		</news>
 	</extension>
 </addon>
@@ -3172,13 +3171,13 @@ DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any o
 	</extension>
 </addon>
 
-<addon id="script.jptools" name="JP Tools" provider-name="People" version="1.64">
+<addon id="script.jptools" name="JP Tools" provider-name="People" version="1.65">
     <requires>
         <import addon="script.module.requests"/>
-        <import addon="script.module.beautifulsoup4"/>
-        <import addon="script.module.youtube.dl"/>
-        <import addon="script.module.resolveurl"/>
-        <import addon="script.module.inputstreamhelper"/>
+        <import addon="script.module.beautifulsoup4" optional="true"/>
+        <import addon="script.module.youtube.dl" optional="true"/>
+        <import addon="script.module.resolveurl" optional="true"/>
+        <import addon="script.module.inputstreamhelper" optional="true"/>
     </requires>
     <extension library="resources/lib/script_entry.py" point="xbmc.python.pluginsource">
         <provides>executable</provides>
