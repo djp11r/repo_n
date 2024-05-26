@@ -1,11 +1,10 @@
-<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="3.0.02">
+<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="3.0.03">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests"/>
         <import addon="script.module.openscrapers"/>
         <import addon="script.module.myaccounts"/>
         <import addon="script.module.resolveurl"/>
-        <import addon="script.module.inputstreamhelper"/>
     </requires>
     <extension library="resources/lib/fenlight.py" point="xbmc.python.pluginsource">
         <provides>video</provides>
