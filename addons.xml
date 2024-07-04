@@ -121,7 +121,7 @@ You can clone the project and host it in your own server.
   </extension>
 </addon>
 
-<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.55" provider-name="open">
+<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.56" provider-name="open">
 	<requires>
 		<import addon="script.module.requests"/>
 		<import addon="script.module.beautifulsoup4" optional="true"/>
@@ -1609,7 +1609,7 @@ v1.0.25 (marcelveldt)
   </extension>
 </addon>
 
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.140" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.141" provider-name="gujal">
     <requires>
         <!-- <import addon="xbmc.python" version="3.0.0" /> -->
         <import addon="script.module.six"/>
@@ -2732,7 +2732,7 @@ Other languages with a great number of subtitles are: Danish, French, Swedish, D
 </extension>
 </addon>
 
-<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="3.0.03">
+<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="3.0.04">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests"/>
