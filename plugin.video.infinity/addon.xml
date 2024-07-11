@@ -1,4 +1,4 @@
-<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.16">
+<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.17">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="script.module.requests"/>
@@ -6,7 +6,6 @@
 		<import addon="script.module.metahandler" optional="true"/>
 		<import addon="plugin.video.youtube" optional="true"/>
 		<import addon="script.module.openscrapers"/>
-		<import addon="script.module.myaccounts" />
 		<import addon="script.module.resolveurl"/>
 		<import addon="script.module.pytz" />
 	</requires>

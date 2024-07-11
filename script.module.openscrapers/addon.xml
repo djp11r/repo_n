@@ -7,7 +7,6 @@
 		<import addon="script.module.certifi" optional="true"/>
 		<import addon="script.module.kodi-six" optional="true"/>
 		<import addon="script.module.simplejson" optional="true"/>
-		<import addon="script.module.myaccounts" optional="true"/>
 	</requires>
 	<extension point="xbmc.python.module" library="lib" />
 	<extension point="xbmc.python.pluginsource" library="lib/default.py">
