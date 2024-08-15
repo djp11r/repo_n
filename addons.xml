@@ -100,7 +100,7 @@ You can clone the project and host it in your own server.
 	</extension>
 </addon>
 
-<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.56" provider-name="open">
+<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.57" provider-name="open">
 	<requires>
 		<import addon="script.module.requests"/>
 		<import addon="script.module.beautifulsoup4" optional="true"/>
@@ -115,7 +115,6 @@ You can clone the project and host it in your own server.
 	</extension>
 	<extension point="xbmc.service" library="lib/service.py" start="startup"/>
 	<extension point="xbmc.addon.metadata">
-		<reuselanguageinvoker>false</reuselanguageinvoker>
 		<summary lang="en_GB">OpenScrapers Module</summary>
 		<description>Scrape common video host for URL's to be playable in Kodi, simplifying addon development of video plugins requiring multi video hosts.</description>
 		<platform>all</platform>
@@ -493,7 +492,7 @@ v1.1.0 (2020-01-17)
     </extension>
 </addon>
 
-<addon id="plugin.video.youtube" name="YouTube" version="7.0.9+beta.10" provider-name="anxdpanic, bromix, MoojMidge">
+<addon id="plugin.video.youtube" name="YouTube" version="7.0.9.2" provider-name="anxdpanic, bromix, MoojMidge">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests" version="2.27.1"/>
@@ -539,6 +538,7 @@ v1.1.0 (2020-01-17)
         <summary lang="nl_NL">Plugin voor YouTube</summary>
         <summary lang="pl_PL">Wtyczka YouTube</summary>
         <summary lang="pt_BR">Plugin para YouTube</summary>
+        <summary lang="ro_RO">Modul pentru YouTube</summary>
         <summary lang="ru_RU"> YouTube</summary>
         <summary lang="sk_SK">Doplnok pre YouTube</summary>
         <summary lang="sv_SE">Plugin for YouTube</summary>
@@ -567,6 +567,7 @@ v1.1.0 (2020-01-17)
         <description lang="nl_NL">YouTube is een van de grootste videodelenwebsite in de hele wereld.</description>
         <description lang="pl_PL">YouTube jest jednym z najwiekszych na swiecie serwisow udostepniania wideo.</description>
         <description lang="pt_BR">O YouTube e um dos maiores sites de compartilhamento de videos do mundo.</description>
+        <description lang="ro_RO">YouTube este unul dintre cele mai mari saituri de distribuire de videoclipuri din lume.</description>
         <description lang="ru_RU">YouTube -   ,    ,    .</description>
         <description lang="sk_SK">YouTube je jednou z najvacsich stranok na zdielanie videa na svete.</description>
         <description lang="sv_SE">YouTube ar en av de storsta videodelningssajterna i varlden.</description>
@@ -591,6 +592,7 @@ v1.1.0 (2020-01-17)
         <disclaimer lang="nl_NL">Deze plug-in wordt niet door Google ondersteund</disclaimer>
         <disclaimer lang="pl_PL">Ta wtyczka nie jest zatwierdzona przez Google</disclaimer>
         <disclaimer lang="pt_BR">Este plugin nao e recomendado pelo Google</disclaimer>
+        <disclaimer lang="ro_RO">Acest modul nu este sustinut de Google</disclaimer>
         <disclaimer lang="ru_RU">   Google</disclaimer>
         <disclaimer lang="sk_SK">Tento doplnok nie je schvaleny spolocnostou Google</disclaimer>
         <disclaimer lang="sv_SE">Detta plugin ar inte godkant av Google</disclaimer>
@@ -1192,7 +1194,7 @@ Adds 'record' button to Video OSD while youtube videos are playing.</description
 
 </addon>
 
-<addon id="script.module.inputstreamhelper" name="InputStream Helper" version="0.6.1+matrix.1" provider-name="emilsvennesson, dagwieers, mediaminister, horstle">
+<addon id="script.module.inputstreamhelper" name="InputStream Helper" version="999.6.1+matrix.1" provider-name="emilsvennesson, dagwieers, mediaminister, horstle">
   <requires>
     <!--py3 compliant-->
     <import addon="xbmc.python" version="3.0.0"/>
@@ -1218,6 +1220,9 @@ Adds 'record' button to Video OSD while youtube videos are playing.</description
     <description lang="hr_HR">Jednostavan Kodi modul koji olaksava razvijanje dodataka koji se temelje na InputStream dodatku i reprodukciji DRM zasticenog sadrzaja.</description>
     <description lang="ru_RU">   Kodi,     ,   InputStream    DRM .</description>
     <news>
+v999.6.1 (v0.6.1)
+- Version bump to over-ride broken modified versions by other developers who are not part of our development team.
+
 v0.6.1 (2023-05-30)
 - Performance improvements on Linux ARM
 - This will be the last release for Python 2 i.e. Kodi 18 (Leia) and below. The next release will require Python 3 and Kodi 19 (Matrix) or higher.
@@ -1245,7 +1250,7 @@ v0.5.9 (2022-03-22)
     <website>https://github.com/emilsvennesson/script.module.inputstreamhelper/wiki</website>
     <source>https://github.com/emilsvennesson/script.module.inputstreamhelper</source>
     <assets>
-      <icon>resources/icon.png</icon>
+      <icon>icon.png</icon>
     </assets>
   </extension>
 </addon>
@@ -1584,7 +1589,7 @@ v1.0.25 (marcelveldt)
   </extension>
 </addon>
 
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.144" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.146" provider-name="gujal">
     <requires>
         <!-- <import addon="xbmc.python" version="3.0.0" /> -->
         <import addon="script.module.six"/>
@@ -1613,7 +1618,7 @@ v1.0.25 (marcelveldt)
     </extension>
 </addon>
 
-<addon id="script.module.routing" name="Plugin routing" version="0.2.3+matrix.1" provider-name="takoi,Team Kodi">
+<addon id="script.module.routing" name="Plugin routing" version="0.2.3.1" provider-name="takoi">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
     </requires>
@@ -1621,7 +1626,7 @@ v1.0.25 (marcelveldt)
     <extension point="xbmc.addon.metadata">
         <summary lang="en_GB">Routing module for plugins</summary>
         <description lang="en_GB">Library for building and parsing plugin URLs.</description>
-        <license>GPL-3.0</license>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
         <platform>all</platform>
         <language>en_GB</language>
         <source>https://github.com/tamland/kodi-plugin-routing</source>
@@ -1985,7 +1990,7 @@ v1.0.25 (marcelveldt)
     </extension>
 </addon>
 
-<addon id="script.module.youtube.dl" name="youtube-dl Control" version="24.724.0" provider-name="ytdl-org,ruuk,sy6sy2,wwark">
+<addon id="script.module.youtube.dl" name="youtube-dl Control" version="24.811.0" provider-name="ytdl-org,ruuk,sy6sy2,wwark">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.addon.signals" version="0.0.5+matrix.1"/>
@@ -2660,9 +2665,12 @@ v5.3.2 (2020-09-30)
   </extension>
 </addon>
 
-<addon id="service.subtitles.subscene" name="Subscene.com" version="1.7.3" provider-name="CrowleyAJ,appelgran">
+<addon id="service.subtitles.subscene" name="Subscene.com" version="2.1.5" provider-name="gujal">
     <requires>
-        <import addon="xbmc.python" version="2.14.0"/>
+        <!-- <import addon="xbmc.python" version="3.0.0"/> -->
+        <import addon="script.module.six"/>
+        <import addon="script.module.kodi-six"/>
+        <import addon="script.module.requests" version="2.4.3"/>
     </requires>
     <extension point="xbmc.subtitle.module" library="service.py"/>
     <extension point="xbmc.addon.metadata">
@@ -2709,7 +2717,7 @@ Other languages with a great number of subtitles are: Danish, French, Swedish, D
 </extension>
 </addon>
 
-<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="3.0.05">
+<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="3.0.06">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests"/>
@@ -2891,8 +2899,6 @@ Other languages with a great number of subtitles are: Danish, French, Swedish, D
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="script.module.requests"/>
-		<import addon="script.module.beautifulsoup4"/>
-		<import addon="script.module.metahandler" optional="true"/>
 		<import addon="plugin.video.youtube" optional="true"/>
 		<import addon="script.module.openscrapers"/>
 		<import addon="script.module.resolveurl"/>
@@ -3128,7 +3134,7 @@ Other languages with a great number of subtitles are: Danish, French, Swedish, D
 	</extension>
 </addon>
 
-<addon id="script.jptools" name="JP Tools" provider-name="People" version="1.66">
+<addon id="script.jptools" name="JP Tools" provider-name="People" version="1.67">
     <requires>
         <import addon="script.module.requests"/>
         <import addon="script.module.beautifulsoup4" optional="true"/>
