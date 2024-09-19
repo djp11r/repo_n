@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.57" provider-name="open">
+<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.58" provider-name="open">
 	<requires>
 		<import addon="script.module.requests" />
+		<import addon="script.module.resolveurl"/>
 		<import addon="script.module.beautifulsoup4" optional="true"/>
 		<import addon="script.module.six" optional="true"/>
 		<import addon="script.module.certifi" optional="true"/>

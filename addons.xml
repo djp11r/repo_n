@@ -100,9 +100,10 @@ You can clone the project and host it in your own server.
 	</extension>
 </addon>
 
-<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.57" provider-name="open">
+<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.58" provider-name="open">
 	<requires>
 		<import addon="script.module.requests"/>
+		<import addon="script.module.resolveurl"/>
 		<import addon="script.module.beautifulsoup4" optional="true"/>
 		<import addon="script.module.six" optional="true"/>
 		<import addon="script.module.certifi" optional="true"/>
@@ -492,12 +493,13 @@ v1.1.0 (2020-01-17)
     </extension>
 </addon>
 
-<addon id="plugin.video.youtube" name="YouTube" version="7.0.9.2" provider-name="anxdpanic, bromix, MoojMidge">
+<addon id="plugin.video.youtube" name="YouTube" version="7.1.1+beta.1" provider-name="anxdpanic, bromix, MoojMidge">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests" version="2.27.1"/>
         <import addon="inputstream.adaptive" version="19.0.0"/>
         <import addon="script.module.inputstreamhelper" version="0.2.2" optional="true"/>
+        <import addon="script.module.pysocks" optional="true"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="resources/lib/plugin.py">
         <provides>video</provides>
@@ -524,6 +526,7 @@ v1.1.0 (2020-01-17)
         <summary lang="de_DE">Plugin fur YouTube</summary>
         <summary lang="el_GR"> YouTube</summary>
         <summary lang="en_GB">Plugin for YouTube</summary>
+        <summary lang="eo">Aldonajo por YouTube</summary>
         <summary lang="es_ES">Complemento para YouTube</summary>
         <summary lang="es_MX">Complemento para YouTube</summary>
         <summary lang="fi_FI">YouTube-lisaosa</summary>
@@ -1589,7 +1592,7 @@ v1.0.25 (marcelveldt)
   </extension>
 </addon>
 
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.146" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.149" provider-name="gujal">
     <requires>
         <!-- <import addon="xbmc.python" version="3.0.0" /> -->
         <import addon="script.module.six"/>
@@ -2688,7 +2691,7 @@ Other languages with a great number of subtitles are: Danish, French, Swedish, D
     </extension>
 </addon>
 
-<addon id="plugin.video.deccandelight" version="2.0.44" name="Deccan Delight" provider-name="gujal">
+<addon id="plugin.video.deccandelight" version="2.0.45" name="Deccan Delight" provider-name="gujal">
 <requires>
 	<import addon="script.module.six"/>
 	<import addon="script.module.kodi-six"/>
@@ -2717,12 +2720,37 @@ Other languages with a great number of subtitles are: Danish, French, Swedish, D
 </extension>
 </addon>
 
-<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="3.0.06">
+<addon id="repository.elementumorg" name="ElementumOrg repository" provider-name="elementumorg" version="0.0.2">
+    <requires>
+    </requires>
+    <extension point="xbmc.addon.repository">
+        <dir>
+            <info>http://127.0.0.1:65223/addons.xml</info>
+            <checksum>http://127.0.0.1:65223/addons.xml.md5</checksum>
+            <datadir>http://127.0.0.1:65223/</datadir>
+        </dir>
+    </extension>
+    <extension point="xbmc.python.script" library="default.py"/>
+    <extension point="xbmc.service" library="service.py"/>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <license>See https://github.com/ElementumOrg/repository.elementumorg/blob/master/LICENSE</license>
+        <source>https://github.com/ElementumOrg/repository.elementumorg</source>
+        <summary lang="en">GitHub virtual Add-on repository</summary>
+        <description lang="en">Customizable repository which acts as a proxy for defined GitHub users' add-ons updates.</description>
+        <news>
+        </news>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="3.0.07">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests"/>
         <import addon="script.module.openscrapers"/>
-        <import addon="script.module.resolveurl"/>
     </requires>
     <extension library="resources/lib/fenlight.py" point="xbmc.python.pluginsource">
         <provides>video</provides>
@@ -2895,13 +2923,12 @@ Other languages with a great number of subtitles are: Danish, French, Swedish, D
 	</extension>
 </addon>
 
-<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.17">
+<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.18">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="script.module.requests"/>
 		<import addon="plugin.video.youtube" optional="true"/>
 		<import addon="script.module.openscrapers"/>
-		<import addon="script.module.resolveurl"/>
 		<import addon="script.module.pytz"/>
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="umbrella.py">
@@ -3134,7 +3161,7 @@ Other languages with a great number of subtitles are: Danish, French, Swedish, D
 	</extension>
 </addon>
 
-<addon id="script.jptools" name="JP Tools" provider-name="People" version="1.67">
+<addon id="script.jptools" name="JP Tools" provider-name="People" version="1.68">
     <requires>
         <import addon="script.module.requests"/>
         <import addon="script.module.beautifulsoup4" optional="true"/>
