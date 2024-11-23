@@ -100,7 +100,7 @@ You can clone the project and host it in your own server.
 	</extension>
 </addon>
 
-<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.59" provider-name="open">
+<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.60" provider-name="open">
 	<requires>
 		<import addon="script.module.requests"/>
 		<import addon="script.module.resolveurl"/>
@@ -493,7 +493,7 @@ v1.1.0 (2020-01-17)
     </extension>
 </addon>
 
-<addon id="plugin.video.youtube" name="YouTube" version="7.1.1.1" provider-name="anxdpanic, bromix, MoojMidge">
+<addon id="plugin.video.youtube" name="YouTube" version="7.1.1.6" provider-name="anxdpanic, bromix, MoojMidge">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests" version="2.27.1"/>
@@ -766,7 +766,7 @@ Adds 'record' button to Video OSD while youtube videos are playing.</description
     </extension>
 </addon>
 
-<addon id="plugin.program.autocompletion" name="AutoCompletion for virtual keyboard" version="2.1.3" provider-name="phil65, sualfred, xulek, finkleandeinhorn, Ivar Brandt">
+<addon id="plugin.program.autocompletion" name="AutoCompletion for virtual keyboard" version="2.1.4" provider-name="phil65, sualfred, xulek, finkleandeinhorn, Ivar Brandt">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.autocompletion" version="2.0.5"/>
@@ -856,7 +856,7 @@ Adds 'record' button to Video OSD while youtube videos are playing.</description
   </extension>
 </addon>
 
-<addon id="plugin.video.playlistloader" name="Playlist Loader" version="1.1.8" provider-name="Nux007, Publish3r, Silhouette2022, jp">
+<addon id="plugin.video.playlistloader" name="Playlist Loader" version="1.1.9" provider-name="Nux007, Publish3r, Silhouette2022, jp">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
     <import addon="script.module.requests" version="2.22.0"/>
@@ -1010,7 +1010,7 @@ Adds 'record' button to Video OSD while youtube videos are playing.</description
     </extension>
 </addon>
 
-<addon id="script.module.autocompletion" name="AutoCompletion library" version="2.1.1" provider-name="Philipp Temminghoff (phil65), bbaronSVK, finkleandeinhorn, berkhornet">
+<addon id="script.module.autocompletion" name="AutoCompletion library" version="3.0.2" provider-name="henryjfry">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests" version="2.9.1"/>
@@ -1021,9 +1021,9 @@ Adds 'record' button to Video OSD while youtube videos are playing.</description
         <description lang="en_GB">Module providing some AutoCompletion functions</description>
         <platform>all</platform>
         <license>GPL-2.0-or-later</license>
-        <source>https://github.com/finkleandeinhorn/script.module.autocompletion</source>
+        <source>https://github.com/sualfred/script.module.autocompletion</source>
         <assets>
-            <icon>icon.png</icon>
+            <icon>resources/icon.png</icon>
         </assets>
     </extension>
 </addon>
@@ -1592,7 +1592,7 @@ v1.0.25 (marcelveldt)
   </extension>
 </addon>
 
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.152" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.155" provider-name="gujal">
     <requires>
         <!-- <import addon="xbmc.python" version="3.0.0" /> -->
         <import addon="script.module.six"/>
@@ -2787,7 +2787,7 @@ Other languages with a great number of subtitles are: Danish, French, Swedish, D
     </extension>
 </addon>
 
-<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="1.0.00">
+<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="1.0.01">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests"/>
@@ -2964,7 +2964,7 @@ Other languages with a great number of subtitles are: Danish, French, Swedish, D
 	</extension>
 </addon>
 
-<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.18">
+<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.19">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="script.module.requests"/>
@@ -3202,7 +3202,7 @@ Other languages with a great number of subtitles are: Danish, French, Swedish, D
 	</extension>
 </addon>
 
-<addon id="script.jptools" name="JP Tools" provider-name="People" version="1.69">
+<addon id="script.jptools" name="JP Tools" provider-name="People" version="1.70">
     <requires>
         <import addon="script.module.requests"/>
         <import addon="script.module.beautifulsoup4" optional="true"/>
