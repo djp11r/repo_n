@@ -100,7 +100,7 @@ You can clone the project and host it in your own server.
 	</extension>
 </addon>
 
-<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.60" provider-name="open">
+<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.61" provider-name="open">
 	<requires>
 		<import addon="script.module.requests"/>
 		<import addon="script.module.resolveurl"/>
@@ -493,7 +493,7 @@ v1.1.0 (2020-01-17)
     </extension>
 </addon>
 
-<addon id="plugin.video.youtube" name="YouTube" version="7.1.1.6" provider-name="anxdpanic, bromix, MoojMidge">
+<addon id="plugin.video.youtube" name="YouTube" version="7.2.0+beta.4" provider-name="anxdpanic, bromix, MoojMidge">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests" version="2.27.1"/>
@@ -529,6 +529,7 @@ v1.1.0 (2020-01-17)
         <summary lang="eo">Aldonajo por YouTube</summary>
         <summary lang="es_ES">Complemento para YouTube</summary>
         <summary lang="es_MX">Complemento para YouTube</summary>
+        <summary lang="et_EE">YouTube lisamoodul</summary>
         <summary lang="fi_FI">YouTube-lisaosa</summary>
         <summary lang="fr_FR">Plugin pour YouTube</summary>
         <summary lang="he_IL">  YouTube</summary>
@@ -584,6 +585,7 @@ v1.1.0 (2020-01-17)
         <disclaimer lang="de_DE">Dieses Plugin ist nicht von Google befurwortet</disclaimer>
         <disclaimer lang="el_GR">        Google</disclaimer>
         <disclaimer lang="en_GB">This plugin is not endorsed by Google</disclaimer>
+        <disclaimer lang="eo">Tiu aldonajo ne estas aprobita de Google</disclaimer>
         <disclaimer lang="es_ES">Este add-on no esta respaldado por Google</disclaimer>
         <disclaimer lang="es_MX">Este complemento no esta respaldado por Google</disclaimer>
         <disclaimer lang="fi_FI">Google ei tue tata lisaosaa</disclaimer>
@@ -1592,7 +1594,7 @@ v1.0.25 (marcelveldt)
   </extension>
 </addon>
 
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.155" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.157" provider-name="gujal">
     <requires>
         <!-- <import addon="xbmc.python" version="3.0.0" /> -->
         <import addon="script.module.six"/>
@@ -2309,7 +2311,7 @@ Release type detection improved.</news>
   </extension>
 </addon>
 
-<addon id="service.subtitles.a4ksubtitles" name="a4kSubtitles" version="3.19.0" provider-name="Unknown">
+<addon id="service.subtitles.a4ksubtitles" name="a4kSubtitles" version="3.20.0" provider-name="Unknown">
     <requires>
       <import addon="script.module.requests"/>
       <import addon="vfs.libarchive" optional="true"/>
@@ -2334,6 +2336,12 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, SubDL, Addic7ed
             <screenshot>screenshot-03.png</screenshot>
         </assets>
     <news>
+[v3.20.0]:
+  * Auto download/selection improvements (by bbviking)
+
+[v3.19.1]:
+  * Parse subtitles version
+
 [v3.19.0]:
   * Lower OpenSubtitles token cache from 7 days to 1 day
   * Fix auto download stopping after first failed subtitle download
@@ -2732,7 +2740,7 @@ Other languages with a great number of subtitles are: Danish, French, Swedish, D
     </extension>
 </addon>
 
-<addon id="plugin.video.deccandelight" version="2.0.46" name="Deccan Delight" provider-name="gujal">
+<addon id="plugin.video.deccandelight" version="2.0.47" name="Deccan Delight" provider-name="gujal">
 <requires>
 	<import addon="script.module.six"/>
 	<import addon="script.module.kodi-six"/>
@@ -2787,7 +2795,7 @@ Other languages with a great number of subtitles are: Danish, French, Swedish, D
     </extension>
 </addon>
 
-<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="1.0.01">
+<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="1.0.02">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests"/>
@@ -2964,7 +2972,7 @@ Other languages with a great number of subtitles are: Danish, French, Swedish, D
 	</extension>
 </addon>
 
-<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.19">
+<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.20">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="script.module.requests"/>
