@@ -1,4 +1,4 @@
-<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.20">
+<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.22">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="script.module.requests"/>
@@ -27,6 +27,15 @@
 					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
 					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
 					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+			</item>
+			<item library="resources\lib\context\artworkCustomize.py">
+				<label>$INFO[Window(home).Property(context.infinity.showUmbrella)]Customize Artwork</label>
+				<visible>
+					!String.IsEmpty(Window(home).Property(context.infinity.artworkCustomize)) +
+					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
+					String.IsEqual(ListItem.Property(isUmbrella_widget),true) +
+					[String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,season)]
 				</visible>
 			</item>
 			<item library="resources\lib\context\playTrailer.py">

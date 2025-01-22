@@ -493,7 +493,7 @@ v1.1.0 (2020-01-17)
     </extension>
 </addon>
 
-<addon id="plugin.video.youtube" name="YouTube" version="7.2.0+beta.4" provider-name="anxdpanic, bromix, MoojMidge">
+<addon id="plugin.video.youtube" name="YouTube" version="7.2.0+beta.5" provider-name="anxdpanic, bromix, MoojMidge">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests" version="2.27.1"/>
@@ -1162,7 +1162,7 @@ Adds 'record' button to Video OSD while youtube videos are playing.</description
   </extension>
 </addon>
 
-<addon id="script.module.idna" name="idna" version="3.4.0" provider-name="Kim Davies">
+<addon id="script.module.idna" name="idna" version="3.10.0" provider-name="Kim Davies">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
   </requires>
@@ -1594,7 +1594,7 @@ v1.0.25 (marcelveldt)
   </extension>
 </addon>
 
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.157" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.162" provider-name="gujal">
     <requires>
         <!-- <import addon="xbmc.python" version="3.0.0" /> -->
         <import addon="script.module.six"/>
@@ -1916,7 +1916,7 @@ v1.0.25 (marcelveldt)
   </extension>
 </addon>
 
-<addon id="script.module.urllib3" name="urllib3" version="2.1.0" provider-name="urllib3">
+<addon id="script.module.urllib3" name="urllib3" version="2.2.3" provider-name="urllib3">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
   </requires>
@@ -2020,6 +2020,55 @@ v1.0.25 (marcelveldt)
             <icon>icon.png</icon>
         </assets>
     </extension>
+</addon>
+
+<addon id="script.simkl" name="Simkl TV Tracker" version="3.2.2" provider-name="David Davo, Simkl">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.service" library="service.py"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Simkl Scrobbler with AI file detection system</summary>
+    <summary lang="en_US">Simkl Scrobbler with AI file detection system</summary>
+    <description lang="en_GB">Automatically set Movies and TV Shows\Anime as watched on Simkl.com. Simkl knows what you're watching, tells you episodes you've missed, and connects you to what your friends are into. Sign up at https://simkl.com to get all of these features: 
+
+- Automatically track what youre watching.
+- Receive notifications about new episodes.
+- Find recommendations based on your watch history.
+- See your friend's ratings.
+
+Simkl was created to help people, like you, to keep track of what you watch and receive notifications about new episodes and new movie releases based on your preferences and watch history.</description>
+    <description lang="en_US">Automatically set Movies and TV Shows\Anime as watched on Simkl.com. Simkl knows what you're watching, tells you episodes you've missed, and connects you to what your friends are into. Sign up at https://simkl.com to get all of these features: 
+
+- Automatically track what youre watching.
+- Receive notifications about new episodes.
+- Find recommendations based on your watch history.
+- See your friend's ratings.
+
+Simkl was created to help people, like you, to keep track of what you watch and receive notifications about new episodes and new movie releases based on your preferences and watch history.</description>
+    <disclaimer lang="en_GB">Not tested on Android</disclaimer>
+    <platform>all</platform>
+    <license>GPL-3.0-or-later</license>
+    <forum>https://forum.kodi.tv/showthread.php?tid=305324</forum>
+    <website>https://simkl.com</website>
+    <email>david@ddavo.me</email>
+    <source>https://github.com/SIMKL/script.simkl</source>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.jpg</fanart>
+    </assets>
+    <language>en</language>
+    <news>
+      v3.2.2 (05-01-24)
+      - fixed new pything isAlive fn
+      v3.2 (22-09-22)
+      - right click, mark as watched/unwatched added
+      v3.1 (21-07-13)
+      - detect engine updated
+      v3.0 (21-03-16)
+      - Kodi 19+ support
+    </news>
+  </extension>
 </addon>
 
 	<addon id="script.skin.helper.service" name="Skin Helper Service" version="1.1.32" provider-name="marcelveldt, cartman.dos">
@@ -2769,8 +2818,9 @@ Other languages with a great number of subtitles are: Danish, French, Swedish, D
 </extension>
 </addon>
 
-<addon id="repository.elementumorg" name="ElementumOrg repository" provider-name="elementumorg" version="0.0.2">
+<addon id="repository.elementumorg" name="ElementumOrg repository" provider-name="elementumorg" version="0.0.5">
     <requires>
+        <!--<import addon="xbmc.python" version="3.0.0"/>-->
     </requires>
     <extension point="xbmc.addon.repository">
         <dir>
@@ -2788,6 +2838,12 @@ Other languages with a great number of subtitles are: Danish, French, Swedish, D
         <summary lang="en">GitHub virtual Add-on repository</summary>
         <description lang="en">Customizable repository which acts as a proxy for defined GitHub users' add-ons updates.</description>
         <news>
+- Allow running in standalone mode
+- Migrate to GitHub API
+- Add support for "tag_pattern" field
+- Add support for private repositories by supplying a "token"
+- Try to automatically determine zip ref from version
+- Multiple minor improvements
         </news>
         <assets>
             <icon>icon.png</icon>
@@ -2795,7 +2851,46 @@ Other languages with a great number of subtitles are: Danish, French, Swedish, D
     </extension>
 </addon>
 
-<addon id="plugin.video.infinite" name="Infinite" provider-name="Tiki" version="1.0.02">
+<addon id="script.elementum.burst" name="Elementum [COLOR FFFF6B00]Burst[/COLOR]" version="0.0.92" provider-name="elgatito">
+    <requires>
+        <import addon="xbmc.addon" version="16.0.0"/>
+        <import addon="plugin.video.elementum" optional="true"/>
+        <import addon="script.module.kodi-six"/>
+        <import addon="script.module.requests"/>
+        <import addon="script.module.future" version="0.16.0.4"/>
+        <import addon="script.module.pycryptodome" optional="true"/>
+    </requires>
+    <extension point="xbmc.python.script" library="burst.py">
+        <provides>executable</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">Elementum torrents provider</summary>
+        <summary lang="hr">Elementum torrent pruzatelji usluga</summary>
+        <summary lang="es">Proveedor de torrents Elementum</summary>
+        <summary lang="ru">  Elementum</summary>
+        <summary lang="sv">Elementum-torrentleverantor</summary>
+        <description lang="en">Elementum Burst is a lean and mean multi-provider for Elementum.</description>
+        <description lang="hr">Elementum Burst je visestruki pruzatelj usluga za Elementum.</description>
+        <description lang="es">Elementum Burst es un multi-proveedor simple y eficiente para Elementum.</description>
+        <description lang="ru">Elementum Burst   ,     Elementum.</description>
+        <description lang="sv">Elementum Burst ar en enkel och effektiv multi-leverantor for Elementum.</description>
+        <disclaimer lang="en">The author does not host or distribute any of the content displayed by this addon. The author does not have any affiliation with the content providers.</disclaimer>
+        <disclaimer lang="hr">Autor ovog dodatka ne posjeduje i ne distribuira bilo kakav sadrzaj koji je pronaen. Autor nije povezan sa bilo kojim izvorom sadrzaja.</disclaimer>
+        <disclaimer lang="es">El autor no aloja ni distribuye ninguno de los contenidos mostrados por este complemento. El autor no tiene ninguna afiliacion con los proveedores de contenido.</disclaimer>
+        <disclaimer lang="ru">      ,   ,  .</disclaimer>
+        <disclaimer lang="sv">Skaparen ar inte vard eller distribuerar nagot av innehallet som visas av detta tillagg. Skaparen har ingen anslutning till innehallsleverantorerna.</disclaimer>
+        <license>WTFPL, Version 2, December 2004. See included LICENSE.</license>
+        <website>https://elementum.surge.sh</website>
+        <source>https://github.com/elgatito/script.elementum.burst</source>
+        <forum>TODO</forum>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="plugin.video.infinite" name="Infinite Light" provider-name="Tiki" version="2.0.00">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests"/>
@@ -2972,7 +3067,7 @@ Other languages with a great number of subtitles are: Danish, French, Swedish, D
 	</extension>
 </addon>
 
-<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.20">
+<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.22">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="script.module.requests"/>
@@ -3001,6 +3096,15 @@ Other languages with a great number of subtitles are: Danish, French, Swedish, D
 					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
 					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
 					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+			</item>
+			<item library="resources\lib\context\artworkCustomize.py">
+				<label>$INFO[Window(home).Property(context.infinity.showUmbrella)]Customize Artwork</label>
+				<visible>
+					!String.IsEmpty(Window(home).Property(context.infinity.artworkCustomize)) +
+					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
+					String.IsEqual(ListItem.Property(isUmbrella_widget),true) +
+					[String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,season)]
 				</visible>
 			</item>
 			<item library="resources\lib\context\playTrailer.py">
