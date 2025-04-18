@@ -100,7 +100,7 @@ You can clone the project and host it in your own server.
 	</extension>
 </addon>
 
-<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.61" provider-name="open">
+<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.62" provider-name="open">
 	<requires>
 		<import addon="script.module.requests"/>
 		<import addon="script.module.resolveurl"/>
@@ -493,7 +493,7 @@ v1.1.0 (2020-01-17)
     </extension>
 </addon>
 
-<addon id="plugin.video.youtube" name="YouTube" version="7.2.0+beta.5" provider-name="anxdpanic, bromix, MoojMidge">
+<addon id="plugin.video.youtube" name="YouTube" version="7.2.0+beta.8" provider-name="anxdpanic, bromix, MoojMidge">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests" version="2.27.1"/>
@@ -545,7 +545,7 @@ v1.1.0 (2020-01-17)
         <summary lang="ro_RO">Modul pentru YouTube</summary>
         <summary lang="ru_RU"> YouTube</summary>
         <summary lang="sk_SK">Doplnok pre YouTube</summary>
-        <summary lang="sv_SE">Plugin for YouTube</summary>
+        <summary lang="sv_SE">Insticksmodul for YouTube</summary>
         <summary lang="tr_TR">YouTube icin eklenti</summary>
         <summary lang="uk_UA">  YouTube</summary>
         <summary lang="vi_VN">Plugin danh cho YouTube</summary>
@@ -574,7 +574,7 @@ v1.1.0 (2020-01-17)
         <description lang="ro_RO">YouTube este unul dintre cele mai mari saituri de distribuire de videoclipuri din lume.</description>
         <description lang="ru_RU">YouTube -   ,    ,    .</description>
         <description lang="sk_SK">YouTube je jednou z najvacsich stranok na zdielanie videa na svete.</description>
-        <description lang="sv_SE">YouTube ar en av de storsta videodelningssajterna i varlden.</description>
+        <description lang="sv_SE">YouTube ar en av varldens storsta webbplatser for videodelning.</description>
         <description lang="tr_TR">YouTube, dunya uzerindeki en buyuk video paylasma platformlarndan birisidir.</description>
         <description lang="uk_UA">YouTube       .</description>
         <description lang="vi_VN">YouTube la mot trong nhung trang web chia se video lon nhat tren the gioi.</description>
@@ -600,7 +600,7 @@ v1.1.0 (2020-01-17)
         <disclaimer lang="ro_RO">Acest modul nu este sustinut de Google</disclaimer>
         <disclaimer lang="ru_RU">   Google</disclaimer>
         <disclaimer lang="sk_SK">Tento doplnok nie je schvaleny spolocnostou Google</disclaimer>
-        <disclaimer lang="sv_SE">Detta plugin ar inte godkant av Google</disclaimer>
+        <disclaimer lang="sv_SE">Denna insticksmodul ar inte godkand av Google</disclaimer>
         <disclaimer lang="tr_TR">Bu eklenti Google tarafndan uretilmemistir</disclaimer>
         <disclaimer lang="uk_UA">       Google</disclaimer>
         <disclaimer lang="vi_VN">Plugin nay khong uoc xac nhan boi Google</disclaimer>
@@ -1594,7 +1594,7 @@ v1.0.25 (marcelveldt)
   </extension>
 </addon>
 
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.162" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.169" provider-name="gujal">
     <requires>
         <!-- <import addon="xbmc.python" version="3.0.0" /> -->
         <import addon="script.module.six"/>
@@ -2756,11 +2756,7 @@ v5.3.2 (2020-09-30)
     <website>http://www.opensubtitles.org</website>
     <email>admin [at] opensubtitles {dot} org</email>
 	<assets>
-	    <icon>resources/media/os_logo_512x512.png</icon>
-	    <fanart>resources/media/os_fanart.jpg</fanart>
-		<screenshot>resources/media/screenshot_1.jpg</screenshot>
-		<screenshot>resources/media/screenshot_2.jpg</screenshot>
-		<screenshot>resources/media/screenshot_3.jpg</screenshot>
+	    <icon>icon.png</icon>
 	</assets>
     <source>https://github.com/opensubtitles/service.subtitles.opensubtitles_by_opensubtitles</source>
   </extension>
@@ -2818,7 +2814,7 @@ Other languages with a great number of subtitles are: Danish, French, Swedish, D
 </extension>
 </addon>
 
-<addon id="repository.elementumorg" name="ElementumOrg repository" provider-name="elementumorg" version="0.0.5">
+<addon id="repository.elementumorg" name="ElementumOrg repository" provider-name="elementumorg" version="0.0.6">
     <requires>
         <!--<import addon="xbmc.python" version="3.0.0"/>-->
     </requires>
@@ -2851,7 +2847,7 @@ Other languages with a great number of subtitles are: Danish, French, Swedish, D
     </extension>
 </addon>
 
-<addon id="script.elementum.burst" name="Elementum [COLOR FFFF6B00]Burst[/COLOR]" version="0.0.92" provider-name="elgatito">
+<addon id="script.elementum.burst" name="Elementum [COLOR FFFF6B00]Burst[/COLOR]" version="0.0.93" provider-name="elgatito">
     <requires>
         <import addon="xbmc.addon" version="16.0.0"/>
         <import addon="plugin.video.elementum" optional="true"/>
@@ -2890,13 +2886,13 @@ Other languages with a great number of subtitles are: Danish, French, Swedish, D
     </extension>
 </addon>
 
-<addon id="plugin.video.infinite" name="Infinite Light" provider-name="Tiki" version="2.0.00">
+<addon id="plugin.video.infinite" name="Infinite Light" provider-name="Tiki" version="2.0.01">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests"/>
         <import addon="script.module.openscrapers"/>
     </requires>
-    <extension library="resources/lib/fenlight.py" point="xbmc.python.pluginsource">
+    <extension library="resources/lib/infinite.py" point="xbmc.python.pluginsource">
         <provides>video</provides>
     </extension>
     <extension library="resources/lib/service.py" point="xbmc.service"/>
@@ -3067,7 +3063,7 @@ Other languages with a great number of subtitles are: Danish, French, Swedish, D
 	</extension>
 </addon>
 
-<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.22">
+<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.23">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="script.module.requests"/>
@@ -3132,6 +3128,15 @@ Other languages with a great number of subtitles are: Danish, French, Swedish, D
 					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
 					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
 					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+			</item>
+			<item library="resources\lib\context\mdblistManager.py">
+				<label>$INFO[Window(home).Property(context.umbrella.showUmbrella)]MDBList Watchlist</label>
+				<visible>
+					!String.IsEmpty(Window(home).Property(context.infinity.mdblistManager)) +
+					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
+					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
+					[String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,movie)]
 				</visible>
 			</item>
 			<item library="resources\lib\context\clearProviders.py">
@@ -3314,7 +3319,7 @@ Other languages with a great number of subtitles are: Danish, French, Swedish, D
 	</extension>
 </addon>
 
-<addon id="script.jptools" name="JP Tools" provider-name="People" version="1.70">
+<addon id="script.jptools" name="JP Tools" provider-name="People" version="1.71">
     <requires>
         <import addon="script.module.requests"/>
         <import addon="script.module.beautifulsoup4" optional="true"/>
