@@ -109,6 +109,7 @@ You can clone the project and host it in your own server.
 		<import addon="script.module.certifi" optional="true"/>
 		<import addon="script.module.kodi-six" optional="true"/>
 		<import addon="script.module.simplejson" optional="true"/>
+		<import addon="script.module.segno" optional="true"/>
 	</requires>
 	<extension point="xbmc.python.module" library="lib"/>
 	<extension point="xbmc.python.pluginsource" library="lib/default.py">
@@ -493,7 +494,7 @@ v1.1.0 (2020-01-17)
     </extension>
 </addon>
 
-<addon id="plugin.video.youtube" name="YouTube" version="7.2.0+beta.8" provider-name="anxdpanic, bromix, MoojMidge">
+<addon id="plugin.video.youtube" name="YouTube" version="7.2.0.1" provider-name="anxdpanic, bromix, MoojMidge">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests" version="2.27.1"/>
@@ -1318,7 +1319,6 @@ v0.5.9 (2022-03-22)
 
 <addon id="script.module.js2py" name="js2py" version="0.6.7" provider-name="Addons4Kodi">
   <requires>
-    <import addon="xbmc.python" version="2.25.0"/>
     <import addon="script.module.six" version="1.11.0"/>
     <import addon="script.module.pyjsparser" version="2.7.1"/>
     <import addon="script.module.tzlocal" version="1.5.1"/>
@@ -1594,7 +1594,7 @@ v1.0.25 (marcelveldt)
   </extension>
 </addon>
 
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.171" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.173" provider-name="gujal">
     <requires>
         <!-- <import addon="xbmc.python" version="3.0.0" /> -->
         <import addon="script.module.six"/>
@@ -1641,19 +1641,20 @@ v1.0.25 (marcelveldt)
     </extension>
 </addon>
 
-<addon id="script.module.shutil_get_terminal_size" name="shutil_get_terminal_size library" version="1.0.0" provider-name="back-to">
+<addon id="script.module.segno" name="segno" version="0.0.1" provider-name="Isaac Muse">
   <requires>
-    <import addon="xbmc.python" version="2.24.0"/>
+    <import addon="xbmc.python" version="3.0.0"/>
   </requires>
   <extension point="xbmc.python.module" library="lib"/>
   <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Pure Python QR Code generator with no dependencies.</summary>
+    <description lang="en_GB">Pure Python QR Code generator with no dependencies.</description>
+    <license>MIT</license>
     <platform>all</platform>
-    <summary>shutil_get_terminal_size library</summary>
-    <license>PSF</license>
-    <source>https://pypi.org/project/backports.shutil_get_terminal_size/</source>
-    <website/>
+    <website>https://segno.readthedocs.io/</website>
+    <source>https://github.com/heuer/segno</source>
     <assets>
-      <icon>icon.png</icon>
+      <icon>resources/icon.png</icon>
     </assets>
   </extension>
 </addon>
@@ -1878,16 +1879,34 @@ v1.0.25 (marcelveldt)
     </extension>
 </addon>
 
-<addon id="script.module.tzlocal" name="tzlocal" version="3.0.0+matrix.2" provider-name="Lennart Regebro">
+<addon id="script.module.tzdata" name="tzdata" version="2023.3.0+matrix.1" provider-name="Python Software Foundation">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
-    <import addon="script.module.pytz" version="2019.3.0+matrix.1"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Provider of IANA time zone data</summary>
+    <description lang="en_GB">This is a Python package containing zic-compiled binaries for the IANA time zone database. It is intended to be a fallback for systems that do not have system time zone data installed</description>
+    <platform>all</platform>
+    <license>Apache-2.0</license>
+    <website>https://pypi.org/project/tzdata/</website>
+    <source>https://github.com/python/tzdata</source>
+    <assets>
+      <icon>resources/icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="script.module.tzlocal" name="tzlocal" version="5.0.1" provider-name="Lennart Regebro">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.module.tzdata" version="2023.3.0+matrix.1"/>
     <import addon="script.module.backports.zoneinfo" version="0.2.1"/>
   </requires>
   <extension point="xbmc.python.module" library="lib"/>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en_GB">Python Module to find out the current time zone</summary>
-    <description lang="en_GB">Packed for Kodi from https://github.com/regebro/tzlocal, forked from https://github.com/jdollarKodi/script.module.tzlocal</description>
+    <summary lang="en_GB">tzinfo object for the local timezone</summary>
+    <description lang="en_GB">tzinfo object for the local timezone</description>
     <platform>all</platform>
     <license>MIT</license>
     <website>https://github.com/regebro/tzlocal</website>
@@ -2300,64 +2319,6 @@ Simkl was created to help people, like you, to keep track of what you watch and 
             <icon>icon.png</icon>
         </assets>
     </extension>
-</addon>
-
-<addon id="service.subloader" name="SubLoader" version="0.1.4" provider-name="DenimNani">
-  <requires>
-    <import addon="xbmc.python" version="2.14.0"/>
-  </requires>
-  <extension point="xbmc.service" library="monitor.py" start="login"/>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">Automatic subtitles for your content</summary>
-    <description lang="en">Auto download the best subtitle automatically as soon you start the video.
-Special thanks to OpenSubtitles.org for providing a unique UA for Subloader.</description>
-    <platform>all</platform>
-    <language>en</language>
-    <license>GPL</license>
-    <website>https://github.com/denimnani</website>
-	<assets>
-		<icon>iconsubloader.png</icon>
-		<fanart>fanartsubloader.png</fanart>
-		<screenshot>resources/media/screenshots/screenshot1subLoader.jpg</screenshot>
-		<screenshot>fanartsubloader.png</screenshot>
-	</assets>
-    <source>https://github.com/denimnani/service.subloader</source>
-    <forum/>
-    <email/>
-	<news>0.1.4     23.07.2019
-Added Dutch language (Special thanks to Tinuz97).
-Clean up project files.
-
-0.1.3     21.07.2019
-Added OS user login.
-Fixed debug option.
-Added more debug information.
-Massive code rewrite.
-Several optimizations.
-Added audio language exclusions.
-Added video addon exclusions.
-Improved sorting settings.
-Improved settings layout.
-Added Do nothing option.
-Fixed typo (Special thanks to AlexNaga).
-
-0.1.2     17.06.2019
-Added a unique User Agent from Opensubtitles.org.
-
-0.1.1     12.06.2019
-Fixed release detection bug.
-Fixed typo.
-
-0.1.0     10.06.2019
-Fixed instalation bug.
-Fixed notifications bug.
-Started Beta convergence.
-Added default behavior selection.
-Added auto donwload any subtitle if no match found.
-Updated settings xml.
-Updated strings po.
-Release type detection improved.</news>
-  </extension>
 </addon>
 
 <addon id="service.subtitles.a4ksubtitles" name="a4kSubtitles" version="3.20.0" provider-name="Unknown">
