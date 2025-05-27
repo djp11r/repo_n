@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.module.peewee" name="peewee" provider-name="coleifer" version="0.0.7">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en_GB">Python wrapper for peewee</summary>
+    <description lang="en_GB">Python wrapper for peewee</description>
+    <license>GPL-3.0-or-later</license>
+    <website>https://github.com/coleifer/peewee</website>
+    <source>https://github.com/coleifer/peewee</source>
+    <assets>
+      <icon>resources/icon.png</icon>
+    </assets>
+    <news>v3.17.7 from origin</news>
+  </extension>
+</addon>
