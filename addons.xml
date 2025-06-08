@@ -100,7 +100,7 @@ You can clone the project and host it in your own server.
 	</extension>
 </addon>
 
-<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.62" provider-name="open">
+<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.63" provider-name="open">
 	<requires>
 		<import addon="script.module.requests"/>
 		<import addon="script.module.resolveurl"/>
@@ -494,7 +494,7 @@ v1.1.0 (2020-01-17)
     </extension>
 </addon>
 
-<addon id="plugin.video.youtube" name="YouTube" version="7.2.0.1" provider-name="anxdpanic, bromix, MoojMidge">
+<addon id="plugin.video.youtube" name="YouTube" version="7.2.0.3" provider-name="anxdpanic, bromix, MoojMidge">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests" version="2.27.1"/>
@@ -1613,7 +1613,7 @@ v1.0.25 (marcelveldt)
   </extension>
 </addon>
 
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.173" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.174" provider-name="gujal">
     <requires>
         <!-- <import addon="xbmc.python" version="3.0.0" /> -->
         <import addon="script.module.six"/>
@@ -2773,7 +2773,7 @@ Other languages with a great number of subtitles are: Danish, French, Swedish, D
     </extension>
 </addon>
 
-<addon id="plugin.video.deccandelight" version="2.0.48" name="Deccan Delight" provider-name="gujal">
+<addon id="plugin.video.deccandelight" version="2.0.49" name="Deccan Delight" provider-name="gujal">
 <requires>
 	<import addon="script.module.six"/>
 	<import addon="script.module.kodi-six"/>
@@ -2874,7 +2874,7 @@ Other languages with a great number of subtitles are: Danish, French, Swedish, D
     </extension>
 </addon>
 
-<addon id="plugin.video.infinite" name="Infinite Light" provider-name="Tiki" version="2.0.01">
+<addon id="plugin.video.infinite" name="Infinite Light" provider-name="Tiki" version="2.0.02">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests"/>
@@ -3307,7 +3307,7 @@ Other languages with a great number of subtitles are: Danish, French, Swedish, D
 	</extension>
 </addon>
 
-<addon id="script.jptools" name="JP Tools" provider-name="People" version="1.71">
+<addon id="script.jptools" name="JP Tools" provider-name="People" version="1.72">
     <requires>
         <import addon="script.module.requests"/>
         <import addon="script.module.beautifulsoup4" optional="true"/>
