@@ -100,7 +100,7 @@ You can clone the project and host it in your own server.
 	</extension>
 </addon>
 
-<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.64" provider-name="open">
+<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.65" provider-name="open">
 	<requires>
 		<import addon="script.module.requests" />
 		<import addon="script.module.resolveurl" />
@@ -494,7 +494,7 @@ v1.1.0 (2020-01-17)
     </extension>
 </addon>
 
-<addon id="plugin.video.youtube" name="YouTube" version="7.2.0.3" provider-name="anxdpanic, bromix, MoojMidge">
+<addon id="plugin.video.youtube" name="YouTube" version="7.3.0+beta.8" provider-name="anxdpanic, bromix, MoojMidge">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
         <import addon="script.module.requests" version="2.27.1" />
@@ -522,6 +522,7 @@ v1.1.0 (2020-01-17)
         <source>https://github.com/anxdpanic/plugin.video.youtube</source>
         <reuselanguageinvoker>true</reuselanguageinvoker>
         <summary lang="bg_BG">  YouTube</summary>
+        <summary lang="bs_BA">Dodatak za YouTube</summary>
         <summary lang="cs_CZ">Plugin pro YouTube</summary>
         <summary lang="da_DK">Plugin til YouTube</summary>
         <summary lang="de_DE">Plugin fur YouTube</summary>
@@ -533,6 +534,7 @@ v1.1.0 (2020-01-17)
         <summary lang="et_EE">YouTube lisamoodul</summary>
         <summary lang="fi_FI">YouTube-lisaosa</summary>
         <summary lang="fr_FR">Plugin pour YouTube</summary>
+        <summary lang="ga">Breisean do YouTube</summary>
         <summary lang="he_IL">  YouTube</summary>
         <summary lang="hr_HR">Dodatak za YouTube</summary>
         <summary lang="hu_HU">YouTube kiegeszito</summary>
@@ -553,6 +555,7 @@ v1.1.0 (2020-01-17)
         <summary lang="zh_CN" />
         <summary lang="zh_TW">YouTube</summary>
         <description lang="bg_BG">YouTube    -         .</description>
+        <description lang="bs_BA">YouTube je jedna od najvecih svjetskih web stranica za dijeljenje videozapisa.</description>
         <description lang="cs_CZ">YouTube je jedna z nejvetsich webovych stranek sveta sdilejici video.</description>
         <description lang="da_DK">YouTube er et af verdens strste videodelingswebsteder.</description>
         <description lang="de_DE">YouTube ist eines der groten Video-Sharing-Websites der Welt.</description>
@@ -581,6 +584,7 @@ v1.1.0 (2020-01-17)
         <description lang="vi_VN">YouTube la mot trong nhung trang web chia se video lon nhat tren the gioi.</description>
         <description lang="zh_CN" />
         <description lang="zh_TW">Youtube </description>
+        <disclaimer lang="bs_BA">Ovaj dodatak nije odobren od strane Googlea</disclaimer>
         <disclaimer lang="cs_CZ">Tento plugin neni schvalen spolecnosti Google</disclaimer>
         <disclaimer lang="da_DK">Dette plugin er ikke godkendt af Google</disclaimer>
         <disclaimer lang="de_DE">Dieses Plugin ist nicht von Google befurwortet</disclaimer>
@@ -859,11 +863,11 @@ Adds 'record' button to Video OSD while youtube videos are playing.</description
   </extension>
 </addon>
 
-<addon id="plugin.video.playlistloader" name="Playlist Loader" version="1.1.9" provider-name="Nux007, Publish3r, Silhouette2022, jp">
+<addon id="plugin.video.playlistloader" name="Playlist Loader" version="1.2.0" provider-name="Nux007, Publish3r, Silhouette2022, jp">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
-    <import addon="script.module.requests" version="2.22.0" />
-    <import addon="script.module.dateutil" version="2.8.1" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.dateutil" />
     <import addon="inputstream.adaptive" />
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
@@ -879,6 +883,32 @@ Adds 'record' button to Video OSD while youtube videos are playing.</description
         <icon>icon.png</icon>
     </assets>
   </extension>
+</addon>
+
+<addon id="script.audiooffsetmanager" version="1.5.0" name="Audio Offset Manager" provider-name="matthane">
+    <requires>
+        <import addon="xbmc.python" version="3.0.1" />
+    </requires>
+    <extension point="xbmc.service" library="service.py" />
+    <extension point="xbmc.python.script" library="script.py" />
+    <extension point="xbmc.addon.metadata">
+        <source>https://github.com/matthane/script.audiooffsetmanager</source>
+        <news>v1.5.0 (2025-05-02)
+- Add notifications (toggleable) for when offsets are applied or saved during playback
+- Add test video bypass option
+        </news>
+        <summary lang="en_GB">Dynamically manages audio offsets</summary>
+        <description lang="en_GB">This add-on intelligently adjusts the audio offset based on the detected HDR type, audio format, and FPS type according to user-configured settings, along with other helpful features</description>
+        <platform>all</platform>
+        <license>GPL-3.0-or-later</license>
+        <assets>
+            <icon>resources/icon.png</icon>
+            <fanart>resources/fanart.jpg</fanart>
+            <screenshot>resources/screenshot-1.jpg</screenshot>
+            <screenshot>resources/screenshot-2.jpg</screenshot>
+            <screenshot>resources/screenshot-3.jpg</screenshot>
+        </assets>
+    </extension>
 </addon>
 
 <addon id="script.common.plugin.cache" name="Common plugin cache" provider-name="anxdpanic, TheCollective" version="3.0.0">
@@ -1490,7 +1520,7 @@ v1.0.25 (marcelveldt)
 	</extension>
 </addon>
 
-<addon id="script.module.peewee" name="peewee" provider-name="coleifer" version="0.0.7">
+<addon id="script.module.peewee" name="peewee" provider-name="coleifer" version="0.0.8">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
   </requires>
@@ -1613,7 +1643,7 @@ v1.0.25 (marcelveldt)
   </extension>
 </addon>
 
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.175" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.184" provider-name="gujal">
     <requires>
         
         <import addon="script.module.six" />
@@ -1997,21 +2027,21 @@ v1.0.25 (marcelveldt)
   </extension>
 </addon>
 
-<addon id="script.module.websocket" name="websocket library" version="0.58.0+matrix.2" provider-name="liris">
+<addon id="script.module.websocket" name="websocket-client" version="1.6.4" provider-name="liris">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
-    <import addon="script.module.six" version="1.14.0+matrix.2" />
   </requires>
   <extension point="xbmc.python.module" library="lib" />
   <extension point="xbmc.addon.metadata">
-    <assets>
-      <icon>icon.png</icon>
-    </assets>
-    <summary lang="en_GB">websocket library repacked for Kodi</summary>
-    <source>https://github.com/pkscout/script.module.websocket</source>
+    <summary lang="en_GB">WebSocket client for Python with low level API options</summary>
+    <description lang="en_GB">WebSocket client for Python with low level API options</description>
+    <source>https://github.com/websocket-client/websocket-client</source>
     <website>https://github.com/websocket-client/websocket-client</website>
+    <license>Apache-2.0</license>
     <platform>all</platform>
-    <license>LGPL-2.1-only</license>
+    <assets>
+      <icon>resources/icon.png</icon>
+    </assets>
   </extension>
 </addon>
 
@@ -2681,17 +2711,15 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, SubDL, Addic7ed
     </extension>
 </addon>
 
-<addon id="service.subtitles.opensubtitles_by_opensubtitles" name="OpenSubtitles.org by OpenSubtitles" version="5.3.2" provider-name="amet, opensubtitles, gujal">
+<addon id="service.subtitles.opensubtitles_by_opensubtitles" name="OpenSubtitles.com by OpenSubtitles" version="5.3.3" provider-name="amet, opensubtitles, juokelis, opensubtitlesdev">
   <requires>
-    
-    <import addon="script.module.six" />
-    <import addon="script.module.kodi-six" />
+<import addon="xbmc.python" version="3.0.0" />
+        <import addon="script.module.requests" />
   </requires>
   <extension point="xbmc.subtitle.module" library="service.py" />
   <extension point="xbmc.addon.metadata">
-    <summary>OpenSubtitles by OpenSubtitles.org</summary>
-    <summary lang="hr">OpenSubtitles.org podnaslovi</summary>
-    <description lang="en">Anonymously search and download subtitles for movies and TV-Series from OpenSubtitles.org without log-in. Search in 75 languages, 4.000.000+ subtitles, daily updates. </description>
+    <summary lang="en_GB">OpenSubtitles.com</summary>
+    <description lang="en_GB">Search and download subtitles for movies and TV-Series from OpenSubtitles.com. Search in 75 languages, 8.000.000+ subtitles, daily updates. Register/Import your account on OpenSubtitles.com before use.</description>
 	<description lang="at">Pelis and Subtitulos TV en munches llingues, milenta de subtitulos traducios y xubios caldia. Descarga llibre dende la fonte, sofitu API, millones d'usuarios.</description>
 	<description lang="br">Istitlou Filmou ha TV e meur a yezh, miliadou a istitlou troet hag uskarget bemdez. Pellgargadenn digoust diouzh ar vammenn, skoazell an API, millionou a implijerien.</description>
 	<description lang="ca">Subtitols de films i televisio en multiples idiomes, milers de subtitols traduits carregats diariament. Descarrega gratuita des de la font, suport de l'API, amb milions d'usuaris.</description>
@@ -2730,23 +2758,17 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, SubDL, Addic7ed
 	<description lang="tr">Her gun eklenen, pek cok dildeki binlerce film ve dizi altyazs. Kaynagndan ucretsiz indirme, API destegi ve milyonlarca kullanc.</description>
 	<description lang="uz">Film va TV Taglavhalari ko'p tillarda, minglab tarjima qilingan taglavhalar har kuni tizimga yuklanadi. Bepul resursdan yuklab oling, API qo'llaydi, millionlab foydalanuvchilar.</description>
 	<description lang="zh">,,API,</description>
-    <disclaimer>Works without log-in</disclaimer>
-    <disclaimer lang="hr">Radi bez prijave</disclaimer>
-	<news>
-Improved add-on by OpenSubtitles.org
-v5.3.2 (2020-09-30)
-- Matrix and Leia compatible
-	</news>
+    <disclaimer lang="en_GB">Users need to provide OpenSubtitles.com username and password in add-on configuration. This is our new extension, old opensubtitles.org will not work on this, but the account can be easily imported on opensubtitles.com.</disclaimer>
     <platform>all</platform>
-	<language />
-    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-    <forum>https://forum.opensubtitles.org/viewtopic.php?f=8&amp;t=15847</forum>
-    <website>http://www.opensubtitles.org</website>
-    <email>admin [at] opensubtitles {dot} org</email>
+    <license>GPL-2.0-only</license>
+    <forum>https://forum.opensubtitles.com/t/new-kodi-extension/1673</forum>
+    <website>https://www.opensubtitles.com/en</website>
+    <email>cto [at] opensubtitles {dot} org</email>
 	<assets>
 	    <icon>icon.png</icon>
+	    <fanart>fanart.jpg</fanart>
 	</assets>
-    <source>https://github.com/opensubtitles/service.subtitles.opensubtitles_by_opensubtitles</source>
+    <source>https://github.com/opensubtitlesdev/service.subtitles.opensubtitles-com</source>
   </extension>
 </addon>
 
@@ -2773,7 +2795,7 @@ Other languages with a great number of subtitles are: Danish, French, Swedish, D
     </extension>
 </addon>
 
-<addon id="plugin.video.deccandelight" version="2.0.50" name="Deccan Delight" provider-name="gujal">
+<addon id="plugin.video.deccandelight" version="2.0.53" name="Deccan Delight" provider-name="gujal">
 <requires>
 	<import addon="script.module.six" />
 	<import addon="script.module.kodi-six" />
@@ -2835,7 +2857,7 @@ Other languages with a great number of subtitles are: Danish, French, Swedish, D
     </extension>
 </addon>
 
-<addon id="script.elementum.burst" name="Elementum [COLOR FFFF6B00]Burst[/COLOR]" version="0.0.94" provider-name="elgatito">
+<addon id="script.elementum.burst" name="Elementum [COLOR FFFF6B00]Burst[/COLOR]" version="0.0.95" provider-name="elgatito">
     <requires>
         <import addon="xbmc.addon" version="16.0.0" />
         <import addon="plugin.video.elementum" optional="true" />
@@ -2874,7 +2896,7 @@ Other languages with a great number of subtitles are: Danish, French, Swedish, D
     </extension>
 </addon>
 
-<addon id="plugin.video.infinite" name="Infinite Light" provider-name="Tiki" version="2.0.03">
+<addon id="plugin.video.infinite" name="Infinite Light" provider-name="Tiki" version="2.0.04">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
         <import addon="script.module.requests" />
@@ -3051,7 +3073,7 @@ Other languages with a great number of subtitles are: Danish, French, Swedish, D
 	</extension>
 </addon>
 
-<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.24">
+<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.25">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0" />
 		<import addon="script.module.requests" />
@@ -3307,7 +3329,7 @@ Other languages with a great number of subtitles are: Danish, French, Swedish, D
 	</extension>
 </addon>
 
-<addon id="script.jptools" name="JP Tools" provider-name="People" version="1.73">
+<addon id="script.jptools" name="JP Tools" provider-name="People" version="1.74">
     <requires>
         <import addon="script.module.requests" />
         <import addon="script.module.beautifulsoup4" optional="true" />
