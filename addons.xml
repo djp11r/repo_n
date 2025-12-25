@@ -100,7 +100,7 @@ You can clone the project and host it in your own server.
 	</extension>
 </addon>
 
-<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.66" provider-name="open">
+<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.67" provider-name="open">
 	<requires>
 		<import addon="script.module.requests" />
 		<import addon="script.module.resolveurl" />
@@ -494,7 +494,7 @@ v1.1.0 (2020-01-17)
     </extension>
 </addon>
 
-<addon id="plugin.video.youtube" name="YouTube" version="7.3.0+beta.10" provider-name="anxdpanic, bromix, MoojMidge">
+<addon id="plugin.video.youtube" name="YouTube" version="7.4.0.1" provider-name="anxdpanic, bromix, MoojMidge">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
         <import addon="script.module.requests" version="2.27.1" />
@@ -1520,7 +1520,7 @@ v1.0.25 (marcelveldt)
 	</extension>
 </addon>
 
-<addon id="script.module.peewee" name="peewee" provider-name="coleifer" version="0.0.8">
+<addon id="script.module.peewee" name="peewee" provider-name="coleifer" version="0.0.9">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
   </requires>
@@ -1535,7 +1535,7 @@ v1.0.25 (marcelveldt)
     <assets>
       <icon>resources/icon.png</icon>
     </assets>
-    <news>v3.17.7 from origin</news>
+    <news>v3.19.0 from origin</news>
   </extension>
 </addon>
 
@@ -1643,7 +1643,7 @@ v1.0.25 (marcelveldt)
   </extension>
 </addon>
 
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.186" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.191" provider-name="gujal">
     <requires>
         
         <import addon="script.module.six" />
@@ -2353,13 +2353,13 @@ Simkl was created to help people, like you, to keep track of what you watch and 
 
 </addon>
 
-<addon id="service.notro" name="notro" version="1.0.11" provider-name="jp">
+<addon id="service.notro" name="notro" version="1.0.12" provider-name="jp">
     <requires />
     <extension point="xbmc.service" library="main.py" />
     <extension point="xbmc.addon.metadata">
         <source>https://github.com/xbmc/notro</source>
         <summary lang="en_GB">Skip intros and outros</summary>
-        <description lang="en_GB">The addon creates a database of your shows and stores a custom set skip value to prompt for skipping intros and outros for TV show episodes</description>
+        <description lang="en_GB">The addon prompt for skipping intros and outros for video paying in kodi</description>
         <platform>all</platform>
         <license>GPL-3.0</license>
         <website />
@@ -2896,7 +2896,7 @@ Other languages with a great number of subtitles are: Danish, French, Swedish, D
     </extension>
 </addon>
 
-<addon id="plugin.video.infinite" name="Infinite Light" provider-name="Tiki" version="2.0.05">
+<addon id="plugin.video.infinite" name="Infinite Light" provider-name="Tiki" version="2.0.06">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
         <import addon="script.module.requests" />
@@ -3073,7 +3073,7 @@ Other languages with a great number of subtitles are: Danish, French, Swedish, D
 	</extension>
 </addon>
 
-<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.25">
+<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.26">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0" />
 		<import addon="script.module.requests" />
@@ -3329,7 +3329,7 @@ Other languages with a great number of subtitles are: Danish, French, Swedish, D
 	</extension>
 </addon>
 
-<addon id="script.jptools" name="JP Tools" provider-name="People" version="1.75">
+<addon id="script.jptools" name="JP Tools" provider-name="People" version="1.76">
     <requires>
         <import addon="script.module.requests" />
         <import addon="script.module.beautifulsoup4" optional="true" />

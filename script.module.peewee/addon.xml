@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.module.peewee" name="peewee" provider-name="coleifer" version="0.0.8">
+<addon id="script.module.peewee" name="peewee" provider-name="coleifer" version="0.0.9">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
   </requires>
@@ -14,6 +14,6 @@
     <assets>
       <icon>resources/icon.png</icon>
     </assets>
-    <news>v3.17.7 from origin</news>
+    <news>v3.19.0 from origin</news>
   </extension>
 </addon>

@@ -1,4 +1,4 @@
-<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.25">
+<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.26">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="script.module.requests"/>
