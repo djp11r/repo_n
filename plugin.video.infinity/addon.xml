@@ -30,11 +30,11 @@
 				</visible>
 			</item>
 			<item library="resources\lib\context\artworkCustomize.py">
-				<label>$INFO[Window(home).Property(context.infinity.showUmbrella)]Customize Artwork</label>
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Customize Artwork</label>
 				<visible>
 					!String.IsEmpty(Window(home).Property(context.infinity.artworkCustomize)) +
 					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
-					String.IsEqual(ListItem.Property(isUmbrella_widget),true) +
+					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
 					[String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,season)]
 				</visible>
 			</item>
@@ -66,9 +66,36 @@
 				</visible>
 			</item>
 			<item library="resources\lib\context\mdblistManager.py">
-				<label>$INFO[Window(home).Property(context.umbrella.showUmbrella)]MDBList Watchlist</label>
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]MDBList Manager</label>
 				<visible>
 					!String.IsEmpty(Window(home).Property(context.infinity.mdblistManager)) +
+					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
+					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
+					[String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+			</item>
+			<item library="resources\lib\context\simklManager.py">
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]SimKL Manager</label>
+				<visible>
+					!String.IsEmpty(Window(home).Property(context.infinity.simklManager)) +
+					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
+					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
+					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+			</item>
+			<item library="resources\lib\context\tmdbListManager.py">
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]TMDB List Manager</label>
+				<visible>
+					!String.IsEmpty(Window(home).Property(context.infinity.tmdbListManager)) +
+					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
+					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
+					[String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+			</item>
+			<item library="resources\lib\context\tmdbWatchlist.py">
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]TMDb Watchlist</label>
+				<visible>
+					!String.IsEmpty(Window(home).Property(context.infinity.tmdbWatchlist)) +
 					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
 					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
 					[String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,movie)]
@@ -105,9 +132,19 @@
 					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]]
 				</visible>
 			</item>
+			<item library="resources\lib\context\libMdblistManager.py">
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]MDBList Watchlist Lib</label>
+				<visible>
+					!String.IsEmpty(Window(home).Property(context.infinity.libMdblistManager)) +
+					[String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.ListItem.FolderPath,videodb://)] +
+					[String.Contains(Container.ListItem.Path,Window(home).Property(infinity.movieLib.path)) | String.Contains(Container.ListItem.Path,Window(home).Property(infinity.tvLib.path))] +
+					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+			</item>
 			<item library="resources\lib\context\addLibtoFavourite.py">
 				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Add/Remove Favourite</label>
 				<visible>
+					!String.IsEmpty(Window(home).Property(context.infinity.addLibtoFavourite)) +
 					[String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.ListItem.FolderPath,videodb://)] +
 					[String.Contains(Container.ListItem.Path,Window(home).Property(infinity.movieLib.path)) | String.Contains(Container.ListItem.Path,Window(home).Property(infinity.tvLib.path))] +
 					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]

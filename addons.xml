@@ -494,7 +494,7 @@ v1.1.0 (2020-01-17)
     </extension>
 </addon>
 
-<addon id="plugin.video.youtube" name="YouTube" version="7.4.0.1" provider-name="anxdpanic, bromix, MoojMidge">
+<addon id="plugin.video.youtube" name="YouTube" version="7.4.2+beta.1" provider-name="anxdpanic, bromix, MoojMidge">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
         <import addon="script.module.requests" version="2.27.1" />
@@ -1643,7 +1643,7 @@ v1.0.25 (marcelveldt)
   </extension>
 </addon>
 
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.191" provider-name="gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.193" provider-name="gujal">
     <requires>
         
         <import addon="script.module.six" />
@@ -1672,7 +1672,7 @@ v1.0.25 (marcelveldt)
     </extension>
 </addon>
 
-<addon id="script.module.routing" name="Plugin routing" version="0.2.3+matrix.1" provider-name="takoi,Team Kodi">
+<addon id="script.module.routing" name="Plugin routing" version="0.2.3.1" provider-name="takoi">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
     </requires>
@@ -1680,7 +1680,7 @@ v1.0.25 (marcelveldt)
     <extension point="xbmc.addon.metadata">
         <summary lang="en_GB">Routing module for plugins</summary>
         <description lang="en_GB">Library for building and parsing plugin URLs.</description>
-        <license>GPL-3.0</license>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
         <platform>all</platform>
         <language>en_GB</language>
         <source>https://github.com/tamland/kodi-plugin-routing</source>
@@ -3105,11 +3105,11 @@ Other languages with a great number of subtitles are: Danish, French, Swedish, D
 				</visible>
 			</item>
 			<item library="resources\lib\context\artworkCustomize.py">
-				<label>$INFO[Window(home).Property(context.infinity.showUmbrella)]Customize Artwork</label>
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Customize Artwork</label>
 				<visible>
 					!String.IsEmpty(Window(home).Property(context.infinity.artworkCustomize)) +
 					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
-					String.IsEqual(ListItem.Property(isUmbrella_widget),true) +
+					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
 					[String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,season)]
 				</visible>
 			</item>
@@ -3141,9 +3141,36 @@ Other languages with a great number of subtitles are: Danish, French, Swedish, D
 				</visible>
 			</item>
 			<item library="resources\lib\context\mdblistManager.py">
-				<label>$INFO[Window(home).Property(context.umbrella.showUmbrella)]MDBList Watchlist</label>
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]MDBList Manager</label>
 				<visible>
 					!String.IsEmpty(Window(home).Property(context.infinity.mdblistManager)) +
+					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
+					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
+					[String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+			</item>
+			<item library="resources\lib\context\simklManager.py">
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]SimKL Manager</label>
+				<visible>
+					!String.IsEmpty(Window(home).Property(context.infinity.simklManager)) +
+					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
+					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
+					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+			</item>
+			<item library="resources\lib\context\tmdbListManager.py">
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]TMDB List Manager</label>
+				<visible>
+					!String.IsEmpty(Window(home).Property(context.infinity.tmdbListManager)) +
+					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
+					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
+					[String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+			</item>
+			<item library="resources\lib\context\tmdbWatchlist.py">
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]TMDb Watchlist</label>
+				<visible>
+					!String.IsEmpty(Window(home).Property(context.infinity.tmdbWatchlist)) +
 					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
 					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
 					[String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,movie)]
@@ -3180,9 +3207,19 @@ Other languages with a great number of subtitles are: Danish, French, Swedish, D
 					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]]
 				</visible>
 			</item>
+			<item library="resources\lib\context\libMdblistManager.py">
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]MDBList Watchlist Lib</label>
+				<visible>
+					!String.IsEmpty(Window(home).Property(context.infinity.libMdblistManager)) +
+					[String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.ListItem.FolderPath,videodb://)] +
+					[String.Contains(Container.ListItem.Path,Window(home).Property(infinity.movieLib.path)) | String.Contains(Container.ListItem.Path,Window(home).Property(infinity.tvLib.path))] +
+					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+			</item>
 			<item library="resources\lib\context\addLibtoFavourite.py">
 				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Add/Remove Favourite</label>
 				<visible>
+					!String.IsEmpty(Window(home).Property(context.infinity.addLibtoFavourite)) +
 					[String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.ListItem.FolderPath,videodb://)] +
 					[String.Contains(Container.ListItem.Path,Window(home).Property(infinity.movieLib.path)) | String.Contains(Container.ListItem.Path,Window(home).Property(infinity.tvLib.path))] +
 					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]
