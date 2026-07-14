@@ -1883,7 +1883,7 @@ v1.0.25 (marcelveldt)
       </assets>
     </extension>
   </addon>
-  <addon id="script.module.resolveurl" name="ResolveURL" version="5.1.205" provider-name="gujal">
+  <addon id="script.module.resolveurl" name="ResolveURL" version="5.1.206" provider-name="gujal">
     <requires>
       <import addon="script.module.six"/>
       <import addon="script.module.kodi-six"/>
@@ -2347,7 +2347,7 @@ v1.0.25 (marcelveldt)
       <source>https://github.com/cartmandos/script.skin.helper.service</source>
     </extension>
   </addon>
-  <addon id="script.skin.info.service" name="Skin Info Service" version="2.0.0~beta37" provider-name="MikeSiLVO">
+  <addon id="script.skin.info.service" name="Skin Info Service" version="2.0.0~beta39" provider-name="MikeSiLVO">
     <requires>
       <import addon="xbmc.python" version="3.0.1"/>
       <import addon="xbmc.json" version="13.5.0"/>
@@ -2371,45 +2371,29 @@ v1.0.25 (marcelveldt)
       <platform>all</platform>
       <license>GPL-3.0-only</license>
       <source>https://github.com/MikeSiLVO/script.skin.info.service</source>
+      <forum>https://forum.kodi.tv/showthread.php?tid=384016</forum>
       <assets>
         <icon>icon.png</icon>
         <fanart>fanart.jpg</fanart>
       </assets>
       <news>
-2.0.0~beta37
-- Metadata editor: play count and last-played are now editable, and date fields accept common formats
-- Letter jump: correct order in every language, with optional dimming or hiding of empty letters
-- Faster Similar and Recommended widgets
-- Online info updates cleanly while scrolling, and works for items with only an IMDb ID
-- Lighter artwork and ratings fetching, plus slideshow and artwork-download fixes
-2.0.0~beta36
-- Service now exits cleanly on Kodi shutdown, even while fetching online data
-- Skins can enable the library and online services separately; library-only skins make no internet calls
-- Lighter online fetching when scrolling through music videos
-- Translation updates
-2.0.0~beta35
-- Metadata editor: NFO export now writes the movie set overview
-- Movie sets: year list is now de-duplicated and sorted, with a new Years.Range property for skins
-- Translation updates
-2.0.0~beta34
-- Fix music playlist backgrounds showing blank
-- Add NFO writer for the metadata editor
+2.0.0~beta39
+- Watched episode percentage on TV show widgets now matches Kodi's own value
+- Fixed stale library info lingering after moving onto an add-on item with no library entry
 2.0.0-Betas
 - Complete rewrite of the service
-- Online metadata and multi-source ratings from TMDb, OMDb, MDBList and Trakt (IMDb, Rotten Tomatoes, Metacritic, TMDb, Trakt and more)
-- Incremental IMDb rating updates from the official dataset, plus IMDb Top 250 rankings from Trakt
-- Smart caching that adapts to content age and TV show status, with no manual cache settings
-- Music and music video online data: artist, album and track info and artwork from TheAudioDB, Last.fm, Wikipedia and Fanart.tv
-- Artwork review tool to find and fill missing artwork across the library
-- Download Artwork for single items or in bulk (movies, TV shows, seasons, episodes, music sets and actors)
+- Online metadata and multi-source ratings (TMDb, OMDb, MDBList, Trakt, IMDb, Rotten Tomatoes, Metacritic and more)
+- Incremental IMDb rating updates and IMDb Top 250 rankings
+- Smart caching that adapts to content age and TV show status, no manual settings
+- Music and music video online data and artwork (TheAudioDB, Last.fm, Wikipedia, Fanart.tv)
+- Artwork review tool plus single and bulk artwork download
 - Metadata editor for movies, TV shows, episodes, music videos, artists, albums and songs
-- Plugin widgets: Next Up, Discovery, Recommendations, Cast, Crew, Similar and more
+- Plugin widgets: Next Up, Discovery, Recommendations, Cast, Crew, Similar, letter jump and more
 - Info dialogs: Actor Info, Video Info and Image Viewer
 - Stinger (mid/post-credits) notifications with skin override support
-- Tools: image blur, color picker, fanart slideshow, texture cache cleanup and animated-poster (GIF) scanner
-- Skinner helpers: generic JSON-RPC wrapper (action=json) and skin setting actions (set/toggle/reset)
-- Requires Kodi 21 (Omega) or newer
-- Skins enable the service with Skin.SetBool(SkinInfo.Service)
+- Tools: image blur, color picker, fanart slideshow, texture cache cleanup and GIF poster scanner
+- Skinner helpers: JSON-RPC wrapper (action=json) and skin setting actions
+- Requires Kodi 21 (Omega) or newer; skins enable it with Skin.SetBool(SkinInfo.Service)
 		</news>
       <summary lang="en_GB">Provides rich media info and artwork to skins.</summary>
       <summary lang="fr_FR">Fournit aux habillages des informations enrichies sur les médias ainsi que leurs visuels.</summary>
@@ -2419,13 +2403,16 @@ v1.0.25 (marcelveldt)
       <description lang="pl_PL">Skin Info Service dostarcza skórkom bogate metadane i grafikę, wykraczając daleko poza to, co Kodi udostępnia domyślnie. Dodaje dodatkowe właściwości, takie jak oceny z wielu źródeł, grafikę, szczegóły transmisji oraz informacje o obsadzie i fabule filmów, seriali, odcinków, kolekcji filmowych, teledysków, wykonawców i albumów, korzystając zarówno z Twojej biblioteki, jak i danych online. Zawiera również narzędzie do wyszukiwania i dodawania animowanych plakatów GIF do Twojej biblioteki.</description>
     </extension>
   </addon>
-  <addon id="script.skinshortcuts" name="Skin Shortcuts" version="3.0.2~beta3" provider-name="MikeSiLVO">
+  <addon id="script.skinshortcuts" name="Skin Shortcuts" version="3.0.2~beta4" provider-name="MikeSiLVO">
     <requires>
       <import addon="xbmc.python" version="3.0.2"/>
     </requires>
     <extension point="xbmc.python.script" library="default.py"/>
     <extension point="xbmc.addon.metadata">
       <news>
+3.0.2~beta4
+  - Fix: browsed picker icons are stored as plain paths so skin icon overrides apply
+  - Fix: a content folder wraps its items and the Create menu item to here under the content icon
 3.0.2~beta3
   - Fix: the add-ons content placeholder fills its path property like the other picker options
 3.0.2~beta2
@@ -2452,6 +2439,7 @@ v1.0.25 (marcelveldt)
         <icon>resources/media/icon.png</icon>
         <fanart>resources/media/fanart.jpg</fanart>
       </assets>
+      <summary lang="cs_CZ">Vlastní nabídky, vlastnosti a grafika pro vzhledy</summary>
       <summary lang="en_GB">Custom menus, properties, and artwork for skins</summary>
       <summary lang="es_ES">Menús, propiedades y arte personalizado para skins</summary>
       <summary lang="it_IT">Menu personalizzati, proprietà e grafica per le skin</summary>
@@ -2459,7 +2447,7 @@ v1.0.25 (marcelveldt)
       <summary lang="zh_CN">皮肤自定义菜单、属性与艺术图</summary>
       <description lang="ar_SA">إضافة مخصصه للمظهر لتوفير إدارة بسيطة للودجيت "الأقسام" و الاختصارات على الشاشة (تتطلب دعم المظهر لها)</description>
       <description lang="bs_BA">Dodatak za skinove koji omogućava jednostavno upravljanje i prikaz korisničkih prečica (potrebna je podrška za skinove)</description>
-      <description lang="cs_CZ">Doplněk pro vzhledy poskytující jednoduchý management a seznamy uživatelských zkratek (vyžaduje podporu vzhledu)</description>
+      <description lang="cs_CZ">Doplněk pro vzhledy poskytující jednoduchou správu a vypisování uživatelských zkratek (vyžaduje podporu vzhledu)</description>
       <description lang="da_DK">Add-on til skins der giver enkel styring og lister over brugergenveje (kræver skin-understøttelse)</description>
       <description lang="de_DE">Addon für Skins zum einfachen Verwalten und Anzeigen von benutzerdefinierten Verknüpfungen (erfordert Skinunterstützung)</description>
       <description lang="el_GR">Πρόσθετο για κελύφη, το οποίο παρέχει έναν απλό τρόπο διαχείρισης και κατηγοριοποίησης των συντομεύσεων του χρήστη (πρέπει να υποστηρίζεται από το κέλυφος)</description>
