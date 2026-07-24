@@ -398,11 +398,12 @@ You can clone the project and host it in your own server.
     <requires>
       <import addon="script.module.six"/>
       <import addon="script.module.kodi-six"/>
-      <import addon="script.module.beautifulsoup4" version="4.0.0"/>
+      <import addon="script.module.beautifulsoup4"/>
       <import addon="script.module.html5lib"/>
-      <import addon="script.module.resolveurl" version="5.1.0"/>
+      <import addon="script.module.resolveurl"/>
       <import addon="plugin.video.youtube" optional="true"/>
       <import addon="plugin.video.imdb.trailers" optional="true"/>
+      <import addon="script.module.requests"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="main.py">
       <provides>video</provides>
@@ -833,7 +834,7 @@ You can clone the project and host it in your own server.
       </assets>
     </extension>
   </addon>
-  <addon id="plugin.video.youtube" name="YouTube" version="7.4.4+beta.4" provider-name="anxdpanic, bromix, MoojMidge">
+  <addon id="plugin.video.youtube" name="YouTube" version="7.4.4" provider-name="anxdpanic, bromix, MoojMidge">
     <requires>
       <import addon="xbmc.python" version="3.0.0"/>
       <import addon="script.module.requests" version="2.27.1"/>
@@ -862,7 +863,7 @@ You can clone the project and host it in your own server.
       <reuselanguageinvoker>true</reuselanguageinvoker>
       <summary lang="bg_BG">Добавка за YouTube</summary>
       <summary lang="bs_BA">Dodatak za YouTube</summary>
-      <summary lang="cs_CZ">Plugin pro YouTube</summary>
+      <summary lang="cs_CZ">Doplněk pro YouTube</summary>
       <summary lang="da_DK">Plugin til YouTube</summary>
       <summary lang="de_DE">Plugin für YouTube</summary>
       <summary lang="el_GR">Πρόσθετο για το YouTube</summary>
@@ -895,7 +896,7 @@ You can clone the project and host it in your own server.
       <summary lang="zh_TW">YouTube附加元件</summary>
       <description lang="bg_BG">YouTube е един от най-големите уеб сайтове за споделяне на видео в целия свят.</description>
       <description lang="bs_BA">YouTube je jedna od najvećih svjetskih web stranica za dijeljenje videozapisa.</description>
-      <description lang="cs_CZ">YouTube je jedna z největších webových stránek světa sdílející video.</description>
+      <description lang="cs_CZ">YouTube je jeden z největších webů pro sdílení videí na světě.</description>
       <description lang="da_DK">YouTube er et af verdens største videodelingswebsteder.</description>
       <description lang="de_DE">YouTube ist eines der größten Video-Sharing-Websites der Welt.</description>
       <description lang="el_GR">Το YouTube είναι μία από τις μεγαλύτερες ιστοσελίδες διαμοιρασμού βίντεο στον κόσμο.</description>
@@ -924,7 +925,7 @@ You can clone the project and host it in your own server.
       <description lang="zh_CN">油管是世界上最大的视频分享网站之一。</description>
       <description lang="zh_TW">Youtube 是全世界最大的影片分享網站。</description>
       <disclaimer lang="bs_BA">Ovaj dodatak nije odobren od strane Googlea</disclaimer>
-      <disclaimer lang="cs_CZ">Tento plugin není schválen společností Google</disclaimer>
+      <disclaimer lang="cs_CZ">Tento doplněk není oficiálně podporován společností Google</disclaimer>
       <disclaimer lang="da_DK">Dette plugin er ikke godkendt af Google</disclaimer>
       <disclaimer lang="de_DE">Dieses Plugin ist nicht von Google befürwortet</disclaimer>
       <disclaimer lang="el_GR">Η παρούσα μικροεφαρμογή δεν έχει υϊοθετηθεί από την Google</disclaimer>
@@ -2347,7 +2348,7 @@ v1.0.25 (marcelveldt)
       <source>https://github.com/cartmandos/script.skin.helper.service</source>
     </extension>
   </addon>
-  <addon id="script.skin.info.service" name="Skin Info Service" version="2.0.0~beta39" provider-name="MikeSiLVO">
+  <addon id="script.skin.info.service" name="Skin Info Service" version="2.0.0~beta44" provider-name="MikeSiLVO">
     <requires>
       <import addon="xbmc.python" version="3.0.1"/>
       <import addon="xbmc.json" version="13.5.0"/>
@@ -2377,9 +2378,11 @@ v1.0.25 (marcelveldt)
         <fanart>fanart.jpg</fanart>
       </assets>
       <news>
-2.0.0~beta39
-- Watched episode percentage on TV show widgets now matches Kodi's own value
-- Fixed stale library info lingering after moving onto an add-on item with no library entry
+2.0.0~beta44
+- Rating updates show a progress bar while the IMDb ratings file downloads, instead of looking like they stalled
+- IMDb rating updates skip tiny changes below 0.1 to avoid needless rewrites
+- Artwork review no longer gets stuck on pending items after a cancelled scan
+- Auto-fill artwork, GIF scan and texture cache now use the same foreground/background prompt as ratings and downloads
 2.0.0-Betas
 - Complete rewrite of the service
 - Online metadata and multi-source ratings (TMDb, OMDb, MDBList, Trakt, IMDb, Rotten Tomatoes, Metacritic and more)
@@ -2397,39 +2400,28 @@ v1.0.25 (marcelveldt)
 		</news>
       <summary lang="en_GB">Provides rich media info and artwork to skins.</summary>
       <summary lang="fr_FR">Fournit aux habillages des informations enrichies sur les médias ainsi que leurs visuels.</summary>
-      <summary lang="pl_PL">Dostarcza bogate informacje o mediach i grafikę dla skórek.</summary>
+      <summary lang="pl_PL">Dostarcza bogatych informacji o mediach i grafikę dla skórek.</summary>
       <description lang="en_GB">Skin Info Service provides skins with rich metadata and artwork beyond what Kodi exposes by default. It adds extra properties such as ratings from multiple sources, artwork, stream details, and cast and plot information for movies, TV shows, episodes, sets, music videos, artists, and albums, drawing on both your library and online data. It also includes a tool to find and add animated GIF posters to your library.</description>
       <description lang="fr_FR">Skin Info Service fournit des informations supplémentaires telles que les notes, les illustrations et les détails de flux pour les films, les séries, les sagas, les artistes et les albums. Comprend un outil de recherche d'affiches GIF pour trouver et ajouter automatiquement des affiches GIF animées à votre médiathèque.</description>
       <description lang="pl_PL">Skin Info Service dostarcza skórkom bogate metadane i grafikę, wykraczając daleko poza to, co Kodi udostępnia domyślnie. Dodaje dodatkowe właściwości, takie jak oceny z wielu źródeł, grafikę, szczegóły transmisji oraz informacje o obsadzie i fabule filmów, seriali, odcinków, kolekcji filmowych, teledysków, wykonawców i albumów, korzystając zarówno z Twojej biblioteki, jak i danych online. Zawiera również narzędzie do wyszukiwania i dodawania animowanych plakatów GIF do Twojej biblioteki.</description>
     </extension>
   </addon>
-  <addon id="script.skinshortcuts" name="Skin Shortcuts" version="3.0.2~beta4" provider-name="MikeSiLVO">
+  <addon id="script.skinshortcuts" name="Skin Shortcuts" version="3.0.2~beta7" provider-name="MikeSiLVO">
     <requires>
       <import addon="xbmc.python" version="3.0.2"/>
     </requires>
     <extension point="xbmc.python.script" library="default.py"/>
     <extension point="xbmc.addon.metadata">
       <news>
-3.0.2~beta4
-  - Fix: browsed picker icons are stored as plain paths so skin icon overrides apply
-  - Fix: a content folder wraps its items and the Create menu item to here under the content icon
-3.0.2~beta3
-  - Fix: the add-ons content placeholder fills its path property like the other picker options
-3.0.2~beta2
-  - Add: the widget, shortcut and background pickers stamp a uniform name, path and type on each option
-  - Fix: browsing into a location fills the path and name properties (library node sublevels, sources, add-ons)
-3.0.2~beta1
-  - Add: skins can restyle the Skin Shortcuts pickers in DialogSelect using a skinshortcuts-picker property and per-option ListItem metadata
-3.0.1
-  - Add: show a source as a library view instead of files (movies, TV shows, episodes, music videos, songs, albums, artists), or everything except it, with a sort order
-  - Add: a global submenuPath element under menus, plus a submenuPath property on menu items for their widget submenu
-  - Add: prompt to switch skins or downgrade the add-on when a skin is built for Skin Shortcuts v2
-  - Add: program add-ons that expose plugin content are browsable in the content picker
-  - Add: skin icon overrides apply to the add-on content placeholder
-  - Fix: Create menu item to here names the menu item after the add-on category
-  - Fix: templateonly now hides a property's numbered slot variants
-  - Fix: a playlist shortcut or background resolves to a valid path
-  - Updated translations
+3.0.2~beta7
+  - Fix: a picker group counts only the entries it will show
+  - Fix: a widget or background picks up the skin's current path and label instead of a saved copy
+  - Fix: clearing a skin default property stays cleared
+3.0.2~beta1 - beta6
+  - Add: skins can restyle the DialogSelect pickers with a skinshortcuts-picker property and ListItem metadata: name, path and type on every option, plus a count on folders
+  - Add: a rename attribute on a widget picker button prompts for a custom widget label
+  - Fix: browsing a location fills each option's path and name, and browsed icons store as plain paths so skin icon overrides apply
+  - Fix: a property set with a built-in name replaces it instead of adding a second entry
         </news>
       <platform>all</platform>
       <license>GPL-2.0-only</license>
