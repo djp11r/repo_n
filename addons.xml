@@ -437,7 +437,7 @@ You can clone the project and host it in your own server.
       <platform>all</platform>
     </extension>
   </addon>
-  <addon id="plugin.video.infinite" name="Infinite Light" provider-name="Tiki" version="2.0.09">
+  <addon id="plugin.video.infinite" version="2.0.09" name="Infinite Light" provider-name="Tiki">
     <requires>
       <import addon="xbmc.python" version="3.0.0"/>
       <import addon="script.module.requests"/>
@@ -542,6 +542,15 @@ You can clone the project and host it in your own server.
           <label>$INFO[Window(home).Property(context.infinity.showInfinity)]SimKL Manager</label>
           <visible>
 					!String.IsEmpty(Window(home).Property(context.infinity.simklManager)) +
+					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
+					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
+					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+        </item>
+        <item library="resources\lib\context\customManager.py">
+          <label>$INFO[Window(home).Property(context.infinity.showInfinity)]Custom Manager</label>
+          <visible>
+					!String.IsEmpty(Window(home).Property(context.infinity.customManager)) +
 					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
 					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
 					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,movie)]
@@ -2348,7 +2357,7 @@ v1.0.25 (marcelveldt)
       <source>https://github.com/cartmandos/script.skin.helper.service</source>
     </extension>
   </addon>
-  <addon id="script.skin.info.service" name="Skin Info Service" version="2.0.0~beta44" provider-name="MikeSiLVO">
+  <addon id="script.skin.info.service" name="Skin Info Service" version="2.0.0" provider-name="MikeSiLVO">
     <requires>
       <import addon="xbmc.python" version="3.0.1"/>
       <import addon="xbmc.json" version="13.5.0"/>
@@ -2378,19 +2387,15 @@ v1.0.25 (marcelveldt)
         <fanart>fanart.jpg</fanart>
       </assets>
       <news>
-2.0.0~beta44
-- Rating updates show a progress bar while the IMDb ratings file downloads, instead of looking like they stalled
-- IMDb rating updates skip tiny changes below 0.1 to avoid needless rewrites
-- Artwork review no longer gets stuck on pending items after a cancelled scan
-- Auto-fill artwork, GIF scan and texture cache now use the same foreground/background prompt as ratings and downloads
-2.0.0-Betas
+2.0.0
 - Complete rewrite of the service
 - Online metadata and multi-source ratings (TMDb, OMDb, MDBList, Trakt, IMDb, Rotten Tomatoes, Metacritic and more)
 - Incremental IMDb rating updates and IMDb Top 250 rankings
+- Bulk TV show metadata sync and a tool to repair missing IMDb, TMDB and TVDB IDs
 - Smart caching that adapts to content age and TV show status, no manual settings
 - Music and music video online data and artwork (TheAudioDB, Last.fm, Wikipedia, Fanart.tv)
 - Artwork review tool plus single and bulk artwork download
-- Metadata editor for movies, TV shows, episodes, music videos, artists, albums and songs
+- Metadata editor for movies, TV shows, episodes, music videos, artists, albums and songs, plus NFO export
 - Plugin widgets: Next Up, Discovery, Recommendations, Cast, Crew, Similar, letter jump and more
 - Info dialogs: Actor Info, Video Info and Image Viewer
 - Stinger (mid/post-credits) notifications with skin override support
@@ -2406,13 +2411,18 @@ v1.0.25 (marcelveldt)
       <description lang="pl_PL">Skin Info Service dostarcza skórkom bogate metadane i grafikę, wykraczając daleko poza to, co Kodi udostępnia domyślnie. Dodaje dodatkowe właściwości, takie jak oceny z wielu źródeł, grafikę, szczegóły transmisji oraz informacje o obsadzie i fabule filmów, seriali, odcinków, kolekcji filmowych, teledysków, wykonawców i albumów, korzystając zarówno z Twojej biblioteki, jak i danych online. Zawiera również narzędzie do wyszukiwania i dodawania animowanych plakatów GIF do Twojej biblioteki.</description>
     </extension>
   </addon>
-  <addon id="script.skinshortcuts" name="Skin Shortcuts" version="3.0.2~beta7" provider-name="MikeSiLVO">
+  <addon id="script.skinshortcuts" name="Skin Shortcuts" version="3.0.2~beta8" provider-name="MikeSiLVO">
     <requires>
       <import addon="xbmc.python" version="3.0.2"/>
     </requires>
     <extension point="xbmc.python.script" library="default.py"/>
     <extension point="xbmc.addon.metadata">
       <news>
+3.0.2~beta8
+  - Fix: browsing into a widget keeps the type declared by the skin instead of always asking
+  - Fix: the add-on category placeholder takes the label and icon from its content element
+  - Fix: widgets resolved from library or node content open in the window that content lives in
+  - Fix: script-only add-ons are offered as menu items only, not as widget content
 3.0.2~beta7
   - Fix: a picker group counts only the entries it will show
   - Fix: a widget or background picks up the skin's current path and label instead of a saved copy
