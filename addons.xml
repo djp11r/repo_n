@@ -2357,7 +2357,7 @@ v1.0.25 (marcelveldt)
       <source>https://github.com/cartmandos/script.skin.helper.service</source>
     </extension>
   </addon>
-  <addon id="script.skin.info.service" name="Skin Info Service" version="2.0.0" provider-name="MikeSiLVO">
+  <addon id="script.skin.info.service" name="Skin Info Service" version="2.0.1~beta2" provider-name="MikeSiLVO">
     <requires>
       <import addon="xbmc.python" version="3.0.1"/>
       <import addon="xbmc.json" version="13.5.0"/>
@@ -2387,51 +2387,53 @@ v1.0.25 (marcelveldt)
         <fanart>fanart.jpg</fanart>
       </assets>
       <news>
-2.0.0
-- Complete rewrite of the service
-- Online metadata and multi-source ratings (TMDb, OMDb, MDBList, Trakt, IMDb, Rotten Tomatoes, Metacritic and more)
-- Incremental IMDb rating updates and IMDb Top 250 rankings
-- Bulk TV show metadata sync and a tool to repair missing IMDb, TMDB and TVDB IDs
-- Smart caching that adapts to content age and TV show status, no manual settings
-- Music and music video online data and artwork (TheAudioDB, Last.fm, Wikipedia, Fanart.tv)
-- Artwork review tool plus single and bulk artwork download
-- Metadata editor for movies, TV shows, episodes, music videos, artists, albums and songs, plus NFO export
-- Plugin widgets: Next Up, Discovery, Recommendations, Cast, Crew, Similar, letter jump and more
-- Info dialogs: Actor Info, Video Info and Image Viewer
-- Stinger (mid/post-credits) notifications with skin override support
-- Tools: image blur, color picker, fanart slideshow, texture cache cleanup and GIF poster scanner
-- Skinner helpers: JSON-RPC wrapper (action=json) and skin setting actions
-- Requires Kodi 21 (Omega) or newer; skins enable it with Skin.SetBool(SkinInfo.Service)
+2.0.1~beta2
+- Breaking: Favourite Episodes widget is now Next Up (Favourites), action is next_up_favourites
+- Artwork can open straight to one type, action=review_artwork with art_type=poster
+- Artwork review scans episodes and music videos, with Music Videos as its own scope
+- Fanart.tv 4K backgrounds and older clearart now show up in artwork options
+- Seasons offer keyart, and no longer list types no source provides
+- New setting chooses what fills an empty music video thumb
+- Thumb added to the artwork types a scan can look for
+- Fanart.tv key test now checks your own key instead of the built-in one
+- An API key that fails to save is reported instead of looking configured
+- Favourites widget gets its own menu, with an entry per media type
 		</news>
+      <summary lang="cs_CZ">Poskytuje vzhledům podrobné informace o médiích a grafiku.</summary>
       <summary lang="en_GB">Provides rich media info and artwork to skins.</summary>
       <summary lang="fr_FR">Fournit aux habillages des informations enrichies sur les médias ainsi que leurs visuels.</summary>
+      <summary lang="hu_HU">Médiainformációkat és grafikákat biztosít a felszínekhez.</summary>
+      <summary lang="it_IT">Fornisce informazioni sui media e artwork di alta qualità alle skin.</summary>
       <summary lang="pl_PL">Dostarcza bogatych informacji o mediach i grafikę dla skórek.</summary>
+      <description lang="cs_CZ">Služba Skin Info Service poskytuje vzhledům podrobná metadata a grafiku nad rámec toho, co Kodi standardně zpřístupňuje. Přidává další vlastnosti, například hodnocení z více zdrojů, grafiku, podrobnosti o streamu a informace o obsazení a ději filmů, seriálů, epizod, sbírek filmů, hudebních videoklipů, interpretů a alb; využívá přitom knihovnu i online data. Obsahuje také nástroj pro vyhledání animovaných plakátů GIF a jejich přidání do knihovny.</description>
       <description lang="en_GB">Skin Info Service provides skins with rich metadata and artwork beyond what Kodi exposes by default. It adds extra properties such as ratings from multiple sources, artwork, stream details, and cast and plot information for movies, TV shows, episodes, sets, music videos, artists, and albums, drawing on both your library and online data. It also includes a tool to find and add animated GIF posters to your library.</description>
       <description lang="fr_FR">Skin Info Service fournit des informations supplémentaires telles que les notes, les illustrations et les détails de flux pour les films, les séries, les sagas, les artistes et les albums. Comprend un outil de recherche d'affiches GIF pour trouver et ajouter automatiquement des affiches GIF animées à votre médiathèque.</description>
+      <description lang="hu_HU">A Skin Info Service gazdag metaadatokkal és grafikákkal látja el a felszíneket, amelyek túlmutatnak azon, amit a Kodi alapértelmezés szerint megjelenít. Extra tulajdonságokat ad hozzá, például értékeléseket több forrásból, grafikákat, streamelési részleteket, valamint szereplő- és cselekményinformációkat filmekhez, tévéműsorokhoz, epizódokhoz, díszletekhez, videoklipekhez, előadókhoz és albumokhoz, mind a médiatárad, mind az online adatok felhasználásával. Tartalmaz egy eszközt is, amellyel animált GIF-posztereket kereshetsz és adhatsz hozzá a médiatáradhoz.</description>
+      <description lang="it_IT">Skin Info Service fornisce alle skin metadati e artwork avanzati, oltre a quanto Kodi mostra di default. Aggiunge proprietà extra come le valutazioni da più fonti, artwork, dettagli del flusso e informazioni su cast e trama per film, serie TV, episodi, saghe cinematografiche, video musicali, artisti e album, attingendo sia dalla libreria che dai dati online. Include anche uno strumento per trovare e aggiungere poster GIF animati alla libreria.</description>
       <description lang="pl_PL">Skin Info Service dostarcza skórkom bogate metadane i grafikę, wykraczając daleko poza to, co Kodi udostępnia domyślnie. Dodaje dodatkowe właściwości, takie jak oceny z wielu źródeł, grafikę, szczegóły transmisji oraz informacje o obsadzie i fabule filmów, seriali, odcinków, kolekcji filmowych, teledysków, wykonawców i albumów, korzystając zarówno z Twojej biblioteki, jak i danych online. Zawiera również narzędzie do wyszukiwania i dodawania animowanych plakatów GIF do Twojej biblioteki.</description>
     </extension>
   </addon>
-  <addon id="script.skinshortcuts" name="Skin Shortcuts" version="3.0.2~beta8" provider-name="MikeSiLVO">
+  <addon id="script.skinshortcuts" name="Skin Shortcuts" version="3.0.2~beta14" provider-name="MikeSiLVO">
     <requires>
       <import addon="xbmc.python" version="3.0.2"/>
     </requires>
     <extension point="xbmc.python.script" library="default.py"/>
     <extension point="xbmc.addon.metadata">
       <news>
-3.0.2~beta8
-  - Fix: browsing into a widget keeps the type declared by the skin instead of always asking
-  - Fix: the add-on category placeholder takes the label and icon from its content element
-  - Fix: widgets resolved from library or node content open in the window that content lives in
-  - Fix: script-only add-ons are offered as menu items only, not as widget content
-3.0.2~beta7
-  - Fix: a picker group counts only the entries it will show
-  - Fix: a widget or background picks up the skin's current path and label instead of a saved copy
-  - Fix: clearing a skin default property stays cleared
-3.0.2~beta1 - beta6
-  - Add: skins can restyle the DialogSelect pickers with a skinshortcuts-picker property and ListItem metadata: name, path and type on every option, plus a count on folders
+3.0.2~beta14
+  - Add: an icons attribute on a menu leaves icons out of its include
+  - Add: icon overrides name a source folder, so a skin's own icons replace the Kodi defaults, packed or loose
+  - Fix: widget and background labels follow a language change
+  - Fix: browsing to a location keeps the icon it was picked with
+  - Fix: the skin reloads only when a rebuild changes the includes
+3.0.2~beta1 - beta13
+  - Add: skins can restyle the DialogSelect pickers with a skinshortcuts-picker property and ListItem metadata
   - Add: a rename attribute on a widget picker button prompts for a custom widget label
-  - Fix: browsing a location fills each option's path and name, and browsed icons store as plain paths so skin icon overrides apply
-  - Fix: a property set with a built-in name replaces it instead of adding a second entry
+  - Add: skins can define the management dialog context menu, the buttons it lists and where it opens
+  - Fix: property conditions combine + and | as Kodi does, and an expression reference expands as a single term
+  - Fix: widgets keep the type the skin declared and open in the window their content lives in
+  - Fix: the includes file is written with unix line endings on every platform
+  - Fix: the widget and shortcut pickers open without stalling the interface
         </news>
       <platform>all</platform>
       <license>GPL-2.0-only</license>
@@ -2444,6 +2446,7 @@ v1.0.25 (marcelveldt)
       <summary lang="cs_CZ">Vlastní nabídky, vlastnosti a grafika pro vzhledy</summary>
       <summary lang="en_GB">Custom menus, properties, and artwork for skins</summary>
       <summary lang="es_ES">Menús, propiedades y arte personalizado para skins</summary>
+      <summary lang="hu_HU">Egyéni menük, tulajdonságok és képek a felszínekhez</summary>
       <summary lang="it_IT">Menu personalizzati, proprietà e grafica per le skin</summary>
       <summary lang="pl_PL">Niestandardowe menu, właściwości i grafika dla skórek</summary>
       <summary lang="zh_CN">皮肤自定义菜单、属性与艺术图</summary>
@@ -2877,7 +2880,7 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, SubDL, Addic7ed
         </news>
     </extension>
   </addon>
-  <addon id="service.subtitles.opensubtitles_by_opensubtitles" name="OpenSubtitles.com by OpenSubtitles" version="5.3.4" provider-name="amet, opensubtitles, juokelis, opensubtitlesdev">
+  <addon id="service.subtitles.opensubtitles_by_opensubtitles" name="OpenSubtitles.com by OpenSubtitles" version="5.3.11" provider-name="amet, opensubtitles, juokelis, opensubtitlesdev">
     <requires>
       <import addon="xbmc.python" version="3.0.0"/>
       <import addon="script.module.requests"/>
