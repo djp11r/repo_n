@@ -1,4 +1,4 @@
-<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.26">
+<addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.29">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="script.module.requests"/>
@@ -78,6 +78,15 @@
 				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]SimKL Manager</label>
 				<visible>
 					!String.IsEmpty(Window(home).Property(context.infinity.simklManager)) +
+					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
+					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
+					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+			</item>
+			<item library="resources\lib\context\customManager.py">
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Custom Manager</label>
+				<visible>
+					!String.IsEmpty(Window(home).Property(context.infinity.customManager)) +
 					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
 					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
 					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,movie)]
