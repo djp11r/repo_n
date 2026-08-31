@@ -394,7 +394,7 @@ You can clone the project and host it in your own server.
       <platform>all</platform>
     </extension>
   </addon>
-  <addon id="plugin.video.deccandelight" version="2.0.53" name="Deccan Delight" provider-name="gujal">
+  <addon id="plugin.video.deccandelight" version="2.0.54" name="Deccan Delight" provider-name="gujal">
     <requires>
       <import addon="script.module.six"/>
       <import addon="script.module.kodi-six"/>
@@ -437,7 +437,7 @@ You can clone the project and host it in your own server.
       <platform>all</platform>
     </extension>
   </addon>
-  <addon id="plugin.video.infinite" version="2.0.09" name="Infinite Light" provider-name="Tiki">
+  <addon id="plugin.video.infinite" version="2.0.10" name="Infinite Light" provider-name="Tiki">
     <requires>
       <import addon="xbmc.python" version="3.0.0"/>
       <import addon="script.module.requests"/>
@@ -462,7 +462,7 @@ You can clone the project and host it in your own server.
       <news>INFO: For latest changes see Changelog within Tools of add-on.</news>
     </extension>
   </addon>
-  <addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.29">
+  <addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.30">
     <requires>
       <import addon="xbmc.python" version="3.0.0"/>
       <import addon="script.module.requests"/>
@@ -1148,7 +1148,7 @@ You can clone the project and host it in your own server.
 		</news>
     </extension>
   </addon>
-  <addon id="script.jptools" name="JP Tools" provider-name="People" version="1.79">
+  <addon id="script.jptools" name="JP Tools" provider-name="People" version="1.80">
     <requires>
       <import addon="script.module.requests"/>
       <import addon="script.module.beautifulsoup4" optional="true"/>
@@ -1724,7 +1724,7 @@ v1.0.25 (marcelveldt)
 		</news>
     </extension>
   </addon>
-  <addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.70" provider-name="open">
+  <addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.71" provider-name="open">
     <requires>
       <import addon="script.module.requests"/>
       <import addon="script.module.resolveurl"/>
@@ -1893,7 +1893,7 @@ v1.0.25 (marcelveldt)
       </assets>
     </extension>
   </addon>
-  <addon id="script.module.resolveurl" name="ResolveURL" version="5.1.207" provider-name="gujal">
+  <addon id="script.module.resolveurl" name="ResolveURL" version="5.1.208" provider-name="gujal">
     <requires>
       <import addon="script.module.six"/>
       <import addon="script.module.kodi-six"/>
