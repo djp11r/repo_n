@@ -1,4 +1,4 @@
-<addon id="plugin.video.infinite" version="2.0.10" name="Infinite Light" provider-name="Tiki">
+<addon id="plugin.video.infinite" version="2.0.11" name="Infinite Light" provider-name="Tiki">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests"/>

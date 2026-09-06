@@ -394,7 +394,7 @@ You can clone the project and host it in your own server.
       <platform>all</platform>
     </extension>
   </addon>
-  <addon id="plugin.video.deccandelight" version="2.0.54" name="Deccan Delight" provider-name="gujal">
+  <addon id="plugin.video.deccandelight" version="2.0.55" name="Deccan Delight" provider-name="gujal">
     <requires>
       <import addon="script.module.six"/>
       <import addon="script.module.kodi-six"/>
@@ -437,7 +437,7 @@ You can clone the project and host it in your own server.
       <platform>all</platform>
     </extension>
   </addon>
-  <addon id="plugin.video.infinite" version="2.0.10" name="Infinite Light" provider-name="Tiki">
+  <addon id="plugin.video.infinite" version="2.0.11" name="Infinite Light" provider-name="Tiki">
     <requires>
       <import addon="xbmc.python" version="3.0.0"/>
       <import addon="script.module.requests"/>
@@ -462,7 +462,7 @@ You can clone the project and host it in your own server.
       <news>INFO: For latest changes see Changelog within Tools of add-on.</news>
     </extension>
   </addon>
-  <addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.30">
+  <addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.31">
     <requires>
       <import addon="xbmc.python" version="3.0.0"/>
       <import addon="script.module.requests"/>
@@ -551,6 +551,24 @@ You can clone the project and host it in your own server.
           <label>$INFO[Window(home).Property(context.infinity.showInfinity)]Custom Manager</label>
           <visible>
 					!String.IsEmpty(Window(home).Property(context.infinity.customManager)) +
+					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
+					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
+					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+        </item>
+        <item library="resources\lib\context\floppyManager.py">
+          <label>$INFO[Window(home).Property(context.infinity.showInfinity)]Floppy Manager</label>
+          <visible>
+					!String.IsEmpty(Window(home).Property(context.infinity.floppyManager)) +
+					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
+					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
+					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+        </item>
+        <item library="resources\lib\context\scrobManager.py">
+          <label>$INFO[Window(home).Property(context.infinity.showInfinity)]Scrob Manager</label>
+          <visible>
+					!String.IsEmpty(Window(home).Property(context.infinity.scrobManager)) +
 					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
 					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
 					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,movie)]
@@ -1148,7 +1166,7 @@ You can clone the project and host it in your own server.
 		</news>
     </extension>
   </addon>
-  <addon id="script.jptools" name="JP Tools" provider-name="People" version="1.80">
+  <addon id="script.jptools" name="JP Tools" provider-name="People" version="1.81">
     <requires>
       <import addon="script.module.requests"/>
       <import addon="script.module.beautifulsoup4" optional="true"/>
@@ -1724,7 +1742,7 @@ v1.0.25 (marcelveldt)
 		</news>
     </extension>
   </addon>
-  <addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.71" provider-name="open">
+  <addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.72" provider-name="open">
     <requires>
       <import addon="script.module.requests"/>
       <import addon="script.module.resolveurl"/>
@@ -1735,28 +1753,23 @@ v1.0.25 (marcelveldt)
       <import addon="script.module.simplejson" optional="true"/>
       <import addon="script.module.segno" optional="true"/>
     </requires>
-    <extension point="xbmc.python.module" library="lib"/>
-    <extension point="xbmc.python.pluginsource" library="lib/default.py">
+    <extension library="lib/default.py" point="xbmc.python.pluginsource">
       <provides>executable</provides>
     </extension>
-    <extension point="xbmc.service" library="lib/service.py" start="startup"/>
+    <extension library="lib" point="xbmc.python.module"/>
+    <extension library="lib/service.py" point="xbmc.service" start="startup"/>
     <extension point="xbmc.addon.metadata">
       <summary lang="en_GB">OpenScrapers Module</summary>
-      <description>Scrape common video host for URL's to be playable in Kodi, simplifying addon development of video plugins requiring multi video hosts.</description>
+      <description lang="en_GB">Scrape common video host for URL's to be playable in Kodi, simplifying addon development of video plugins requiring multi video hosts.The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon.[CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.[CR]This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</description>
+      <language/>
       <platform>all</platform>
       <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
       <forum/>
       <website/>
-      <source/>
-      <disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon.[CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.[CR]This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</disclaimer>
       <assets>
         <icon>icon.png</icon>
         <fanart>fanart.png</fanart>
-        <screenshot/>
       </assets>
-      <news>
-			upd and apividsrc, apimdb added new scrapers
-		</news>
     </extension>
   </addon>
   <addon id="script.module.peewee" name="peewee" provider-name="coleifer" version="0.0.9">
@@ -2358,7 +2371,7 @@ v1.0.25 (marcelveldt)
       <source>https://github.com/cartmandos/script.skin.helper.service</source>
     </extension>
   </addon>
-  <addon id="script.skin.info.service" name="Skin Info Service" version="2.0.1~beta2" provider-name="MikeSiLVO">
+  <addon id="script.skin.info.service" name="Skin Info Service" version="2.0.1~beta3" provider-name="MikeSiLVO">
     <requires>
       <import addon="xbmc.python" version="3.0.1"/>
       <import addon="xbmc.json" version="13.5.0"/>
@@ -2388,54 +2401,67 @@ v1.0.25 (marcelveldt)
         <fanart>fanart.jpg</fanart>
       </assets>
       <news>
-2.0.1~beta2
-- Breaking: Favourite Episodes widget is now Next Up (Favourites), action is next_up_favourites
-- Artwork can open straight to one type, action=review_artwork with art_type=poster
-- Artwork review scans episodes and music videos, with Music Videos as its own scope
-- Fanart.tv 4K backgrounds and older clearart now show up in artwork options
-- Seasons offer keyart, and no longer list types no source provides
-- New setting chooses what fills an empty music video thumb
-- Thumb added to the artwork types a scan can look for
-- Fanart.tv key test now checks your own key instead of the built-in one
-- An API key that fails to save is reported instead of looking configured
-- Favourites widget gets its own menu, with an entry per media type
+2.0.1~beta3
+- The database is rebuilt on a new layout, so online data is fetched again on first run
+- The separate music cache file is gone, folded into the main database
+- Ratings sources can each be turned on or off, with IMDb always on
+- A bulk ratings run can skip Trakt, and shows Trakt's request limit so you can decide
+- The ratings dialog reports items done and names the source that is behind
+- Roger Ebert ratings are no longer missing
+- Movie sets can be edited in the metadata editor
+- Edited ratings and votes are saved instead of being dropped
+- Ratings accept a decimal point or comma, and a bad entry is rejected instead of saved as zero
+- New properties for HDR type, audio language, subtitle language and stereo mode
+- MDBList award tags, aggregate score and Metacritic Must-See are available as properties
+- Online cast fills in for seasons and episodes
+- Editing or rescraping an item updates its properties straight away
+- Person details set actors content so skins can style the list
+- Playback widgets refresh instead of serving a cached page
+- Ratings and awards no longer show on the wrong item when a movie and a show share a TMDB id
 		</news>
       <summary lang="cs_CZ">Poskytuje vzhledům podrobné informace o médiích a grafiku.</summary>
       <summary lang="en_GB">Provides rich media info and artwork to skins.</summary>
+      <summary lang="es_ES">Provee información enriquecida del contenido y arte a las skins.</summary>
       <summary lang="fr_FR">Fournit aux habillages des informations enrichies sur les médias ainsi que leurs visuels.</summary>
       <summary lang="hu_HU">Médiainformációkat és grafikákat biztosít a felszínekhez.</summary>
       <summary lang="it_IT">Fornisce informazioni sui media e artwork di alta qualità alle skin.</summary>
       <summary lang="pl_PL">Dostarcza bogatych informacji o mediach i grafikę dla skórek.</summary>
+      <summary lang="ru_RU">Предоставляет обложкам подробную информацию о медиа и иллюстрации.</summary>
+      <summary lang="zh_CN">为皮肤提供丰富的媒体信息和艺术图。</summary>
       <description lang="cs_CZ">Služba Skin Info Service poskytuje vzhledům podrobná metadata a grafiku nad rámec toho, co Kodi standardně zpřístupňuje. Přidává další vlastnosti, například hodnocení z více zdrojů, grafiku, podrobnosti o streamu a informace o obsazení a ději filmů, seriálů, epizod, sbírek filmů, hudebních videoklipů, interpretů a alb; využívá přitom knihovnu i online data. Obsahuje také nástroj pro vyhledání animovaných plakátů GIF a jejich přidání do knihovny.</description>
       <description lang="en_GB">Skin Info Service provides skins with rich metadata and artwork beyond what Kodi exposes by default. It adds extra properties such as ratings from multiple sources, artwork, stream details, and cast and plot information for movies, TV shows, episodes, sets, music videos, artists, and albums, drawing on both your library and online data. It also includes a tool to find and add animated GIF posters to your library.</description>
       <description lang="fr_FR">Skin Info Service fournit des informations supplémentaires telles que les notes, les illustrations et les détails de flux pour les films, les séries, les sagas, les artistes et les albums. Comprend un outil de recherche d'affiches GIF pour trouver et ajouter automatiquement des affiches GIF animées à votre médiathèque.</description>
       <description lang="hu_HU">A Skin Info Service gazdag metaadatokkal és grafikákkal látja el a felszíneket, amelyek túlmutatnak azon, amit a Kodi alapértelmezés szerint megjelenít. Extra tulajdonságokat ad hozzá, például értékeléseket több forrásból, grafikákat, streamelési részleteket, valamint szereplő- és cselekményinformációkat filmekhez, tévéműsorokhoz, epizódokhoz, díszletekhez, videoklipekhez, előadókhoz és albumokhoz, mind a médiatárad, mind az online adatok felhasználásával. Tartalmaz egy eszközt is, amellyel animált GIF-posztereket kereshetsz és adhatsz hozzá a médiatáradhoz.</description>
       <description lang="it_IT">Skin Info Service fornisce alle skin metadati e artwork avanzati, oltre a quanto Kodi mostra di default. Aggiunge proprietà extra come le valutazioni da più fonti, artwork, dettagli del flusso e informazioni su cast e trama per film, serie TV, episodi, saghe cinematografiche, video musicali, artisti e album, attingendo sia dalla libreria che dai dati online. Include anche uno strumento per trovare e aggiungere poster GIF animati alla libreria.</description>
       <description lang="pl_PL">Skin Info Service dostarcza skórkom bogate metadane i grafikę, wykraczając daleko poza to, co Kodi udostępnia domyślnie. Dodaje dodatkowe właściwości, takie jak oceny z wielu źródeł, grafikę, szczegóły transmisji oraz informacje o obsadzie i fabule filmów, seriali, odcinków, kolekcji filmowych, teledysków, wykonawców i albumów, korzystając zarówno z Twojej biblioteki, jak i danych online. Zawiera również narzędzie do wyszukiwania i dodawania animowanych plakatów GIF do Twojej biblioteki.</description>
+      <description lang="ru_RU">Skin Info Service предоставляет обложкам расширенные метаданные и иллюстрации, выходящие за рамки стандартных возможностей Kodi. Он добавляет дополнительные свойства, такие как рейтинги из нескольких источников, иллюстрации, сведения о потоках, а также информацию об актёрах и сюжете для фильмов, сериалов, серий, киноциклов, музыкальных клипов, исполнителей и альбомов, используя как вашу медиатеку, так и данные из интернета. Также включает инструмент для поиска и добавления в медиатеку анимированных постеров в формате GIF.</description>
+      <description lang="zh_CN">皮肤信息服务为皮肤提供超出 Kodi 默认范围的丰富元数据和艺术图。它添加了多种额外属性,例如来自多个来源的评分、艺术图、流媒体详情,以及电影、电视剧、剧集、合集、音乐视频、艺术家和专辑的演员阵容和剧情信息,数据来源包括您的媒体库和在线数据。它还包含一个工具,用于查找并向您的媒体库添加动画 GIF 海报。</description>
     </extension>
   </addon>
-  <addon id="script.skinshortcuts" name="Skin Shortcuts" version="3.0.2~beta16" provider-name="MikeSiLVO">
+  <addon id="script.skinshortcuts" name="Skin Shortcuts" version="3.0.4~beta2" provider-name="MikeSiLVO">
     <requires>
       <import addon="xbmc.python" version="3.0.2"/>
     </requires>
     <extension point="xbmc.python.script" library="default.py"/>
     <extension point="xbmc.addon.metadata">
       <news>
-3.0.2~beta16
-  - Fix: backgrounds that open a browse or playlist dialog get the same folder arrow as groups
-  - Fix: the picker keeps its place when it reopens instead of jumping back to the current selection
-3.0.2~beta1 - beta15
-  - Add: skins can retire a widget, background or property in an overrides block and point saved menus at its replacement
+3.0.4~beta2
+  - Add: a warning when a menu, item, widget, background or view name is defined more than once
+3.0.4~beta1
+  - Fix: a shortcut picked from the groupings keeps the conditions on its actions
+3.0.3
+  - Fix: a widget picked from a library node takes its type from the node, so add-on nodes are no longer mistyped
+3.0.2
   - Add: skins can restyle the DialogSelect pickers with a skinshortcuts-picker property and ListItem metadata
-  - Add: icon overrides name a source folder, so a skin's own icons replace the Kodi defaults, packed or loose
-  - Add: an icons attribute on a menu leaves icons out of its include
   - Add: skins can define the management dialog context menu, the buttons it lists and where it opens
-  - Fix: widget and background labels in numbered slots follow a language change
-  - Fix: view selections survive a menu save
+  - Add: skins can retire a widget, background or property in an overrides block and point saved menus at its replacement
+  - Add: icon overrides name a source folder, so a skin's own icons replace the Kodi defaults, packed or loose
+  - Add: a rename attribute on a widget picker button prompts for a custom widget label
   - Fix: property conditions combine + and | as Kodi does, and an expression reference expands as a single term
-  - Fix: widgets keep the type the skin declared and open in the window their content lives in
   - Fix: the includes file is written with unix line endings on every platform
   - Fix: the skin reloads only when a rebuild changes the includes
+  - Fix: the picker keeps its place when it reopens instead of jumping back to the current selection
+  - Fix: backgrounds that open a browse or playlist dialog get the same folder arrow as groups
         </news>
       <platform>all</platform>
       <license>GPL-2.0-only</license>

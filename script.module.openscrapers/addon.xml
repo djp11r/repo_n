@@ -1,36 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.71" provider-name="open">
-	<requires>
-		<import addon="script.module.requests" />
-		<import addon="script.module.resolveurl"/>
-		<import addon="script.module.beautifulsoup4" optional="true"/>
-		<import addon="script.module.six" optional="true"/>
-		<import addon="script.module.certifi" optional="true"/>
-		<import addon="script.module.kodi-six" optional="true"/>
-		<import addon="script.module.simplejson" optional="true"/>
-		<import addon="script.module.segno" optional="true"/>
-	</requires>
-	<extension point="xbmc.python.module" library="lib" />
-	<extension point="xbmc.python.pluginsource" library="lib/default.py">
-		<provides>executable</provides>
-	</extension>
-	<extension point="xbmc.service" library="lib/service.py" start="startup" />
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en_GB">OpenScrapers Module</summary>
-		<description>Scrape common video host for URL's to be playable in Kodi, simplifying addon development of video plugins requiring multi video hosts.</description>
-		<platform>all</platform>
-		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-		<forum></forum>
-		<website></website>
-		<source></source>
-		<disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon.[CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.[CR]This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</disclaimer>
-		<assets>
-			<icon>icon.png</icon>
-			<fanart>fanart.png</fanart>
-			<screenshot></screenshot>
-		</assets>
-		<news>
-			upd and apividsrc, apimdb added new scrapers
-		</news>
-	</extension>
+<addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.72" provider-name="open">
+    <requires>
+        <import addon="script.module.requests" />
+        <import addon="script.module.resolveurl"/>
+        <import addon="script.module.beautifulsoup4" optional="true"/>
+        <import addon="script.module.six" optional="true"/>
+        <import addon="script.module.certifi" optional="true"/>
+        <import addon="script.module.kodi-six" optional="true"/>
+        <import addon="script.module.simplejson" optional="true"/>
+        <import addon="script.module.segno" optional="true"/>
+    </requires>
+    <extension library="lib/default.py" point="xbmc.python.pluginsource">
+        <provides>executable</provides>
+    </extension>
+    <extension library="lib" point="xbmc.python.module"/>
+    <extension library="lib/service.py" point="xbmc.service" start="startup"/>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en_GB">OpenScrapers Module</summary>
+        <description lang="en_GB">Scrape common video host for URL's to be playable in Kodi, simplifying addon development of video plugins requiring multi video hosts.The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon.[CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.[CR]This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</description>
+        <language />
+        <platform>all</platform>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+        <forum></forum>
+        <website></website>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.png</fanart>
+        </assets>
+    </extension>
 </addon>
