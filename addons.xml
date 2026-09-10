@@ -1040,6 +1040,25 @@ You can clone the project and host it in your own server.
       </assets>
     </extension>
   </addon>
+  <addon id="repository.silvo" name="SiLVO Development Repository" version="1.0.0" provider-name="SiLVO">
+    <extension point="xbmc.addon.repository" name="SiLVO Dev Repo">
+      <dir minversion="21.9.1">
+        <info compressed="false">https://raw.githubusercontent.com/MikeSiLVO/repository.silvo/main/piers/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/MikeSiLVO/repository.silvo/main/piers/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/MikeSiLVO/repository.silvo/main/piers/</datadir>
+      </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+      <summary lang="en_GB">SiLVO Development Repository</summary>
+      <description lang="en_GB">Development and pre-release repository for Aeon Nox: SiLVO skin and related addons. Contains beta versions for testing before official Kodi repo releases.</description>
+      <disclaimer lang="en_GB">Pre-release software may contain bugs. Use at your own risk. Stable versions are available in the official Kodi repository.</disclaimer>
+      <platform>all</platform>
+      <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+      </assets>
+    </extension>
+  </addon>
   <addon id="script.audiooffsetmanager" version="1.5.0" name="Audio Offset Manager" provider-name="matthane">
     <requires>
       <import addon="xbmc.python" version="3.0.1"/>
@@ -2371,7 +2390,7 @@ v1.0.25 (marcelveldt)
       <source>https://github.com/cartmandos/script.skin.helper.service</source>
     </extension>
   </addon>
-  <addon id="script.skin.info.service" name="Skin Info Service" version="2.0.1~beta3" provider-name="MikeSiLVO">
+  <addon id="script.skin.info.service" name="Skin Info Service" version="2.0.1~beta4" provider-name="MikeSiLVO">
     <requires>
       <import addon="xbmc.python" version="3.0.1"/>
       <import addon="xbmc.json" version="13.5.0"/>
@@ -2401,23 +2420,18 @@ v1.0.25 (marcelveldt)
         <fanart>fanart.jpg</fanart>
       </assets>
       <news>
-2.0.1~beta3
-- The database is rebuilt on a new layout, so online data is fetched again on first run
-- The separate music cache file is gone, folded into the main database
-- Ratings sources can each be turned on or off, with IMDb always on
-- A bulk ratings run can skip Trakt, and shows Trakt's request limit so you can decide
-- The ratings dialog reports items done and names the source that is behind
-- Roger Ebert ratings are no longer missing
-- Movie sets can be edited in the metadata editor
-- Edited ratings and votes are saved instead of being dropped
-- Ratings accept a decimal point or comma, and a bad entry is rejected instead of saved as zero
-- New properties for HDR type, audio language, subtitle language and stereo mode
-- MDBList award tags, aggregate score and Metacritic Must-See are available as properties
-- Online cast fills in for seasons and episodes
-- Editing or rescraping an item updates its properties straight away
-- Person details set actors content so skins can style the list
-- Playback widgets refresh instead of serving a cached page
-- Ratings and awards no longer show on the wrong item when a movie and a show share a TMDB id
+2.0.1~beta4
+- Fix memory growing during video playback
+- The IMDb Top 250 can update itself daily, or be run straight from a skin
+- New star-scale property for Roger Ebert and Letterboxd ratings
+- Award counts are left empty instead of writing 0
+- Similar items rank on shared genres first, and can be limited to unwatched or to a playlist
+- A TV show with no cast of its own falls back to the season regulars
+- The ratings dialog shows progress while it loads library items
+- Filmography ratings show at one decimal
+- Blur skips internal art and skin textures
+- The letter bar checks the available letters without scanning every item
+- A failed Trakt token refresh no longer signs you out
 		</news>
       <summary lang="cs_CZ">Poskytuje vzhledům podrobné informace o médiích a grafiku.</summary>
       <summary lang="en_GB">Provides rich media info and artwork to skins.</summary>
@@ -2438,13 +2452,15 @@ v1.0.25 (marcelveldt)
       <description lang="zh_CN">皮肤信息服务为皮肤提供超出 Kodi 默认范围的丰富元数据和艺术图。它添加了多种额外属性,例如来自多个来源的评分、艺术图、流媒体详情,以及电影、电视剧、剧集、合集、音乐视频、艺术家和专辑的演员阵容和剧情信息,数据来源包括您的媒体库和在线数据。它还包含一个工具,用于查找并向您的媒体库添加动画 GIF 海报。</description>
     </extension>
   </addon>
-  <addon id="script.skinshortcuts" name="Skin Shortcuts" version="3.0.4~beta2" provider-name="MikeSiLVO">
+  <addon id="script.skinshortcuts" name="Skin Shortcuts" version="3.0.4~beta3" provider-name="MikeSiLVO">
     <requires>
       <import addon="xbmc.python" version="3.0.2"/>
     </requires>
     <extension point="xbmc.python.script" library="default.py"/>
     <extension point="xbmc.addon.metadata">
       <news>
+3.0.4~beta3
+  - Fix: a variable a template declares stays defined when no menu item matches it
 3.0.4~beta2
   - Add: a warning when a menu, item, widget, background or view name is defined more than once
 3.0.4~beta1
