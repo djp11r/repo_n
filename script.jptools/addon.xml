@@ -11,7 +11,7 @@
         <provides>executable</provides>
     </extension>
     <extension library="resources/lib/" point="xbmc.python.module"/>
-    <extension library="resources/lib/service.py" point="xbmc.service" start="startup" />
+    <extension library="resources/lib/service.py" point="xbmc.service" start="startup"/>
     <extension point="xbmc.addon.metadata">
         <summary lang="en_GB">A Streamlined Utility Tool for Kodi.</summary>
         <description lang="en_GB">A Streamlined Utility Tool for Kodi.</description>
