@@ -437,7 +437,7 @@ You can clone the project and host it in your own server.
       <platform>all</platform>
     </extension>
   </addon>
-  <addon id="plugin.video.infinite" version="2.0.11" name="Infinite Light" provider-name="Tiki">
+  <addon id="plugin.video.infinite" version="2.0.12" name="Infinite Light" provider-name="Tiki">
     <requires>
       <import addon="xbmc.python" version="3.0.0"/>
       <import addon="script.module.requests"/>
@@ -451,7 +451,7 @@ You can clone the project and host it in your own server.
     <extension point="xbmc.addon.metadata">
       <reuselanguageinvoker>true</reuselanguageinvoker>
       <summary lang="en">We do not host any of the contents. Mainly used for English and Hindi content.</summary>
-      <description lang="en">This add-on is intended for advanced Kodi users only. You must own the content of any media you play through this addon.</description>
+      <description lang="en">This add-on is for personal use. I am attempting to leave commentary when AI is used to help with code I may not have a good understanding of. and intended for advanced Kodi users only. You must own the content of any media you play through this addon.</description>
       <platform>all</platform>
       <disclaimer lang="en">The author of this addon does not host any of the content which is found and has no affiliation with any of the content providers.</disclaimer>
       <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
@@ -462,7 +462,7 @@ You can clone the project and host it in your own server.
       <news>INFO: For latest changes see Changelog within Tools of add-on.</news>
     </extension>
   </addon>
-  <addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.31">
+  <addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.32">
     <requires>
       <import addon="xbmc.python" version="3.0.0"/>
       <import addon="script.module.requests"/>
@@ -569,6 +569,15 @@ You can clone the project and host it in your own server.
           <label>$INFO[Window(home).Property(context.infinity.showInfinity)]Scrob Manager</label>
           <visible>
 					!String.IsEmpty(Window(home).Property(context.infinity.scrobManager)) +
+					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
+					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
+					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+        </item>
+        <item library="resources\lib\context\punchplayManager.py">
+          <label>$INFO[Window(home).Property(context.infinity.showInfinity)]PunchPlay Manager</label>
+          <visible>
+					!String.IsEmpty(Window(home).Property(context.infinity.punchplayManager)) +
 					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
 					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
 					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,movie)]
@@ -712,7 +721,7 @@ You can clone the project and host it in your own server.
     <extension point="xbmc.addon.metadata">
       <reuselanguageinvoker>true</reuselanguageinvoker>
       <summary lang="en">Infinity We do not host any of the contents streamed</summary>
-      <description lang="en">[B]Infinity[/B][CR] This addon does not form part of the Kodi Media Centre. Please do not seek assistance with this addon from any of the Official Kodi Support Channels.[CR]The author does not host any of the content in this addon and takes no responsibility for content found. We do not know anything about a lab under Raccoon City.</description>
+      <description lang="en">[B]Infinity[/B][CR] This addon does not form part of the Kodi Media Centre. Please do not seek assistance with this addon from any of the Official Kodi Support Channels.[CR]The author does not host any of the content in this addon and takes no responsibility for content found. We do not know anything about a lab under Raccoon City. Infinity is not actually an umbrella and will not shield you from rain.</description>
       <platform>all</platform>
       <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
       <forum/>
@@ -1040,6 +1049,35 @@ You can clone the project and host it in your own server.
       </assets>
     </extension>
   </addon>
+  <addon id="repository.JPB" name="[COLOR lime][B]J[/B][/COLOR]PB Repo" version="1.16" provider-name="JPB">
+    <extension point="xbmc.addon.repository" name="[COLOR lime][B]J[/B]PB Repo">
+      <dir>
+        <info compressed="false">https://raw.githubusercontent.com/djp11r/repo_n/mayb/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/djp11r/repo_n/mayb/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/djp11r/repo_n/mayb/</datadir>
+      </dir>
+      <dir>
+        <info compressed="false">https://raw.githubusercontent.com/djp11r/additinal_repo_n/mayb/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/djp11r/additinal_repo_n/mayb/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/djp11r/additinal_repo_n/mayb/</datadir>
+      </dir>
+      <dir>
+        <info compressed="false">https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/Gujal00/smrzips/master/zips/</datadir>
+      </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+      <summary>The Best Third Party Addons and Tools for Kodi</summary>
+      <description>Enjoy access to ...</description>
+      <disclaimer lang="en">Repository has non-comercial nature. Created by enthusiasts, acting in good faith.hereby disclaims and negates all other warranties, including without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights. Further, video add-ons don't warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials on the Internet web site where from data is retrieved or otherwise relating to such materials or on any sites linked to this addon. Videos are streamed directly from video-hosting websites that are having full rights to remove such access to video if required. These add-ons access website contents like a normal web browser and show content to users.</disclaimer>
+      <platform>all</platform>
+      <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+      </assets>
+    </extension>
+  </addon>
   <addon id="repository.silvo" name="SiLVO Development Repository" version="1.0.0" provider-name="SiLVO">
     <extension point="xbmc.addon.repository" name="SiLVO Dev Repo">
       <dir minversion="21.9.1">
@@ -1185,7 +1223,7 @@ You can clone the project and host it in your own server.
 		</news>
     </extension>
   </addon>
-  <addon id="script.jptools" name="JP Tools" provider-name="People" version="1.81">
+  <addon id="script.jptools" name="JP Tools" provider-name="People" version="1.82">
     <requires>
       <import addon="script.module.requests"/>
       <import addon="script.module.beautifulsoup4" optional="true"/>
@@ -1761,7 +1799,7 @@ v1.0.25 (marcelveldt)
 		</news>
     </extension>
   </addon>
-  <addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.72" provider-name="open">
+  <addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.73" provider-name="open">
     <requires>
       <import addon="script.module.requests"/>
       <import addon="script.module.resolveurl"/>
@@ -1925,7 +1963,7 @@ v1.0.25 (marcelveldt)
       </assets>
     </extension>
   </addon>
-  <addon id="script.module.resolveurl" name="ResolveURL" version="5.1.208" provider-name="gujal">
+  <addon id="script.module.resolveurl" name="ResolveURL" version="5.1.210" provider-name="gujal">
     <requires>
       <import addon="script.module.six"/>
       <import addon="script.module.kodi-six"/>
@@ -2390,7 +2428,7 @@ v1.0.25 (marcelveldt)
       <source>https://github.com/cartmandos/script.skin.helper.service</source>
     </extension>
   </addon>
-  <addon id="script.skin.info.service" name="Skin Info Service" version="2.0.1~beta4" provider-name="MikeSiLVO">
+  <addon id="script.skin.info.service" name="Skin Info Service" version="2.0.1~beta7" provider-name="MikeSiLVO">
     <requires>
       <import addon="xbmc.python" version="3.0.1"/>
       <import addon="xbmc.json" version="13.5.0"/>
@@ -2406,7 +2444,7 @@ v1.0.25 (marcelveldt)
       <menu id="kodi.core.main">
         <item library="context.py">
           <label>$ADDON[script.skin.info.service 32102]</label>
-          <visible>!String.IsEmpty(ListItem.DBID) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,musicvideo) | String.IsEqual(ListItem.DBType,set) | String.IsEqual(ListItem.DBType,artist) | String.IsEqual(ListItem.DBType,album) | String.IsEqual(ListItem.DBType,song)]</visible>
+          <visible>!String.IsEmpty(ListItem.DBID) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,musicvideo) | String.IsEqual(ListItem.DBType,set) | String.IsEqual(ListItem.DBType,artist) | String.IsEqual(ListItem.DBType,album) | String.IsEqual(ListItem.DBType,song)] + [Addon.SettingBool(script.skin.info.service,context_show_review_artwork) | Addon.SettingBool(script.skin.info.service,context_show_download_artwork) | Addon.SettingBool(script.skin.info.service,context_show_update_ratings) | Addon.SettingBool(script.skin.info.service,context_show_edit_metadata) | Addon.SettingBool(script.skin.info.service,context_show_export_nfo)]</visible>
         </item>
       </menu>
     </extension>
@@ -2420,21 +2458,25 @@ v1.0.25 (marcelveldt)
         <fanart>fanart.jpg</fanart>
       </assets>
       <news>
-2.0.1~beta4
-- Fix memory growing during video playback
-- The IMDb Top 250 can update itself daily, or be run straight from a skin
-- New star-scale property for Roger Ebert and Letterboxd ratings
-- Award counts are left empty instead of writing 0
-- Similar items rank on shared genres first, and can be limited to unwatched or to a playlist
-- A TV show with no cast of its own falls back to the season regulars
-- The ratings dialog shows progress while it loads library items
-- Filmography ratings show at one decimal
-- Blur skips internal art and skin textures
-- The letter bar checks the available letters without scanning every item
-- A failed Trakt token refresh no longer signs you out
+2.0.1~beta7
+- Watch time for TV shows and seasons, from the service and the plugin
+- Plugin TV show and season items now carry runtime and watch time
+- Season watched episode count now fills in
+- Online show info and ratings for episodes
+- Default ratings source setting now takes effect
+- Clear logos follow the online metadata language
+- Music video artist and album node lookups work without a dbid
+- Play all and play random find items again
+- Skin property values keep their commas
+- Texture cleanup menu tidied, age cleanup report added to last report
+- Animated posters found on network shares
+- Editor saves song moods and lists every library value
+- Ratings: Stop All Updates stops at once, RogerEbert thumbs-down and Emmy wins added
+- Many more dialogs and prompts translated, en_us uses US spelling
 		</news>
       <summary lang="cs_CZ">Poskytuje vzhledům podrobné informace o médiích a grafiku.</summary>
       <summary lang="en_GB">Provides rich media info and artwork to skins.</summary>
+      <summary lang="en_US">Provides rich media info and artwork to skins.</summary>
       <summary lang="es_ES">Provee información enriquecida del contenido y arte a las skins.</summary>
       <summary lang="fr_FR">Fournit aux habillages des informations enrichies sur les médias ainsi que leurs visuels.</summary>
       <summary lang="hu_HU">Médiainformációkat és grafikákat biztosít a felszínekhez.</summary>
@@ -2444,6 +2486,8 @@ v1.0.25 (marcelveldt)
       <summary lang="zh_CN">为皮肤提供丰富的媒体信息和艺术图。</summary>
       <description lang="cs_CZ">Služba Skin Info Service poskytuje vzhledům podrobná metadata a grafiku nad rámec toho, co Kodi standardně zpřístupňuje. Přidává další vlastnosti, například hodnocení z více zdrojů, grafiku, podrobnosti o streamu a informace o obsazení a ději filmů, seriálů, epizod, sbírek filmů, hudebních videoklipů, interpretů a alb; využívá přitom knihovnu i online data. Obsahuje také nástroj pro vyhledání animovaných plakátů GIF a jejich přidání do knihovny.</description>
       <description lang="en_GB">Skin Info Service provides skins with rich metadata and artwork beyond what Kodi exposes by default. It adds extra properties such as ratings from multiple sources, artwork, stream details, and cast and plot information for movies, TV shows, episodes, sets, music videos, artists, and albums, drawing on both your library and online data. It also includes a tool to find and add animated GIF posters to your library.</description>
+      <description lang="en_US">Skin Info Service provides skins with rich metadata and artwork beyond what Kodi exposes by default. It adds extra properties such as ratings from multiple sources, artwork, stream details, and cast and plot information for movies, TV shows, episodes, sets, music videos, artists, and albums, drawing on both your library and online data. It also includes a tool to find and add animated GIF posters to your library.</description>
+      <description lang="es_ES">Skin Info Service provee skins con metadata enriquecida y mejor arte de lo que expone Kodi por defecto. Añade propiedades extra como las valoraciones desde distintas fuentes, arte, detalles de la emisión, elenco y argumento de las películas, programas de TV, episodios, sagas, vídeos musicales, intérpretes y álbumes, pintándolo todo en la colección y datos online. Incluye tambien una herramietna para buscar y añadir carteles de GIF animados para la colección.</description>
       <description lang="fr_FR">Skin Info Service fournit des informations supplémentaires telles que les notes, les illustrations et les détails de flux pour les films, les séries, les sagas, les artistes et les albums. Comprend un outil de recherche d'affiches GIF pour trouver et ajouter automatiquement des affiches GIF animées à votre médiathèque.</description>
       <description lang="hu_HU">A Skin Info Service gazdag metaadatokkal és grafikákkal látja el a felszíneket, amelyek túlmutatnak azon, amit a Kodi alapértelmezés szerint megjelenít. Extra tulajdonságokat ad hozzá, például értékeléseket több forrásból, grafikákat, streamelési részleteket, valamint szereplő- és cselekményinformációkat filmekhez, tévéműsorokhoz, epizódokhoz, díszletekhez, videoklipekhez, előadókhoz és albumokhoz, mind a médiatárad, mind az online adatok felhasználásával. Tartalmaz egy eszközt is, amellyel animált GIF-posztereket kereshetsz és adhatsz hozzá a médiatáradhoz.</description>
       <description lang="it_IT">Skin Info Service fornisce alle skin metadati e artwork avanzati, oltre a quanto Kodi mostra di default. Aggiunge proprietà extra come le valutazioni da più fonti, artwork, dettagli del flusso e informazioni su cast e trama per film, serie TV, episodi, saghe cinematografiche, video musicali, artisti e album, attingendo sia dalla libreria che dai dati online. Include anche uno strumento per trovare e aggiungere poster GIF animati alla libreria.</description>
@@ -2452,32 +2496,23 @@ v1.0.25 (marcelveldt)
       <description lang="zh_CN">皮肤信息服务为皮肤提供超出 Kodi 默认范围的丰富元数据和艺术图。它添加了多种额外属性,例如来自多个来源的评分、艺术图、流媒体详情,以及电影、电视剧、剧集、合集、音乐视频、艺术家和专辑的演员阵容和剧情信息,数据来源包括您的媒体库和在线数据。它还包含一个工具,用于查找并向您的媒体库添加动画 GIF 海报。</description>
     </extension>
   </addon>
-  <addon id="script.skinshortcuts" name="Skin Shortcuts" version="3.0.4~beta3" provider-name="MikeSiLVO">
+  <addon id="script.skinshortcuts" name="Skin Shortcuts" version="3.0.4" provider-name="MikeSiLVO">
     <requires>
       <import addon="xbmc.python" version="3.0.2"/>
     </requires>
     <extension point="xbmc.python.script" library="default.py"/>
     <extension point="xbmc.addon.metadata">
       <news>
-3.0.4~beta3
-  - Fix: a variable a template declares stays defined when no menu item matches it
-3.0.4~beta2
+3.0.4
+  - Add: property names match regardless of case
+  - Add: limit, sortby and sortorder from a widget definition reach every item the widget is assigned to
+  - Add: EMPTY, IN and bare checks in a suffixed condition follow the suffix
   - Add: a warning when a menu, item, widget, background or view name is defined more than once
-3.0.4~beta1
+  - Add: log off, screensaver and library update/clean in the commands source
+  - Add: the commands source only lists what the system can run
+  - Fix: the commands source labels match the command each one runs
   - Fix: a shortcut picked from the groupings keeps the conditions on its actions
-3.0.3
-  - Fix: a widget picked from a library node takes its type from the node, so add-on nodes are no longer mistyped
-3.0.2
-  - Add: skins can restyle the DialogSelect pickers with a skinshortcuts-picker property and ListItem metadata
-  - Add: skins can define the management dialog context menu, the buttons it lists and where it opens
-  - Add: skins can retire a widget, background or property in an overrides block and point saved menus at its replacement
-  - Add: icon overrides name a source folder, so a skin's own icons replace the Kodi defaults, packed or loose
-  - Add: a rename attribute on a widget picker button prompts for a custom widget label
-  - Fix: property conditions combine + and | as Kodi does, and an expression reference expands as a single term
-  - Fix: the includes file is written with unix line endings on every platform
-  - Fix: the skin reloads only when a rebuild changes the includes
-  - Fix: the picker keeps its place when it reopens instead of jumping back to the current selection
-  - Fix: backgrounds that open a browse or playlist dialog get the same folder arrow as groups
+  - Fix: a variable a template declares stays defined when no menu item matches it
         </news>
       <platform>all</platform>
       <license>GPL-2.0-only</license>
