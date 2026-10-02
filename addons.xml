@@ -394,7 +394,7 @@ You can clone the project and host it in your own server.
       <platform>all</platform>
     </extension>
   </addon>
-  <addon id="plugin.video.deccandelight" version="2.0.55" name="Deccan Delight" provider-name="gujal">
+  <addon id="plugin.video.deccandelight" version="2.0.56" name="Deccan Delight" provider-name="gujal">
     <requires>
       <import addon="script.module.six"/>
       <import addon="script.module.kodi-six"/>
@@ -437,7 +437,7 @@ You can clone the project and host it in your own server.
       <platform>all</platform>
     </extension>
   </addon>
-  <addon id="plugin.video.infinite" version="2.0.12" name="Infinite Light" provider-name="Tiki">
+  <addon id="plugin.video.infinite" version="2.0.13" name="Infinite Light" provider-name="Tiki">
     <requires>
       <import addon="xbmc.python" version="3.0.0"/>
       <import addon="script.module.requests"/>
@@ -462,7 +462,7 @@ You can clone the project and host it in your own server.
       <news>INFO: For latest changes see Changelog within Tools of add-on.</news>
     </extension>
   </addon>
-  <addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.32">
+  <addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.33">
     <requires>
       <import addon="xbmc.python" version="3.0.0"/>
       <import addon="script.module.requests"/>
@@ -1223,7 +1223,7 @@ You can clone the project and host it in your own server.
 		</news>
     </extension>
   </addon>
-  <addon id="script.jptools" name="JP Tools" provider-name="People" version="1.82">
+  <addon id="script.jptools" name="JP Tools" provider-name="People" version="1.83">
     <requires>
       <import addon="script.module.requests"/>
       <import addon="script.module.beautifulsoup4" optional="true"/>
@@ -1799,7 +1799,7 @@ v1.0.25 (marcelveldt)
 		</news>
     </extension>
   </addon>
-  <addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.73" provider-name="open">
+  <addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.74" provider-name="open">
     <requires>
       <import addon="script.module.requests"/>
       <import addon="script.module.resolveurl"/>
@@ -1963,7 +1963,7 @@ v1.0.25 (marcelveldt)
       </assets>
     </extension>
   </addon>
-  <addon id="script.module.resolveurl" name="ResolveURL" version="5.1.210" provider-name="gujal">
+  <addon id="script.module.resolveurl" name="ResolveURL" version="5.1.212" provider-name="gujal">
     <requires>
       <import addon="script.module.six"/>
       <import addon="script.module.kodi-six"/>
@@ -2172,35 +2172,20 @@ v1.0.25 (marcelveldt)
 - Futures module is not set to optional (on Kodi 19 it is not imported)</news>
     </extension>
   </addon>
-  <addon id="script.module.tulip" name="Tulip Library collection" version="4.0.4" provider-name="Twilight0">
+  <addon id="script.module.tulip" name="Tulip Library collection" version="4.2.0" provider-name="Twilight0">
     <requires>
       <import addon="xbmc.python" version="3.0.0"/>
+      <import addon="script.module.netclient" version="1.2.0"/>
+      <import addon="script.module.m3u8" version="6.1.0" optional="true"/>
     </requires>
     <extension point="xbmc.python.module" library="resources/lib"/>
     <extension point="xbmc.addon.metadata">
-      <summary lang="en">Tulip library collection with helper functions for Kodi</summary>
-      <description lang="en">Tulip library collection with helper functions for Kodi</description>
+      <summary lang="en">Tulip library with helper functions for Kodi and its forks</summary>
+      <description lang="en">Tulip library combines the best elements from Lambda's "lamlib" and tknorris's shared modules. Also includes various enhancements, newer and improved functions and Python 3 compatibility, though the latter is largely untested. Can also be as standalone utils</description>
       <platform>all</platform>
       <license>GPL-3.0-only</license>
       <source>https://github.com/Twilight0/script.module.tulip</source>
-      <news>[B]4.0.X[/B]
-- New stripped and reworked version from a lot of unnecessary stuff, python 3 only
-- Add ability to set licence for streams
-- Directory builder can now add all items at once (performance gain)
-- Removed progress dialog capability for builder (wasn't particularly effective or useful anyway)
-- Allow genre to be a list
-[B]3.1.X[/B]
-- Update user agent strings
-- Added a few more utilities
-- Add offscreen boolean parameter for ListItem
-- Bug fixes
-[B]3.0.X[/B]
-- Utilize certifi for net module
-- Add ability to save locally unencrypted m3u8 ts video content
-- Update user agent strings
-- Change the way kodi version is obtained
-- Add limit and username/password auth to net module
-- Convert url bytes object to string (python 3 only)</news>
+      <news/>
       <assets>
         <icon>icon.png</icon>
         <fanart>fanart.jpg</fanart>
@@ -2428,7 +2413,7 @@ v1.0.25 (marcelveldt)
       <source>https://github.com/cartmandos/script.skin.helper.service</source>
     </extension>
   </addon>
-  <addon id="script.skin.info.service" name="Skin Info Service" version="2.0.1~beta7" provider-name="MikeSiLVO">
+  <addon id="script.skin.info.service" name="Skin Info Service" version="2.0.1~beta14" provider-name="MikeSiLVO">
     <requires>
       <import addon="xbmc.python" version="3.0.1"/>
       <import addon="xbmc.json" version="13.5.0"/>
@@ -2446,6 +2431,10 @@ v1.0.25 (marcelveldt)
           <label>$ADDON[script.skin.info.service 32102]</label>
           <visible>!String.IsEmpty(ListItem.DBID) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,musicvideo) | String.IsEqual(ListItem.DBType,set) | String.IsEqual(ListItem.DBType,artist) | String.IsEqual(ListItem.DBType,album) | String.IsEqual(ListItem.DBType,song)] + [Addon.SettingBool(script.skin.info.service,context_show_review_artwork) | Addon.SettingBool(script.skin.info.service,context_show_download_artwork) | Addon.SettingBool(script.skin.info.service,context_show_update_ratings) | Addon.SettingBool(script.skin.info.service,context_show_edit_metadata) | Addon.SettingBool(script.skin.info.service,context_show_export_nfo)]</visible>
         </item>
+        <item library="context.py" args="pvr">
+          <label>$ADDON[script.skin.info.service 32079]</label>
+          <visible>Skin.HasSetting(SkinInfo.PVR) + [[String.StartsWith(ListItem.FileNameAndPath,pvr://guide/) + !Window.IsActive(radioguide) + !Window.IsActive(radiosearch)] | [String.StartsWith(ListItem.FileNameAndPath,pvr://channels/tv/) + ListItem.HasEpg] | [String.StartsWith(ListItem.FileNameAndPath,pvr://recordings/tv/) + !ListItem.IsFolder] | [String.StartsWith(ListItem.FileNameAndPath,pvr://timers/tv/timers/) + ListItem.HasEpg]]</visible>
+        </item>
       </menu>
     </extension>
     <extension point="xbmc.addon.metadata">
@@ -2458,21 +2447,11 @@ v1.0.25 (marcelveldt)
         <fanart>fanart.jpg</fanart>
       </assets>
       <news>
-2.0.1~beta7
-- Watch time for TV shows and seasons, from the service and the plugin
-- Plugin TV show and season items now carry runtime and watch time
-- Season watched episode count now fills in
-- Online show info and ratings for episodes
-- Default ratings source setting now takes effect
-- Clear logos follow the online metadata language
-- Music video artist and album node lookups work without a dbid
-- Play all and play random find items again
-- Skin property values keep their commas
-- Texture cleanup menu tidied, age cleanup report added to last report
-- Animated posters found on network shares
-- Editor saves song moods and lists every library value
-- Ratings: Stop All Updates stops at once, RogerEbert thumbs-down and Emmy wins added
-- Many more dialogs and prompts translated, en_us uses US spelling
+2.0.1~beta14
+- Plugin path that lists numbered infolabels, such as hourly weather, with 0-100 scaling
+- NFO export includes TV show status (Piers+)
+- Fix Library.Refreshed for removals, library clean and scans
+- Fix texture cleanup keeping unused actor photos from .actors folders
 		</news>
       <summary lang="cs_CZ">Poskytuje vzhledům podrobné informace o médiích a grafiku.</summary>
       <summary lang="en_GB">Provides rich media info and artwork to skins.</summary>
@@ -2494,25 +2473,37 @@ v1.0.25 (marcelveldt)
       <description lang="pl_PL">Skin Info Service dostarcza skórkom bogate metadane i grafikę, wykraczając daleko poza to, co Kodi udostępnia domyślnie. Dodaje dodatkowe właściwości, takie jak oceny z wielu źródeł, grafikę, szczegóły transmisji oraz informacje o obsadzie i fabule filmów, seriali, odcinków, kolekcji filmowych, teledysków, wykonawców i albumów, korzystając zarówno z Twojej biblioteki, jak i danych online. Zawiera również narzędzie do wyszukiwania i dodawania animowanych plakatów GIF do Twojej biblioteki.</description>
       <description lang="ru_RU">Skin Info Service предоставляет обложкам расширенные метаданные и иллюстрации, выходящие за рамки стандартных возможностей Kodi. Он добавляет дополнительные свойства, такие как рейтинги из нескольких источников, иллюстрации, сведения о потоках, а также информацию об актёрах и сюжете для фильмов, сериалов, серий, киноциклов, музыкальных клипов, исполнителей и альбомов, используя как вашу медиатеку, так и данные из интернета. Также включает инструмент для поиска и добавления в медиатеку анимированных постеров в формате GIF.</description>
       <description lang="zh_CN">皮肤信息服务为皮肤提供超出 Kodi 默认范围的丰富元数据和艺术图。它添加了多种额外属性,例如来自多个来源的评分、艺术图、流媒体详情,以及电影、电视剧、剧集、合集、音乐视频、艺术家和专辑的演员阵容和剧情信息,数据来源包括您的媒体库和在线数据。它还包含一个工具,用于查找并向您的媒体库添加动画 GIF 海报。</description>
+      <disclaimer lang="cs_CZ">Tento doplněk využívá službu TMDb a její rozhraní API, ale nemá od TMDb oficiální podporu, certifikaci ani jiné schválení.</disclaimer>
+      <disclaimer lang="en_GB">This add-on uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.</disclaimer>
+      <disclaimer lang="en_US">This add-on uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.</disclaimer>
+      <disclaimer lang="it_IT">Questo add-on usa TMDB e le API di TMDB, ma non è approvato, certificato o altrimenti autorizzato da TMDB.</disclaimer>
+      <disclaimer lang="pl_PL">Ten dodatek korzysta z serwisu TMDB i interfejsów API TMDB, ale nie jest zatwierdzony, certyfikowany ani w żaden inny sposób wspierany przez TMDB.</disclaimer>
+      <disclaimer lang="ru_RU">Это дополнение использует TMDB и API TMDB, но не одобрено, не сертифицировано и иным образом не поддержано TMDB.</disclaimer>
     </extension>
   </addon>
-  <addon id="script.skinshortcuts" name="Skin Shortcuts" version="3.0.4" provider-name="MikeSiLVO">
+  <addon id="script.skinshortcuts" name="Skin Shortcuts" version="3.0.6~beta1" provider-name="MikeSiLVO">
     <requires>
       <import addon="xbmc.python" version="3.0.2"/>
     </requires>
     <extension point="xbmc.python.script" library="default.py"/>
     <extension point="xbmc.addon.metadata">
       <news>
-3.0.4
-  - Add: property names match regardless of case
-  - Add: limit, sortby and sortorder from a widget definition reach every item the widget is assigned to
-  - Add: EMPTY, IN and bare checks in a suffixed condition follow the suffix
-  - Add: a warning when a menu, item, widget, background or view name is defined more than once
-  - Add: log off, screensaver and library update/clean in the commands source
-  - Add: the commands source only lists what the system can run
-  - Fix: the commands source labels match the command each one runs
-  - Fix: a shortcut picked from the groupings keeps the conditions on its actions
-  - Fix: a variable a template declares stays defined when no menu item matches it
+3.0.6~beta1
+  - Fix: a reset or restored item shows its widget and background without reopening the dialog
+  - Fix: the id property is wrapped in $NUMBER
+3.0.5
+  - Fix: a skin made for Skin Shortcuts v2 shows a modal leading to the skin setting or Add-ons
+  - Fix: the menu shows on the first start after a Kodi upgrade
+  - Add: a visible condition on property options
+  - Add: more reset labels for skins
+  - Add: template content that cannot be built is reported, with the fix in the log
+  - Fix: PVR channel shortcuts play the channel
+  - Fix: edits to an item a visible condition hides are kept on save
+  - Fix: a damaged userdata file falls back to skin defaults, keeping a .bak copy
+  - Fix: picking a new shortcut replaces the previous item's visible condition
+  - Fix: custom widget includes are built for every widget slot
+  - Fix: editing in a subdialog stays on the item it was opened for
+  - Misc fixes and improvements
         </news>
       <platform>all</platform>
       <license>GPL-2.0-only</license>
@@ -2527,7 +2518,7 @@ v1.0.25 (marcelveldt)
       <summary lang="es_ES">Menús, propiedades y arte personalizado para skins</summary>
       <summary lang="hu_HU">Egyéni menük, tulajdonságok és képek a felszínekhez</summary>
       <summary lang="it_IT">Menu personalizzati, proprietà e grafica per le skin</summary>
-      <summary lang="pl_PL">Niestandardowe menu, właściwości i grafika dla skórek</summary>
+      <summary lang="pl_PL">Niestandardowe menu, właściwości i grafika dla skór</summary>
       <summary lang="ru_RU">Пользовательские меню, свойства и иллюстрации для обложек</summary>
       <summary lang="zh_CN">皮肤自定义菜单、属性与艺术图</summary>
       <description lang="ar_SA">إضافة مخصصه للمظهر لتوفير إدارة بسيطة للودجيت "الأقسام" و الاختصارات على الشاشة (تتطلب دعم المظهر لها)</description>
