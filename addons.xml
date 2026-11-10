@@ -437,7 +437,7 @@ You can clone the project and host it in your own server.
       <platform>all</platform>
     </extension>
   </addon>
-  <addon id="plugin.video.infinite" version="2.0.14" name="Infinite Light" provider-name="Tiki">
+  <addon id="plugin.video.infinite" version="2.0.15" name="Infinite Light" provider-name="Tiki">
     <requires>
       <import addon="xbmc.python" version="3.0.0"/>
       <import addon="script.module.requests"/>
@@ -462,7 +462,7 @@ You can clone the project and host it in your own server.
       <news>INFO: For latest changes see Changelog within Tools of add-on.</news>
     </extension>
   </addon>
-  <addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.34">
+  <addon id="plugin.video.infinity" name="Infinity" provider-name="Infinity" version="6.6.35">
     <requires>
       <import addon="xbmc.python" version="3.0.0"/>
       <import addon="script.module.requests"/>
@@ -1799,7 +1799,7 @@ v1.0.25 (marcelveldt)
 		</news>
     </extension>
   </addon>
-  <addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.75" provider-name="open">
+  <addon id="script.module.openscrapers" name="OpenScrapers Module" version="1.00.76" provider-name="open">
     <requires>
       <import addon="script.module.requests"/>
       <import addon="script.module.resolveurl"/>
@@ -1963,7 +1963,7 @@ v1.0.25 (marcelveldt)
       </assets>
     </extension>
   </addon>
-  <addon id="script.module.resolveurl" name="ResolveURL" version="5.1.213" provider-name="gujal">
+  <addon id="script.module.resolveurl" name="ResolveURL" version="5.1.214" provider-name="gujal">
     <requires>
       <import addon="script.module.six"/>
       <import addon="script.module.kodi-six"/>
@@ -2413,7 +2413,7 @@ v1.0.25 (marcelveldt)
       <source>https://github.com/cartmandos/script.skin.helper.service</source>
     </extension>
   </addon>
-  <addon id="script.skin.info.service" name="Skin Info Service" version="2.0.1" provider-name="MikeSiLVO">
+  <addon id="script.skin.info.service" name="Skin Info Service" version="2.0.2" provider-name="MikeSiLVO">
     <requires>
       <import addon="xbmc.python" version="3.0.1"/>
       <import addon="xbmc.json" version="13.5.0"/>
@@ -2447,25 +2447,10 @@ v1.0.25 (marcelveldt)
         <fanart>fanart.jpg</fanart>
       </assets>
       <news>
-2.0.1
-- New widgets: Continue Watching, Next Up (Favourites), Recent Videos, Favourites, Upcoming Episodes and TMDB Discover
-- Trakt widgets for watchlist, history, in progress, Next Up, most played and lists
-- Online properties for episodes and for widget items outside the library
-- Live TV properties for the guide, channels, recordings and timers, plus a Fix match context item
-- Player properties for the playing season, live TV, artist discography and similar artists
-- New properties: awards, Rotten Tomatoes counts, star ratings, HDR, audio and subtitle language, watch time, image color
-- Plugin path for numbered infolabels, such as hourly weather
-- Ratings sources can each be turned off, and the IMDb Top 250 can update daily
-- Artwork review covers episodes and music videos, plus Fanart.tv 4K backgrounds and season keyart
-- Estuary versions of the actor, video info, artwork and image dialogs
-- Actor info covers crew, and TMDB search can open the info dialog
-- Slideshow can follow a playlist or library node, and includes music videos
-- Metadata editor handles movie sets and song moods, NFO export adds TV show status (Piers+)
-- Fix a rare Kodi crash when closing a library window
-- Fix home properties and blur being cleared by modal dialogs
-- Fix ratings and awards on the wrong item when a movie and a show share a TMDB id
-- Fix Library.Refreshed for removals, library clean and scans
-- Fix texture cleanup keeping unused actor photos from .actors folders
+2.0.2
+- TMDB country setting for the Now Playing and Upcoming widgets
+- Estuary video and actor info show the full plot and match Estuary's sizes
+- Estuary video info: Director and Writer open person info, Recommended button label
 		</news>
       <summary lang="cs_CZ">Poskytuje vzhledům podrobné informace o médiích a grafiku.</summary>
       <summary lang="en_GB">Provides rich media info and artwork to skins.</summary>
@@ -2496,6 +2481,7 @@ v1.0.25 (marcelveldt)
       <disclaimer lang="pl_PL">Ten dodatek korzysta z serwisu TMDB i interfejsów API TMDB, ale nie jest zatwierdzony, certyfikowany ani w żaden inny sposób wspierany przez TMDB.</disclaimer>
       <disclaimer lang="ru_RU">Это дополнение использует TMDB и API TMDB, но не одобрено, не сертифицировано и иным образом не поддержано TMDB.</disclaimer>
       <disclaimer lang="sv_SE">Detta tillägg använder TMDB och TMDB:s API:er, men är inte rekommenderat, certifierat eller på annat sätt godkänt av TMDB.</disclaimer>
+      <disclaimer lang="zh_CN">本插件使用 TMDB 及 TMDB API，但未获得 TMDB 的认可、认证或以其他方式批准。</disclaimer>
     </extension>
   </addon>
   <addon id="script.skinshortcuts" name="Skin Shortcuts" version="3.0.6~beta3" provider-name="MikeSiLVO">
